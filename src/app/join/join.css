@@ -120,7 +120,7 @@
   border: 2px solid var(--color-accent); /* Lime Outline */
 }
 
-.join-toggle-container[data-active="retailer"] .join-toggle-pill {
+.join-toggle-container[data-active="wholesaler"] .join-toggle-pill {
   transform: translateX(100%);
 }
 

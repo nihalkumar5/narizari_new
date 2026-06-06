@@ -50,7 +50,7 @@ export default function Navbar({ variant = "default" }) {
             <button className="join-us-btn">Join Us <i className="fas fa-chevron-down" style={{ fontSize: '0.8em', marginLeft: '4px' }}></i></button>
             <div className="join-us-menu">
               <Link href="/join?type=manufacturer">As a Manufacturer</Link>
-              <Link href="/join?type=retailer">As a Retailer</Link>
+              <Link href="/join?type=wholesaler">As a Wholesaler</Link>
             </div>
           </div>
 

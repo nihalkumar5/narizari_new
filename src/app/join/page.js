@@ -7,12 +7,12 @@ import './join.css';
 
 function JoinForm() {
   const searchParams = useSearchParams();
-  const initialType = searchParams.get('type') === 'retailer' ? 'retailer' : 'manufacturer';
+  const initialType = searchParams.get('type') === 'wholesaler' ? 'wholesaler' : 'manufacturer';
   const [type, setType] = useState(initialType);
 
   useEffect(() => {
     const queryType = searchParams.get('type');
-    if (queryType === 'retailer' || queryType === 'manufacturer') {
+    if (queryType === 'wholesaler' || queryType === 'manufacturer') {
       setType(queryType);
     }
   }, [searchParams]);
@@ -26,7 +26,7 @@ function JoinForm() {
         <div className="join-header">
           <h1>Partner with <span>NariZari.</span></h1>
           <p>
-            Whether you are a master weaver producing heritage textiles, or a luxury retailer looking to expand your collection, join our exclusive network.
+            Whether you are a master weaver producing heritage textiles, or a luxury wholesaler looking to expand your collection, join our exclusive network.
           </p>
         </div>
 
@@ -40,10 +40,10 @@ function JoinForm() {
             Manufacturer
           </button>
           <button 
-            className={`join-toggle-btn ${type === 'retailer' ? 'active' : ''}`}
-            onClick={() => setType('retailer')}
+            className={`join-toggle-btn ${type === 'wholesaler' ? 'active' : ''}`}
+            onClick={() => setType('wholesaler')}
           >
-            Retailer
+            Wholesaler
           </button>
         </div>
 
@@ -168,51 +168,75 @@ function JoinForm() {
               <button type="submit" className="join-submit-btn">Register Manufacturing Unit</button>
             </form>
           ) : (
-            <form key="retailer-form" className="join-form-content" onSubmit={(e) => e.preventDefault()}>
+            <form key="wholesaler-form" className="join-form-content" onSubmit={(e) => e.preventDefault()}>
+              <div style={{ marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '0.5rem' }}>Wholesaler Registration</h2>
+                <p style={{ color: 'var(--color-slate)', fontWeight: '500' }}>Register as a wholesaler to source premium heritage textiles directly from verified manufacturers.</p>
+              </div>
+
               <div className="join-row">
                 <div className="join-input-group">
-                  <label>Store / Brand Name</label>
-                  <input type="text" placeholder="e.g. Heritage Luxe" required />
+                  <label>Contact Person Name *</label>
+                  <input type="text" placeholder="Full name" required />
                 </div>
                 <div className="join-input-group">
-                  <label>Contact Person</label>
-                  <input type="text" placeholder="Full Name" required />
+                  <label>Business / Firm Name *</label>
+                  <input type="text" placeholder="Registered firm name" required />
                 </div>
               </div>
               
               <div className="join-row">
                 <div className="join-input-group">
-                  <label>Email Address</label>
-                  <input type="email" placeholder="purchasing@store.com" required />
+                  <label>City</label>
+                  <input type="text" placeholder="e.g. Lucknow, Hyderabad, Bangalore" />
                 </div>
                 <div className="join-input-group">
-                  <label>Store Location(s)</label>
-                  <input type="text" placeholder="e.g. Mumbai, New York" required />
+                  <label>Mobile Number *</label>
+                  <input type="tel" placeholder="10-digit mobile number" required />
                 </div>
               </div>
 
               <div className="join-input-group">
-                <label>Store Type</label>
-                <select required defaultValue="">
-                  <option value="" disabled>Select store type...</option>
-                  <option value="boutique">Independent Boutique</option>
-                  <option value="chain">Retail Chain</option>
-                  <option value="online">E-Commerce Only</option>
-                  <option value="department">Department Store</option>
-                </select>
+                <label>WhatsApp Number</label>
+                <input type="tel" placeholder="If different from mobile" />
+              </div>
+
+              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Login Credentials</h3>
+
+              <div className="join-row">
+                <div className="join-input-group">
+                  <label>Email Address *</label>
+                  <input type="email" placeholder="business@email.com" required />
+                </div>
+                <div className="join-input-group">
+                  <label>Password *</label>
+                  <input type="password" placeholder="Minimum 6 characters" required minLength="6" />
+                </div>
               </div>
 
               <div className="join-input-group">
-                <label>Website / Instagram</label>
-                <input type="url" placeholder="https://" />
+                <label>Estimated Monthly Volume Requirement</label>
+                <input type="text" placeholder="e.g. 500 pcs, 2000 pcs" />
               </div>
 
               <div className="join-input-group">
-                <label>What are you looking to source?</label>
-                <textarea placeholder="e.g. Bridal Lehengas, Handloom Sarees..."></textarea>
+                <label>Preferred Saree Categories</label>
+                <textarea placeholder="e.g. Banarasi Silk, Surat Prints, Cotton"></textarea>
               </div>
 
-              <button type="submit" className="join-submit-btn">Apply as Retailer</button>
+              <div className="join-input-group">
+                <label>Target Price Range per Unit (INR)</label>
+                <input type="text" placeholder="e.g. 400–1500" />
+              </div>
+
+              <div className="join-input-group" style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>
+                <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', fontWeight: '500', textTransform: 'none', letterSpacing: 'normal', fontSize: '0.95rem', color: 'var(--color-navy)', cursor: 'pointer' }}>
+                  <input type="checkbox" required style={{ width: 'auto', marginTop: '0.25rem', transform: 'scale(1.2)' }} />
+                  <span>I have read and agree to NariZari's Terms & Conditions and Privacy Policy. I acknowledge that NariZari is a marketplace platform and is not liable for transaction outcomes, product quality, or disputes between manufacturers and wholesalers.</span>
+                </label>
+              </div>
+
+              <button type="submit" className="join-submit-btn">Register as Wholesaler</button>
             </form>
           )}
 
