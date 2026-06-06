@@ -834,6 +834,12 @@ body.shopify-dark-theme a {
 .brand-ignore-content h2 .neon-text {
   color: #008060; /* Shopify Green for contrast on light bg */
   display: block;
+  font-family: var(--font-caveat);
+  font-weight: 700;
+  font-size: 1.25em;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: 0.5rem;
 }
 
 .brand-ignore-features {
