@@ -1,0 +1,477 @@
+/* --------------------------------------------------------------------------
+   Theme Selector View
+   -------------------------------------------------------------------------- */
+.theme-selector-view {
+  min-height: 100vh;
+  padding: 10rem 2rem 6rem;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(var(--color-border-thin) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.theme-selector-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.theme-selector-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.theme-card {
+  background: var(--color-white);
+  border: 3px solid var(--color-navy);
+  box-shadow: 8px 8px 0 var(--color-navy);
+  padding: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 var(--color-accent);
+}
+
+.theme-card-icon {
+  font-size: 3rem;
+  color: var(--color-accent-dark);
+  margin-bottom: 1.5rem;
+}
+
+.theme-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.theme-card p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-slate);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Storefront Preview Container
+   -------------------------------------------------------------------------- */
+.storefront-wrapper {
+  min-height: 100vh;
+  background-color: #e5e5e5;
+  padding: 2rem;
+  position: relative;
+}
+
+.back-to-themes-btn {
+  position: fixed;
+  top: 100px;
+  left: 30px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  border: 2px solid var(--color-navy);
+  box-shadow: 4px 4px 0 var(--color-accent);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-to-themes-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-accent);
+}
+
+.storefront-browser {
+  max-width: 1280px;
+  margin: 80px auto 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-chrome {
+  background: #e2e2e2;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 0.5rem;
+}
+
+.browser-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.browser-dot.red { background: #ff5f56; }
+.browser-dot.yellow { background: #ffbd2e; }
+.browser-dot.green { background: #27c93f; }
+
+.browser-url {
+  background: #fff;
+  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: #666;
+  margin-left: 1rem;
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   THEME STYLES (Mock Storefront Elements)
+   -------------------------------------------------------------------------- */
+.sf-body {
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-nav {
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sf-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.sf-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  min-height: 500px;
+}
+
+.sf-hero-content {
+  flex: 1;
+}
+
+.sf-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sf-hero-img img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+}
+
+.sf-products {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.sf-product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sf-product-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.sf-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sf-product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sf-product-title { margin: 0; }
+.sf-product-price { margin: 0; }
+.sf-product-btn {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+/* ==========================================================================
+   THEME 1: MINIMAL LUXURY
+   ========================================================================== */
+.theme-minimal .sf-body {
+  background: #fafafa;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.theme-minimal .sf-nav {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.theme-minimal .sf-logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.theme-minimal .sf-nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.theme-minimal .sf-hero-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.theme-minimal .sf-hero-desc {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.theme-minimal .sf-hero-img img {
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.theme-minimal .sf-product-title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.theme-minimal .sf-product-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+.theme-minimal .sf-product-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+
+/* ==========================================================================
+   THEME 2: HERITAGE CLASSIC
+   ========================================================================== */
+.theme-heritage .sf-body {
+  background: #fdfbf7;
+  color: #4a3b32;
+  font-family: "Georgia", serif;
+}
+
+.theme-heritage .sf-nav {
+  background: #4a3b32;
+  color: #fdfbf7;
+}
+
+.theme-heritage .sf-logo {
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.theme-heritage .sf-nav-links a {
+  color: #e6d3ba;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.theme-heritage .sf-hero {
+  background-image: radial-gradient(#e6d3ba 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.theme-heritage .sf-hero-title {
+  font-size: 4rem;
+  font-weight: normal;
+  color: #2c221b;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.theme-heritage .sf-hero-desc {
+  font-size: 1.2rem;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #665245;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.theme-heritage .sf-hero-img img {
+  border: 12px solid #fff;
+  box-shadow: 0 15px 30px rgba(74, 59, 50, 0.15);
+}
+
+.theme-heritage .sf-product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.theme-heritage .sf-product-price {
+  font-size: 1.1rem;
+  color: #8c7355;
+  font-style: italic;
+}
+
+.theme-heritage .sf-product-btn {
+  background: #4a3b32;
+  color: #fdfbf7;
+  font-family: "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+
+/* ==========================================================================
+   THEME 3: MODERN BRUTALIST
+   ========================================================================== */
+.theme-brutalist .sf-body {
+  background: #f4f4f0;
+  color: #111424;
+  font-family: var(--font-body);
+}
+
+.theme-brutalist .sf-nav {
+  border-bottom: 4px solid #111424;
+  background: #d1f34d;
+}
+
+.theme-brutalist .sf-logo {
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.theme-brutalist .sf-nav-links a {
+  color: #111424;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.theme-brutalist .sf-hero {
+  border-bottom: 4px solid #111424;
+}
+
+.theme-brutalist .sf-hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  text-shadow: 4px 4px 0 #d1f34d;
+}
+
+.theme-brutalist .sf-hero-desc {
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: 500px;
+}
+
+.theme-brutalist .sf-hero-img img {
+  border: 4px solid #111424;
+  box-shadow: 12px 12px 0 #111424;
+}
+
+.theme-brutalist .sf-product-card {
+  border: 4px solid #111424;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 8px 8px 0 #111424;
+}
+
+.theme-brutalist .sf-product-img {
+  border: 2px solid #111424;
+}
+
+.theme-brutalist .sf-product-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.theme-brutalist .sf-product-price {
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: #d1f34d;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid #111424;
+}
+
+.theme-brutalist .sf-product-btn {
+  background: #111424;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 3px solid #111424;
+  margin-top: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-brutalist .sf-product-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #d1f34d;
+}
