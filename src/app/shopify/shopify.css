@@ -649,7 +649,7 @@ body.shopify-dark-theme a {
 .essential-stagger-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
   max-width: 800px;
 }
@@ -657,55 +657,43 @@ body.shopify-dark-theme a {
 .essential-card {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding: 2rem 3rem;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  gap: 2rem;
+  padding: 2.5rem 3rem;
+  border-radius: 0; /* Brutalist sharp corners */
+  background: var(--bg-dark);
+  border: 4px solid var(--text-light);
   width: 85%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .essential-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.essential-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
+  transform: translate(-4px, -4px);
 }
 
 .essential-card p {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.4;
   color: var(--text-light);
   margin: 0;
+  text-transform: uppercase;
 }
 
 .essential-number {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 0; /* Brutalist sharp corners */
   background: var(--text-light);
   color: var(--bg-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.5rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  font-weight: 900;
+  font-size: 2rem;
+  border: 4px solid var(--text-light);
 }
 
 /* Stagger Alignments */
@@ -715,26 +703,25 @@ body.shopify-dark-theme a {
 
 .card-align-right {
   align-self: flex-end;
-  /* reverse layout to match image aesthetic, number on the right */
   flex-direction: row-reverse;
   text-align: right;
 }
-.card-align-right::before {
-  left: auto;
-  right: 0;
-}
 
-/* Accent Colors */
-.accent-lavender::before { background: var(--color-lavender); }
+/* Accent Colors - Brutalist Shadows & Numbers */
+.accent-lavender { box-shadow: 12px 12px 0 var(--color-lavender); }
+.accent-lavender:hover { box-shadow: 16px 16px 0 var(--color-lavender); }
 .accent-lavender .essential-number { background: var(--color-lavender); }
 
-.accent-orange::before { background: var(--color-orange); }
+.accent-orange { box-shadow: 12px 12px 0 var(--color-orange); }
+.accent-orange:hover { box-shadow: 16px 16px 0 var(--color-orange); }
 .accent-orange .essential-number { background: var(--color-orange); }
 
-.accent-cyan::before { background: #00E6B8; }
+.accent-cyan { box-shadow: 12px 12px 0 #00E6B8; }
+.accent-cyan:hover { box-shadow: 16px 16px 0 #00E6B8; }
 .accent-cyan .essential-number { background: #00E6B8; }
 
-.accent-yellow::before { background: var(--color-yellow); }
+.accent-yellow { box-shadow: 12px 12px 0 var(--color-yellow); }
+.accent-yellow:hover { box-shadow: 16px 16px 0 var(--color-yellow); }
 .accent-yellow .essential-number { background: var(--color-yellow); }
 
 @media (max-width: 768px) {
