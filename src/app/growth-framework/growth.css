@@ -1,30 +1,24 @@
 .growth-page {
-  background-color: #fafafa;
+  background-color: var(--color-bg);
   color: #000;
   font-family: var(--font-body);
   overflow-x: hidden;
 }
 
-/* Light Hero Section */
+/* Light Hero Section - Brutalist */
 .growth-hero {
   position: relative;
-  padding: 10rem 2rem 6rem;
-  background: #ffffff;
+  padding: 10rem 2rem 5rem;
+  background-color: transparent;
+  background-image: radial-gradient(var(--color-border-thin) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-bottom: 3px solid var(--color-navy);
   text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
   overflow: hidden;
 }
 
 .growth-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .growth-hero-content {
@@ -36,37 +30,45 @@
 
 .growth-badge {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: #000;
-  color: var(--color-accent);
+  margin-bottom: 1rem;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-navy);
+  box-shadow: 3px 3px 0 var(--color-navy);
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 0.9rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 50px;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .growth-hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -2px;
+  font-weight: 800;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #000;
+  letter-spacing: -0.02em;
 }
 
 .growth-hero h1 span {
-  color: transparent;
-  -webkit-text-stroke: 2px #000;
+  font-family: var(--font-caveat), cursive;
+  font-weight: 500;
+  font-size: 1.15em;
+  display: inline-block;
+  transform: rotate(-2deg);
+  color: var(--color-accent-dark);
+  -webkit-text-stroke: 0;
+  text-transform: none;
 }
 
 .growth-hero p {
+  font-family: var(--font-body);
   font-size: 1.25rem;
-  color: #444;
+  color: var(--color-slate);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;

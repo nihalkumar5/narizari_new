@@ -30,7 +30,7 @@ export default function GrowthFramework() {
         <section className="growth-hero">
           <div className="growth-hero-content animate-on-scroll">
             <div className="growth-badge">The NariZari System</div>
-            <h1>THE GROWTH <span>FRAMEWORK</span></h1>
+            <h1>THE GROWTH <span>Framework.</span></h1>
             <p>A battle-tested 4-step system to scale premium e-commerce brands to 7 and 8 figures. We don't just run ads; we engineer scalable revenue ecosystems.</p>
           </div>
         </section>
