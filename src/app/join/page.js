@@ -76,8 +76,8 @@ function JoinForm() {
 
               <div className="join-input-group">
                 <label>Primary Textiles Manufactured</label>
-                <select required>
-                  <option value="" disabled selected>Select specialization...</option>
+                <select required defaultValue="">
+                  <option value="" disabled>Select specialization...</option>
                   <option value="katan">Katan Silk</option>
                   <option value="banarasi">Banarasi Brocade</option>
                   <option value="chanderi">Chanderi</option>
@@ -123,8 +123,8 @@ function JoinForm() {
 
               <div className="join-input-group">
                 <label>Store Type</label>
-                <select required>
-                  <option value="" disabled selected>Select store type...</option>
+                <select required defaultValue="">
+                  <option value="" disabled>Select store type...</option>
                   <option value="boutique">Independent Boutique</option>
                   <option value="chain">Retail Chain</option>
                   <option value="online">E-Commerce Only</option>
