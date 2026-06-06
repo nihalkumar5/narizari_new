@@ -168,9 +168,11 @@ export default function Shopify() {
         {/* --- TRANSFORMATION SHOWCASE --- */}
         <section className="shopify-transformation-section">
           <div className="transformation-header">
-            <span className="section-subtitle" style={{color:"var(--color-navy)", background:"var(--text-light)"}}>UX/UI Upgrade</span>
-            <h2>Conversion Rate Transformations</h2>
-            <p>See how we redesign outdated funnels into high-converting luxury experiences.</p>
+            <span className="modern-badge">
+              <i className="fas fa-sparkles"></i> UX/UI UPGRADE
+            </span>
+            <h2 className="gradient-heading">Conversion Rate Transformations</h2>
+            <p className="transformation-desc">See how we redesign outdated funnels into high-converting luxury experiences.</p>
           </div>
           <div className="transformation-grid">
             <div className="transformation-card">
