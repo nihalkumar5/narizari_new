@@ -207,7 +207,7 @@ export default function CaseStudies() {
         </section>
 
         {/* --- FINAL CTA SECTION --- */}
-        <section className="shopify-cta-section brutalist-cta animate-on-scroll" style={{marginTop: "5rem", marginBottom: "5rem"}}>
+        <section className="shopify-cta-section animate-on-scroll" style={{marginTop: "5rem", marginBottom: "5rem"}}>
           <div className="cta-block">
             {/* FLOATING GLASS CARDS */}
             <div className="cta-glass-card float-1">
