@@ -331,7 +331,7 @@
       display: none !important;
     }
 
-    .nav-join-dropdown {
+    .nav-join-dropdown:not(.mobile-join-dropdown) {
       display: none !important;
     }
 
