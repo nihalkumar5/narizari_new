@@ -117,6 +117,39 @@ export default function Shopify() {
 
     </div>
 
+        {/* --- SHOPIFY ESSENTIAL SECTION --- */}
+        <section className="shopify-essential-section">
+          <div className="shopify-essential-header">
+            <h2 className="essential-title">Why <span>SHOPIFY</span> is Essential for <br/> Growing Your Business</h2>
+          </div>
+          
+          <div className="essential-stagger-container">
+            {/* Card 1 */}
+            <div className="essential-card card-align-left accent-lavender">
+              <div className="essential-number">1</div>
+              <p>Simple to set up and manage without needing technical skills.</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="essential-card card-align-right accent-orange">
+              <div className="essential-number">2</div>
+              <p>Secure, reliable, and trusted by millions of online stores.</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="essential-card card-align-left accent-cyan">
+              <div className="essential-number">3</div>
+              <p>Offers built-in tools for marketing, SEO, and sales optimization.</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="essential-card card-align-right accent-yellow">
+              <div className="essential-number">4</div>
+              <p>Easily scalable to support your business as it grows.</p>
+            </div>
+          </div>
+        </section>
+
         {/* --- BENTO GRID SECTION --- */}
         <section className="shopify-bento-section">
           <h2 className="shopify-bento-header">The NariZari E-Commerce System</h2>

@@ -612,3 +612,138 @@ body.shopify-dark-theme a {
   }
 }
 
+}
+
+
+/* --- SHOPIFY ESSENTIAL SECTION --- */
+.shopify-essential-section {
+  grid-column: 1 / -1;
+  padding: 6rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.shopify-essential-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.essential-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+}
+
+.essential-title span {
+  color: #00E6B8;
+  display: inline-block;
+  padding: 0 0.5rem;
+  background: rgba(0, 230, 184, 0.1);
+  border-radius: 8px;
+}
+
+.essential-stagger-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.essential-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 85%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.essential-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.essential-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+}
+
+.essential-card p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.essential-number {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--text-light);
+  color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Stagger Alignments */
+.card-align-left {
+  align-self: flex-start;
+}
+
+.card-align-right {
+  align-self: flex-end;
+  /* reverse layout to match image aesthetic, number on the right */
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.card-align-right::before {
+  left: auto;
+  right: 0;
+}
+
+/* Accent Colors */
+.accent-lavender::before { background: var(--color-lavender); }
+.accent-lavender .essential-number { background: var(--color-lavender); }
+
+.accent-orange::before { background: var(--color-orange); }
+.accent-orange .essential-number { background: var(--color-orange); }
+
+.accent-cyan::before { background: #00E6B8; }
+.accent-cyan .essential-number { background: #00E6B8; }
+
+.accent-yellow::before { background: var(--color-yellow); }
+.accent-yellow .essential-number { background: var(--color-yellow); }
+
+@media (max-width: 768px) {
+  .essential-card {
+    width: 100%;
+    align-self: center;
+    flex-direction: column !important;
+    text-align: center;
+    padding: 2rem;
+  }
+}
