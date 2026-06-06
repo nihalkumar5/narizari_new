@@ -1570,15 +1570,15 @@
     .hero-bg-img {
       position: relative;
       opacity: 1 !important;
-      height: 40vh;
-      min-height: 300px;
-      max-height: 400px;
+      height: 50vh;
+      min-height: 400px;
+      max-height: 500px;
       width: 100%;
       top: auto;
       bottom: auto;
       right: auto;
       left: auto;
-      object-fit: contain;
+      object-fit: cover;
       object-position: bottom right;
       z-index: 1;
       margin-top: 1rem;
