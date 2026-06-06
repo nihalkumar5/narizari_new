@@ -110,8 +110,8 @@
 }
 
 .ind-card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.05);
+  background: #0a0a0f;
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 24px;
   padding: 3rem 2rem;
   position: relative;
@@ -125,15 +125,15 @@
 
 .ind-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(0,0,0,0.1);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border-color: rgba(210, 250, 0, 0.3);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15), inset 0 0 40px rgba(210, 250, 0, 0.03);
 }
 
 .ind-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.9) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(10,10,15,0.95) 100%);
   z-index: 1;
 }
 
@@ -155,16 +155,16 @@
   top: 0; left: 0; right: 0; bottom: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.4;
   transition: opacity 0.5s ease, transform 1s ease;
   z-index: 0;
-  filter: grayscale(100%) contrast(1.2);
+  filter: grayscale(80%) contrast(1.2);
 }
 
 .ind-card:hover .ind-bg-image {
-  opacity: 0.25;
+  opacity: 0.6;
   transform: scale(1.05);
-  filter: grayscale(40%) contrast(1.2);
+  filter: grayscale(20%) contrast(1.2);
 }
 
 .ind-content {
@@ -175,7 +175,9 @@
 .ind-icon {
   width: 60px;
   height: 60px;
-  background: var(--color-navy);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -191,7 +193,7 @@
 
 .ind-card:hover .ind-icon {
   background: var(--color-accent);
-  color: var(--color-navy);
+  color: #000;
   transform: scale(1.1) rotate(-5deg);
 }
 
@@ -199,7 +201,7 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--color-navy);
+  color: #fff;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: -0.5px;
@@ -211,7 +213,7 @@
 
 .ind-desc {
   font-family: var(--font-body);
-  color: var(--color-slate-light);
+  color: rgba(255,255,255,0.7);
   font-size: 1.05rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
