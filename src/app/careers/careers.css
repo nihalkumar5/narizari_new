@@ -475,6 +475,20 @@
 }
 
 @media (max-width: 768px) {
+  .careers-heading {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+  
+  .careers-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-solid, .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
   .perks-header {
     flex-direction: column;
     align-items: flex-start;

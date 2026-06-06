@@ -13,7 +13,7 @@
 
 .about-header-huge {
   font-family: var(--font-heading);
-  font-size: clamp(6rem, 15vw, 16rem);
+  font-size: clamp(3rem, 15vw, 16rem);
   font-weight: 800;
   line-height: 0.85;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
 
 .about-subheader-huge {
   font-family: var(--font-heading);
-  font-size: clamp(5rem, 12vw, 13rem);
+  font-size: clamp(3rem, 12vw, 13rem);
   font-weight: 800;
   line-height: 0.85;
   text-transform: uppercase;
@@ -189,7 +189,7 @@
 
 .section-heading {
   font-family: var(--font-heading);
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(2.5rem, 10vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.9;
