@@ -303,41 +303,40 @@ export default function Shopify() {
           </div>
         </section>
 
-        {/* --- FINAL CTA SECTION --- */}
-        <section className="shopify-cta-section animate-on-scroll">
-          <div className="cta-block">
-            <span className="cta-pill"><i className="fab fa-whatsapp"></i> Whatsapp Call</span>
-            <h2>Ready to Grow Like Crazy?</h2>
-            <p>Book your free demo call—let's make your brand the next big thing!</p>
-            <button className="cta-btn">Schedule a Free Call <i className="fas fa-arrow-right"></i></button>
-            <div className="cta-trust">
-              <span className="stars" style={{color:"#e056fd", letterSpacing:"2px"}}>★★★★★</span> Trusted by 200+ brands
-            </div>
-          </div>
-        </section>
-
-        {/* --- FOOTER --- */}
-        <footer className="shopify-footer">
-          <div className="footer-content">
-            <div className="footer-logo">
-              <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.8rem", fontWeight: "800", color: "var(--color-white)", letterSpacing: "-0.02em" }}>
-                Nari<span style={{ color: "var(--color-accent)" }}>Zari</span>
-              </span>
-              <p>Premium Shopify Growth & Marketing Agency</p>
-            </div>
-            <div className="footer-links">
-              <a href="#">Home</a>
-              <a href="#">Case Studies</a>
-              <a href="#">Services</a>
-              <a href="#">Contact Us</a>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} NariZari. All rights reserved.</p>
-          </div>
-        </footer>
-
       </main>
+
+      {/* Premium Footer */}
+      <footer className="premium-footer">
+        <div className="premium-footer-bg"></div>
+        <div className="premium-footer-grid">
+          <div className="premium-footer-brand">
+            <h2>Nari<span>Zari.</span></h2>
+            <p className="premium-footer-desc">
+              We build high-converting marketing systems and digital showrooms to scale premium e-commerce brands worldwide.
+            </p>
+          </div>
+          <div className="premium-footer-col">
+            <h3>Start Scaling</h3>
+            <div className="premium-footer-links">
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer">Book Discovery Call <i className="fas fa-arrow-right" style={{fontSize: "0.8em", marginLeft: "4px"}}></i></a>
+              <a href="/services">Our Services</a>
+              <a href="/case-studies">Case Studies</a>
+            </div>
+          </div>
+          <div className="premium-footer-col">
+            <h3>Connect</h3>
+            <div className="premium-footer-links">
+              <a href="https://linkedin.com">LinkedIn</a>
+              <a href="https://instagram.com">Instagram</a>
+              <a href="mailto:hello@narizari.com">hello@narizari.com</a>
+            </div>
+          </div>
+        </div>
+        <div className="premium-footer-bottom">
+          <span>&copy; {new Date().getFullYear()} NariZari. All Rights Reserved.</span>
+          <span>Designed for High-Ticket E-Commerce.</span>
+        </div>
+      </footer>
     </>
   );
 }
