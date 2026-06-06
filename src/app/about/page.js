@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import ScrollReveal from '@/components/ScrollReveal';
 import './about.css';
 
 export default function About() {
@@ -8,29 +9,37 @@ export default function About() {
       <main className="about-page">
         {/* TOP SECTION */}
         <section className="about-top-section">
-          <h1 className="about-header-huge">ABOUT US</h1>
+          <ScrollReveal direction="up" delay={0.1}>
+            <h1 className="about-header-huge">ABOUT US</h1>
+          </ScrollReveal>
           
           <div className="about-top-content">
-            <div className="about-team-image-wrapper">
+            <ScrollReveal direction="right" delay={0.2} className="about-team-image-wrapper">
               <img 
                 src="/about_team.png" 
                 alt="Our Creative Team" 
                 className="about-team-image"
               />
-            </div>
+            </ScrollReveal>
             
             <div className="about-top-text-container">
-              <p className="about-top-lead-text">
-                NariZari is a creative powerhouse of designers, strategists, and developers dedicated to crafting exceptional digital experiences that drive real results.
-              </p>
+              <ScrollReveal direction="up" delay={0.3}>
+                <p className="about-top-lead-text">
+                  NariZari is a creative powerhouse of designers, strategists, and developers dedicated to crafting exceptional digital experiences that drive real results.
+                </p>
+              </ScrollReveal>
               
-              <p className="about-top-sub-text">
-                10+ years of expertise in managing thriving brands and digital platforms.
-              </p>
+              <ScrollReveal direction="up" delay={0.4}>
+                <p className="about-top-sub-text">
+                  10+ years of expertise in managing thriving brands and digital platforms.
+                </p>
+              </ScrollReveal>
               
-              <p className="about-top-sub-text">
-                Our team consists of passionate, talented individuals dedicated to pushing the boundaries of creativity. We excel at crafting innovative solutions tailored to your design and branding needs. Whether it's a completely new identity or refreshing an old aesthetic, we deliver.
-              </p>
+              <ScrollReveal direction="up" delay={0.5}>
+                <p className="about-top-sub-text">
+                  Our team consists of passionate, talented individuals dedicated to pushing the boundaries of creativity. We excel at crafting innovative solutions tailored to your design and branding needs. Whether it's a completely new identity or refreshing an old aesthetic, we deliver.
+                </p>
+              </ScrollReveal>
             </div>
           </div>
         </section>
@@ -39,82 +48,90 @@ export default function About() {
         <section className="about-bottom-section">
           <div className="about-bottom-content">
             <div className="about-bottom-left">
-              <div className="about-office-image-wrapper">
+              <ScrollReveal direction="right" delay={0.1} className="about-office-image-wrapper">
                 <img 
                   src="/about_office.png" 
                   alt="Our Creative Office" 
                   className="about-office-image"
                 />
-              </div>
+              </ScrollReveal>
               
-              <p className="about-bottom-text">
-                At NariZari, we blend innovation with expertise to craft bespoke digital experiences that help businesses stand out in a competitive market. By emphasizing cutting-edge design, we craft meaningful digital experiences that deliver results and enhance brand recognition.
-              </p>
+              <ScrollReveal direction="up" delay={0.2}>
+                <p className="about-bottom-text">
+                  At NariZari, we blend innovation with expertise to craft bespoke digital experiences that help businesses stand out in a competitive market. By emphasizing cutting-edge design, we craft meaningful digital experiences that deliver results and enhance brand recognition.
+                </p>
+              </ScrollReveal>
             </div>
             
             <div className="about-bottom-right">
-              <h2 className="about-subheader-huge">
-                WHO WE<br/>ARE
-              </h2>
+              <ScrollReveal direction="left" delay={0.3}>
+                <h2 className="about-subheader-huge">
+                  WHO WE<br/>ARE
+                </h2>
+              </ScrollReveal>
             </div>
           </div>
         </section>
 
         {/* OUR STORY SECTION */}
         <section className="about-story-section">
-          <div className="section-label-row">
-            <span className="section-label"><span className="section-label-plus">+</span> About</span>
-            <span>(02)</span>
-          </div>
-          <h2 className="section-heading">Our Story</h2>
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="section-label-row">
+              <span className="section-label"><span className="section-label-plus">+</span> About</span>
+              <span>(02)</span>
+            </div>
+            <h2 className="section-heading">Our Story</h2>
+          </ScrollReveal>
           
           <div className="stats-grid">
-            <div className="stat-card">
+            <ScrollReveal direction="up" delay={0.2} className="stat-card">
               <div className="stat-header">
                 <span className="stat-title">Projects</span>
               </div>
               <span className="stat-value">60+</span>
               <p className="stat-desc">We begin with a friendly conversation to understand your goals.</p>
-            </div>
+            </ScrollReveal>
             
-            <div className="stat-card">
+            <ScrollReveal direction="up" delay={0.3} className="stat-card">
               <div className="stat-header">
                 <span className="stat-title">Experience</span>
               </div>
               <span className="stat-value">05+</span>
               <p className="stat-desc">We begin with a friendly conversation to understand your goals.</p>
-            </div>
+            </ScrollReveal>
             
-            <div className="stat-card">
+            <ScrollReveal direction="up" delay={0.4} className="stat-card">
               <div className="stat-header">
                 <span className="stat-title">Success</span>
               </div>
               <span className="stat-value">98%</span>
               <p className="stat-desc">We begin with a friendly conversation to understand your goals.</p>
-            </div>
+            </ScrollReveal>
             
-            <div className="stat-card">
+            <ScrollReveal direction="up" delay={0.5} className="stat-card">
               <div className="stat-header">
                 <span className="stat-title">Reviews</span>
               </div>
               <span className="stat-value">4.9</span>
               <p className="stat-desc">We begin with a friendly conversation to understand your goals.</p>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
         {/* COLLABORATORS SECTION */}
         <section className="about-collaborators-section">
-          <div className="section-label-row">
-            <span className="section-label"><span className="section-label-plus">+</span> Collaborators</span>
-            <span>(03)</span>
-          </div>
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="section-label-row">
+              <span className="section-label"><span className="section-label-plus">+</span> Collaborators</span>
+              <span>(03)</span>
+            </div>
+            
+            <p className="collaborators-text">
+              We partner with visionary brands to create enduring innovation.
+            </p>
+          </ScrollReveal>
           
-          <p className="collaborators-text">
-            We partner with visionary brands to create enduring innovation.
-          </p>
-          
-          <div className="marquee-wrapper">
+          <ScrollReveal direction="up" delay={0.2} className="marquee-wrapper">
             <div className="marquee-content">
               {/* Duplicate set for infinite scroll */}
               {[...Array(2)].map((_, i) => (
@@ -127,42 +144,43 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </section>
 
         {/* CREATIVE TEAM SECTION */}
         <section className="about-team-section">
-          <div className="section-label-row">
-            <span className="section-label"><span className="section-label-plus">+</span> Our Team</span>
-            <span>(04)</span>
-          </div>
-          
-          <h2 className="section-heading">Creative Team</h2>
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="section-label-row">
+              <span className="section-label"><span className="section-label-plus">+</span> Our Team</span>
+              <span>(04)</span>
+            </div>
+            <h2 className="section-heading">Creative Team</h2>
+          </ScrollReveal>
           
           <div className="team-grid">
-            <div className="team-member-card">
+            <ScrollReveal direction="up" delay={0.2} className="team-member-card">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Team Member" className="team-member-img" />
               <div className="team-member-info">
                 <h3 className="team-member-name">Alex Rivera</h3>
                 <span className="team-member-role">Creative Director</span>
               </div>
-            </div>
+            </ScrollReveal>
             
-            <div className="team-member-card">
+            <ScrollReveal direction="up" delay={0.3} className="team-member-card">
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80" alt="Team Member" className="team-member-img" />
               <div className="team-member-info">
                 <h3 className="team-member-name">Jordan Lee</h3>
                 <span className="team-member-role">Lead Strategist</span>
               </div>
-            </div>
+            </ScrollReveal>
             
-            <div className="team-member-card">
+            <ScrollReveal direction="up" delay={0.4} className="team-member-card">
               <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80" alt="Team Member" className="team-member-img" />
               <div className="team-member-info">
                 <h3 className="team-member-name">Casey Smith</h3>
                 <span className="team-member-role">Senior Designer</span>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
