@@ -27,26 +27,7 @@ export default function Navbar({ variant = "default" }) {
     }
   }, [drawerOpen]);
 
-  if (variant === 'shopify') {
-    return (
-      <nav className="shopify-nav">
-        <div className="logo">
-          <Link href="/">Nari<span>Zari</span></Link>
-        </div>
-        <div className="nav-center">
-          <Link href="/#services">Services</Link>
-          <Link href="/#about">About Us</Link>
-          <Link href="/#case-studies">Cases</Link>
-        </div>
-        <div className="nav-right">
-          <Link href="/#signup">Sign Up</Link>
-          <Link href="/#signup" className="icon-btn">
-            <i className="fas fa-arrow-right"></i>
-          </Link>
-        </div>
-      </nav>
-    );
-  }
+
 
   return (
     <>

@@ -27,7 +27,7 @@ export default function Shopify() {
 
   return (
     <>
-      <Navbar variant="shopify" />
+      <Navbar />
       
       {view === 'selection' && (
         <main className="theme-selector-view">
