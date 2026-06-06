@@ -52,50 +52,120 @@ function JoinForm() {
           
           {type === 'manufacturer' ? (
             <form key="manufacturer-form" className="join-form-content" onSubmit={(e) => e.preventDefault()}>
+              <div style={{ marginBottom: '1rem' }}>
+                <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '0.5rem' }}>Manufacturer Registration</h2>
+                <p style={{ color: 'var(--color-slate)', fontWeight: '500' }}>Register your manufacturing unit to connect directly with verified wholesalers across India.</p>
+              </div>
+
               <div className="join-row">
                 <div className="join-input-group">
-                  <label>Business Name</label>
-                  <input type="text" placeholder="e.g. Veda Weavers" required />
+                  <label>Contact Person Name *</label>
+                  <input type="text" placeholder="Full name" required />
                 </div>
                 <div className="join-input-group">
-                  <label>Contact Person</label>
-                  <input type="text" placeholder="Full Name" required />
+                  <label>Company / Business Name *</label>
+                  <input type="text" placeholder="Registered firm name" required />
                 </div>
               </div>
               
               <div className="join-row">
                 <div className="join-input-group">
-                  <label>Email Address</label>
-                  <input type="email" placeholder="hello@company.com" required />
+                  <label>Production City *</label>
+                  <input type="text" placeholder="e.g. Surat, Varanasi" required />
                 </div>
                 <div className="join-input-group">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 98765 43210" required />
+                  <label>Dispatch Pincode *</label>
+                  <input type="text" placeholder="e.g. 395003" required />
+                </div>
+              </div>
+
+              <div className="join-row">
+                <div className="join-input-group">
+                  <label>Mobile Number *</label>
+                  <input type="tel" placeholder="10-digit mobile number" required />
+                </div>
+                <div className="join-input-group">
+                  <label>WhatsApp Number</label>
+                  <input type="tel" placeholder="If different from mobile" />
                 </div>
               </div>
 
               <div className="join-input-group">
-                <label>Primary Textiles Manufactured</label>
-                <select required defaultValue="">
-                  <option value="" disabled>Select specialization...</option>
-                  <option value="katan">Katan Silk</option>
-                  <option value="banarasi">Banarasi Brocade</option>
-                  <option value="chanderi">Chanderi</option>
-                  <option value="other">Other Heritage Textiles</option>
-                </select>
+                <label>Business Verification *</label>
+                <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', textTransform: 'none', letterSpacing: 'normal', color: 'var(--color-navy)' }}>
+                    <input type="radio" name="business_verification" value="registered" required style={{ width: 'auto', padding: '0' }} />
+                    Registered Business / Firm (GSTIN)
+                  </label>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', textTransform: 'none', letterSpacing: 'normal', color: 'var(--color-navy)' }}>
+                    <input type="radio" name="business_verification" value="independent" required style={{ width: 'auto', padding: '0' }} />
+                    Independent Weaver / Heritage Artisan — Direct Source, No Brokers
+                  </label>
+                </div>
               </div>
 
               <div className="join-input-group">
-                <label>Production Capacity (per month)</label>
-                <input type="text" placeholder="e.g. 500 units" required />
+                <label>GSTIN Number *</label>
+                <input type="text" placeholder="e.g. 07AABCU9603R1ZX" required />
               </div>
 
               <div className="join-input-group">
-                <label>Message / Additional Details</label>
-                <textarea placeholder="Tell us about your heritage and weaving techniques..."></textarea>
+                <label>Full Factory / Production Unit Address *</label>
+                <textarea placeholder="Complete address for cargo pickup and logistics coordination" required></textarea>
               </div>
 
-              <button type="submit" className="join-submit-btn">Apply as Manufacturer</button>
+              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Login Credentials</h3>
+
+              <div className="join-row">
+                <div className="join-input-group">
+                  <label>Email Address *</label>
+                  <input type="email" placeholder="business@email.com" required />
+                </div>
+                <div className="join-input-group">
+                  <label>Password *</label>
+                  <input type="password" placeholder="Minimum 6 characters" required minLength="6" />
+                </div>
+              </div>
+
+              <div className="join-input-group" style={{ marginTop: '1rem' }}>
+                <label>Manufacturing Categories</label>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.8rem', marginTop: '0.5rem' }}>
+                  {['Banarasi Silk', 'Kanjivaram Silk', 'Georgette', 'Chiffon', 'Cotton', 'Linen', 'Tussar Silk', 'Chanderi', 'Patola', 'Bandhani', 'Leheriya', 'Net', 'Crepe', 'Organza', 'Seico', 'Kuddampam'].map(cat => (
+                    <label key={cat} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', textTransform: 'none', letterSpacing: 'normal', fontSize: '0.95rem', color: 'var(--color-navy)' }}>
+                      <input type="checkbox" value={cat} style={{ width: 'auto', padding: '0' }} /> {cat}
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div className="join-row">
+                <div className="join-input-group">
+                  <label>Minimum Order Quantity (MOQ)</label>
+                  <input type="text" placeholder="e.g. 50 pieces" />
+                </div>
+                <div className="join-input-group">
+                  <label>Wholesale Price Range (INR) *</label>
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <input type="number" placeholder="Min" required style={{ flex: 1 }} />
+                    <span style={{ color: 'var(--color-navy)', fontWeight: '800' }}>—</span>
+                    <input type="number" placeholder="Max" required style={{ flex: 1 }} />
+                  </div>
+                </div>
+              </div>
+
+              <div className="join-input-group">
+                <label>Upload Product Catalog (PDF or Image)</label>
+                <input type="file" accept=".pdf,image/*" style={{ background: 'var(--color-white)' }} />
+              </div>
+
+              <div className="join-input-group" style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>
+                <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', fontWeight: '500', textTransform: 'none', letterSpacing: 'normal', fontSize: '0.95rem', color: 'var(--color-navy)', cursor: 'pointer' }}>
+                  <input type="checkbox" required style={{ width: 'auto', marginTop: '0.25rem', transform: 'scale(1.2)' }} />
+                  <span>I have read and agree to NariZari's Terms & Conditions and Privacy Policy. I acknowledge that NariZari is a marketplace platform and is not liable for transaction outcomes, product quality, or disputes between manufacturers and wholesalers.</span>
+                </label>
+              </div>
+
+              <button type="submit" className="join-submit-btn">Register Manufacturing Unit</button>
             </form>
           ) : (
             <form key="retailer-form" className="join-form-content" onSubmit={(e) => e.preventDefault()}>
