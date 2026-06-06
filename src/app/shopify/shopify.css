@@ -30,6 +30,10 @@ body.shopify-dark-theme a {
   text-decoration: none;
 }
 
+body.shopify-dark-theme .join-us-menu a {
+  color: var(--color-navy);
+}
+
 /* Navbar */
 .shopify-nav {
   display: flex;
@@ -791,32 +795,63 @@ body.shopify-dark-theme a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--bg-dark);
-  padding: 1.5rem;
-  border: 4px solid var(--text-light);
-  box-shadow: 10px 10px 0 var(--color-orange);
-  transition: transform 0.2s;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.transformation-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .transformation-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 14px 14px 0 var(--color-orange);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.transformation-card:hover::before {
+  opacity: 1;
 }
 
 .transformation-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.transformation-card:hover h3 {
+  color: var(--color-accent);
 }
 
 .transformation-card img {
   width: 100%;
-  border: 2px solid var(--text-light);
+  border-radius: 12px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transformation-card:hover img {
+  transform: scale(1.04);
 }
 
 
