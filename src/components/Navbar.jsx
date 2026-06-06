@@ -103,8 +103,12 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>ABOUT US</Link></li>
             <li><Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>CASE STUDIES</Link></li>
             <li><Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>GROWTH FRAMEWORK</Link></li>
-            <li><Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>CAREERS</Link></li>
             <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONNECT</Link></li>
+            <li style={{ marginTop: '1.5rem' }}>
+              <Link href="/careers" className="btn btn-primary join-btn" onClick={() => setDrawerOpen(false)} style={{ width: '100%', justifyContent: 'center', textAlign: 'center', textDecoration: 'none' }}>
+                JOIN US
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="drawer-footer">
