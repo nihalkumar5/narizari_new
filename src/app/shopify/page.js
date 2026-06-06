@@ -173,6 +173,26 @@ export default function Shopify() {
           </div>
         </section>
 
+        {/* --- BRAND IGNORE SECTION --- */}
+        <section className="shopify-brand-ignore-section">
+          <div className="brand-ignore-content">
+            <h2>We Make Your Brand <span className="neon-text">Impossible To Ignore.</span></h2>
+            <div className="brand-ignore-features">
+              <span>Beautiful websites.</span>
+              <span>Strategic design.</span>
+              <span>Real results.</span>
+            </div>
+          </div>
+          <div className="brand-ignore-images">
+            <div className="ignore-img-wrapper img-1">
+              <img src="/assets/brand_ignore_pocket_1780737486458.png" alt="Phone in pocket" />
+            </div>
+            <div className="ignore-img-wrapper img-2">
+              <img src="/assets/brand_ignore_sunglasses_1780737499118.png" alt="Neon sunglasses reflection" />
+            </div>
+          </div>
+        </section>
+
         {/* --- TESTIMONIALS SECTION --- */}
         <section className="shopify-testimonial-section">
           <div className="testimonial-header">
