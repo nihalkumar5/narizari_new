@@ -210,13 +210,13 @@ export default function CaseStudies() {
         <section className="shopify-cta-section animate-on-scroll" style={{marginTop: "5rem", marginBottom: "5rem"}}>
           <div className="cta-block">
             {/* FLOATING GLASS CARDS */}
-            <div className="glass-card float-1">
+            <div className="cta-glass-card float-1">
               <i className="fas fa-chart-line"></i> <span>+250% ROAS</span>
             </div>
-            <div className="glass-card float-2">
+            <div className="cta-glass-card float-2">
               <i className="fas fa-bolt"></i> <span>Scale Fast</span>
             </div>
-            <div className="glass-card float-3">
+            <div className="cta-glass-card float-3">
               <i className="fas fa-users"></i> <span>10k+ Leads</span>
             </div>
 

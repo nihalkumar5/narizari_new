@@ -2579,7 +2579,7 @@
   100% { transform: translateY(0); }
 }
 
-.glass-card {
+.cta-glass-card {
   position: absolute;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
@@ -2599,7 +2599,7 @@
   pointer-events: none;
 }
 
-.glass-card i {
+.cta-glass-card i {
   color: var(--color-accent);
   font-size: 1.2rem;
 }
