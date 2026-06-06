@@ -92,12 +92,12 @@ export default function ServicesPage() {
           ))}
         </section>
         
-        {/*  Brutalist CTA block  */}
+        {/*  Brutalist Dark CTA block  */}
         <section className="section-container" style={{ borderBottom: "none", paddingBottom: "6rem", paddingTop: "4rem" }}>
           <div id="contact" style={{
-            backgroundColor: "var(--color-accent)",
+            background: "linear-gradient(135deg, var(--color-navy) 0%, #1a1f2e 100%)",
             border: "4px solid var(--color-navy)",
-            boxShadow: "12px 12px 0 var(--color-navy)",
+            boxShadow: "12px 12px 0 var(--color-accent)",
             textAlign: "center",
             position: "relative",
             padding: "clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem)",
@@ -107,31 +107,47 @@ export default function ServicesPage() {
             <div style={{
               position: "absolute",
               top: 0, left: 0, width: "100%", height: "100%",
-              backgroundImage: "radial-gradient(var(--color-navy) 1px, transparent 1px)",
-              backgroundSize: "20px 20px",
-              opacity: 0.15,
+              backgroundImage: "radial-gradient(rgba(255,255,255,0.1) 2px, transparent 2px)",
+              backgroundSize: "30px 30px",
+              opacity: 0.5,
               pointerEvents: "none"
             }}></div>
             
-            {/* Abstract Decorative Elements */}
+            {/* Rotating Badge */}
             <div style={{
               position: "absolute",
               top: "-20px",
-              left: "-20px",
-              width: "100px",
-              height: "100px",
-              border: "4px solid var(--color-navy)",
+              right: "20px",
+              width: "140px",
+              height: "140px",
+              backgroundColor: "var(--color-accent)",
               borderRadius: "50%",
-              pointerEvents: "none"
-            }}></div>
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "3px solid var(--color-navy)",
+              boxShadow: "6px 6px 0 var(--color-navy)",
+              zIndex: 10
+            }}>
+              <svg viewBox="0 0 100 100" style={{ width: "100%", height: "100%", animation: "spin-slow 12s linear infinite" }}>
+                <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+                <text style={{ fontSize: "11.5px", fontFamily: "var(--font-heading)", fontWeight: "bold", fill: "var(--color-navy)", letterSpacing: "1px" }}>
+                  <textPath href="#circlePath" startOffset="0%">
+                    HERITAGE BRAND SCALING • HIGH ROI • 
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+
+            {/* Abstract Decorative Elements */}
             <div style={{
               position: "absolute",
               bottom: "-30px",
-              right: "40px",
+              left: "40px",
               width: "80px",
               height: "80px",
-              backgroundColor: "var(--color-white)",
-              border: "4px solid var(--color-navy)",
+              backgroundColor: "transparent",
+              border: "4px solid var(--color-accent)",
               pointerEvents: "none",
               transform: "rotate(15deg)"
             }}></div>
@@ -140,46 +156,47 @@ export default function ServicesPage() {
               <div style={{
                 display: "inline-block",
                 padding: "0.5rem 1rem",
-                backgroundColor: "var(--color-navy)",
-                color: "var(--color-white)",
+                backgroundColor: "var(--color-white)",
+                color: "var(--color-navy)",
                 fontFamily: "var(--font-heading)",
-                fontWeight: "700",
+                fontWeight: "800",
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
-                marginBottom: "2rem",
-                boxShadow: "4px 4px 0 var(--color-white)",
-                border: "2px solid var(--color-white)"
+                marginBottom: "2.5rem",
+                boxShadow: "4px 4px 0 var(--color-accent)",
+                border: "2px solid var(--color-navy)"
               }}>
                 Action Required
               </div>
               <h2 style={{
                 fontFamily: "var(--font-heading)",
-                color: "var(--color-navy)",
+                color: "var(--color-white)",
                 marginBottom: "1.5rem",
                 fontSize: "clamp(2.5rem, 4vw, 4rem)",
                 lineHeight: "1.1",
                 textTransform: "uppercase"
               }}>
-                Ready To Build A Marketing Engine That <span style={{ color: "var(--color-white)", textShadow: "2px 2px 0 var(--color-navy)" }}>Scales?</span>
+                Ready To Build A Marketing Engine That <span style={{ color: "var(--color-accent)", textShadow: "2px 2px 0 var(--color-navy)" }}>Scales?</span>
               </h2>
               <p style={{
                 fontFamily: "var(--font-body)",
-                color: "var(--color-navy)",
+                color: "rgba(255, 255, 255, 0.85)",
                 marginBottom: "3rem",
                 fontSize: "1.2rem",
-                fontWeight: "600",
+                fontWeight: "400",
                 maxWidth: "600px",
                 marginInline: "auto",
                 lineHeight: "1.6"
               }}>
                 Schedule a 30-minute heritage brand discovery call. We'll outline your market opportunities and analyze how to take your traditional saree house national.
               </p>
-              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{
                 fontSize: "1.1rem",
                 padding: "1rem 2.5rem",
-                backgroundColor: "var(--color-navy)",
-                color: "var(--color-white)",
-                boxShadow: "4px 4px 0 var(--color-white)"
+                backgroundColor: "var(--color-white)",
+                color: "var(--color-navy)",
+                border: "2px solid var(--color-navy)",
+                boxShadow: "6px 6px 0 var(--color-accent)"
               }}>
                 Book Your Strategy Call
               </a>

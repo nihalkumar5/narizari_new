@@ -2310,3 +2310,12 @@
     transform: translateX(calc(-50% - 1rem));
   }
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
