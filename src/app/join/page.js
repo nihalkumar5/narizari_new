@@ -145,10 +145,10 @@ function JoinForm() {
                 </div>
                 <div className="join-input-group">
                   <label>Wholesale Price Range (INR) *</label>
-                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                    <input type="number" placeholder="Min" required style={{ flex: 1 }} />
+                  <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', width: '100%' }}>
+                    <input type="number" placeholder="Min" required style={{ flex: 1, minWidth: 0, width: '100%' }} />
                     <span style={{ color: 'var(--color-navy)', fontWeight: '800' }}>—</span>
-                    <input type="number" placeholder="Max" required style={{ flex: 1 }} />
+                    <input type="number" placeholder="Max" required style={{ flex: 1, minWidth: 0, width: '100%' }} />
                   </div>
                 </div>
               </div>
