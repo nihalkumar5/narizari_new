@@ -2426,6 +2426,7 @@
 
 .mobile-join-dropdown {
   width: 100%;
+  display: block !important;
 }
 
 .mobile-join-dropdown .join-us-menu {
