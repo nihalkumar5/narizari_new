@@ -61,7 +61,7 @@ export default function Navbar({ variant = "default" }) {
           <ul className="nav-links">
             <li><Link href="/about" className="nav-link">About Us</Link></li>
             <li><Link href="/services" className="nav-link">Services</Link></li>
-            <li><Link href="/#case-studies" className="nav-link">Case Studies</Link></li>
+            <li><Link href="/case-studies" className="nav-link">Case Studies</Link></li>
             <li><Link href="/#growth-framework" className="nav-link">Growth Framework</Link></li>
             <li><Link href="/careers" className="nav-link">Careers</Link></li>
             <li><Link href="/contact" className="nav-link">Contact</Link></li>
@@ -114,7 +114,7 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/#services" className="drawer-link" onClick={() => setDrawerOpen(false)}>SHOP SAMPLE</Link></li>
             <li><Link href="/#services" className="drawer-link" onClick={() => setDrawerOpen(false)}>INDUSTRIES</Link></li>
             <li><Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>ABOUT US</Link></li>
-            <li><Link href="/#faq" className="drawer-link" onClick={() => setDrawerOpen(false)}>BLOGS</Link></li>
+
             <li><Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>CAREERS</Link></li>
             <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONNECT</Link></li>
           </ul>

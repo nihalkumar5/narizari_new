@@ -289,111 +289,7 @@ export default function Home() {
 
 
 
-    {/*  4. Featured Case Studies (Scoped inside a soft light-grey block)  */}
-    <section className="section-container" style={{"paddingInline":"0","borderBottom":"none"}}>
-      <div className="bg-gray" style={{"padding":"clamp(3rem, 6vw, 6rem) clamp(1.5rem, 5vw, 5rem)"}}>
-        <div className="section-intro">
-          <span className="section-subtitle">Case Studies</span>
-          <h2>Where Heritage Meets <span style={{"fontFamily":"var(--font-caveat), cursive", "fontWeight":"500", "fontSize":"1.15em", "display":"inline-block", "transform":"rotate(-2deg)"}}>Modern Conversion.</span></h2>
-        </div>
 
-        <div className="bento-grid">
-          {/*  Case Study 1  */}
-          <article className="bento-card bento-span-12" style={{"padding":"0","border":"1px solid var(--color-border-thin)","backgroundColor":"var(--color-white)","overflow":"hidden","display":"grid","gridTemplateColumns":"repeat(12, 1fr)","borderRadius":"28px"}}>
-            <div className="col-6 hover-reveal-container" style={{"gridColumn":"span 6","padding":"0","borderBottom":"none"}}>
-              <img src="/assets/case-study-ecom.png" alt="Maison Eclat premium Varanasi Saree online store mockup" className="hover-reveal-img" />
-              <div className="hover-overlay"></div>
-            </div>
-            <div style={{"gridColumn":"span 6","padding":"clamp(2rem, 4vw, 3.5rem)","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"2rem"}}>
-              <div>
-                <span style={{"fontFamily":"var(--font-body)","fontSize":"0.75rem","fontWeight":"700","color":"var(--color-accent-dark)","letterSpacing":"0.08em","textTransform":"uppercase"}}>01. Digital Transformation</span>
-                <h3 style={{"marginBlock":"0.75rem","fontSize":"2rem"}}>Maison Eclat</h3>
-                <p style={{"marginBottom":"1.5rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Problem:</strong> A 120-year-old Banarasi silk house in Varanasi relied completely on foot traffic. Lacked digital reach.
-                </p>
-                <p style={{"marginBottom":"1.5rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Solution:</strong> We designed an ultra-premium digital boutique, launched localized campaigns targeting affluent collectors, and integrated GI-tag transparency.
-                </p>
-              </div>
-              <div style={{"display":"flex","gap":"2.5rem","paddingTop":"1.5rem","borderTop":"1px solid var(--color-border-thin)"}}>
-                <div>
-                  <div style={{"fontSize":"2.25rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>+230%</div>
-                  <div style={{"fontSize":"0.75rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Digital Sales</div>
-                </div>
-                <div>
-                  <div style={{"fontSize":"2.25rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>₹18.9K</div>
-                  <div style={{"fontSize":"0.75rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Avg. Value</div>
-                </div>
-                <div>
-                  <div style={{"fontSize":"2.25rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>4.8x</div>
-                  <div style={{"fontSize":"0.75rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Ad ROAS</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          {/*  Case Study 2  */}
-          <article className="bento-card bento-span-6" style={{"padding":"0","backgroundColor":"var(--color-white)","overflow":"hidden","borderRadius":"28px"}}>
-            <div className="hover-reveal-container">
-              <img src="/assets/case-study-brand.png" alt="Aurélie Luxury Saree premium box packaging and branding visual" className="hover-reveal-img" />
-              <div className="hover-overlay"></div>
-            </div>
-            <div style={{"padding":"2.5rem","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"1.5rem"}}>
-              <div>
-                <span style={{"fontFamily":"var(--font-body)","fontSize":"0.75rem","fontWeight":"700","color":"var(--color-accent-dark)","letterSpacing":"0.08em","textTransform":"uppercase"}}>02. Heritage Positioning</span>
-                <h3 style={{"marginBlock":"0.5rem"}}>Aurélie Weaves</h3>
-                <p style={{"fontSize":"0.95rem","marginBottom":"1rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Problem:</strong> Saree value was diluted by cheap powerloom replicas sold online.
-                </p>
-                <p style={{"fontSize":"0.95rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Solution:</strong> Created visual storytelling videos tracking the saree from raw silk sourcing to loom. Repositioned the label as "Heritage Couture".
-                </p>
-              </div>
-              <div style={{"display":"flex","gap":"2rem","paddingTop":"1.5rem","borderTop":"1px solid var(--color-border-thin)"}}>
-                <div>
-                  <div style={{"fontSize":"1.85rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>+187%</div>
-                  <div style={{"fontSize":"0.7rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Growth</div>
-                </div>
-                <div>
-                  <div style={{"fontSize":"1.85rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>100%</div>
-                  <div style={{"fontSize":"0.7rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Weavers Fair-Pay</div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          {/*  Case Study 3  */}
-          <article className="bento-card bento-span-6" style={{"padding":"0","backgroundColor":"var(--color-white)","overflow":"hidden","borderRadius":"28px"}}>
-            <div className="hover-reveal-container">
-              <img src="/assets/case-study-saas.png" alt="FinOps Weaving House logistics and shipping dashboard mockup" className="hover-reveal-img" />
-              <div className="hover-overlay"></div>
-            </div>
-            <div style={{"padding":"2.5rem","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"1.5rem"}}>
-              <div>
-                <span style={{"fontFamily":"var(--font-body)","fontSize":"0.75rem","fontWeight":"700","color":"var(--color-accent-dark)","letterSpacing":"0.08em","textTransform":"uppercase"}}>03. Scale & Automation</span>
-                <h3 style={{"marginBlock":"0.5rem"}}>FinOps Handlooms</h3>
-                <p style={{"fontSize":"0.95rem","marginBottom":"1rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Problem:</strong> Logistical bottlenecks and high cart dropoffs during peak wedding shopping seasons.
-                </p>
-                <p style={{"fontSize":"0.95rem","fontWeight":"400","color":"var(--color-slate-light)"}}>
-                  <strong>Solution:</strong> Setup automated customer care pathways, digital reservation bookings, and direct delivery trackers.
-                </p>
-              </div>
-              <div style={{"display":"flex","gap":"2rem","paddingTop":"1.5rem","borderTop":"1px solid var(--color-border-thin)"}}>
-                <div>
-                  <div style={{"fontSize":"1.85rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>+212%</div>
-                  <div style={{"fontSize":"0.7rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Conversions</div>
-                </div>
-                <div>
-                  <div style={{"fontSize":"1.85rem","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800"}}>-40%</div>
-                  <div style={{"fontSize":"0.7rem","fontFamily":"var(--font-body)","color":"var(--color-slate-light)","textTransform":"uppercase","fontWeight":"600"}}>Support Burden</div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     {/*  5. Process Section  */}
     <section id="process" className="bg-navy" style={{
@@ -563,6 +459,139 @@ export default function Home() {
           <p style={{ fontWeight: "700", color: "var(--color-navy)", fontFamily: "var(--font-heading)", fontSize: "1.15rem", textTransform: "uppercase" }}>
             — Vineet Mishra, Founder of NariZari (IIT BHU Alumnus)
           </p>
+        </div>
+      </div>
+    </section>
+
+    {/*  8.5 Testimonials Marquee Section  */}
+    <section className="marquee-section" style={{ position: "relative", zIndex: "1" }}>
+      
+      <div className="marquee-intro">
+        <span className="section-subtitle" style={{ display: "inline-block", marginBottom: "1rem" }}>Client Stories</span>
+        <h2 style={{ fontFamily: "var(--font-heading)", color: "var(--color-navy)", fontSize: "clamp(2.5rem, 4vw, 3.5rem)", letterSpacing: "-0.02em" }}>
+          Don't just take our <span style={{"fontFamily":"var(--font-caveat), cursive", "fontWeight":"500", "color":"var(--color-accent-dark)"}}>word</span> for it.
+        </h2>
+      </div>
+
+      {/* Decorative Ticker */}
+      <div className="testimonial-ticker">
+        <div className="ticker-track">
+          <span>TRUSTED BY HERITAGE BRANDS</span> <span className="ticker-dot">•</span>
+          <span>HIGH TICKET CONVERSIONS</span> <span className="ticker-dot">•</span>
+          <span>LUXURY RETAIL SCALE</span> <span className="ticker-dot">•</span>
+          <span>VARANASI TO THE WORLD</span> <span className="ticker-dot">•</span>
+          <span>TRUSTED BY HERITAGE BRANDS</span> <span className="ticker-dot">•</span>
+          <span>HIGH TICKET CONVERSIONS</span> <span className="ticker-dot">•</span>
+          <span>LUXURY RETAIL SCALE</span> <span className="ticker-dot">•</span>
+          <span>VARANASI TO THE WORLD</span> <span className="ticker-dot">•</span>
+        </div>
+      </div>
+      
+      <div className="marquee-container">
+        {/* Set 1 */}
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Casper Leigh" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Casper Leigh</h4>
+              <span>Director, Veda Silks</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>Awesome services. I am really happy to be here because of their services. I will continue to use their services in the future.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Cian Reyes" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Cian Reyes</h4>
+              <span>Founder, Maison Eclat</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>By far the best thing about this is the efficient team they've put together. Everyone is so knowledgeable and friendly.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="John Doe" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>John Doe</h4>
+              <span>CEO, Aurélie Weaves</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>Just wow. I knew I was going to get a great service, but they went above and beyond my expectations.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Asa Walter" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Asa Walter</h4>
+              <span>Growth, FinOps</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>This is the best thing that happened to my small business. They re-branded and re-organized my company in no time.</p>
+          </div>
+        </div>
+
+        {/* Set 2 (Duplicate for seamless marquee) */}
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Casper Leigh" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Casper Leigh</h4>
+              <span>Director, Veda Silks</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>Awesome services. I am really happy to be here because of their services. I will continue to use their services in the future.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Cian Reyes" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Cian Reyes</h4>
+              <span>Founder, Maison Eclat</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>By far the best thing about this is the efficient team they've put together. Everyone is so knowledgeable and friendly.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="John Doe" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>John Doe</h4>
+              <span>CEO, Aurélie Weaves</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>Just wow. I knew I was going to get a great service, but they went above and beyond my expectations.</p>
+          </div>
+        </div>
+
+        <div className="testimonial-card">
+          <div className="testimonial-header">
+            <img src="/images/avatar.png" alt="Asa Walter" className="testimonial-avatar" />
+            <div className="testimonial-author">
+              <h4>Asa Walter</h4>
+              <span>Growth, FinOps</span>
+            </div>
+          </div>
+          <div className="testimonial-quote">
+            <p>This is the best thing that happened to my small business. They re-branded and re-organized my company in no time.</p>
+          </div>
         </div>
       </div>
     </section>
