@@ -46,6 +46,14 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/contact" className="nav-link">Contact</Link></li>
           </ul>
 
+          <div className="nav-join-dropdown">
+            <button className="join-us-btn">Join Us <i className="fas fa-chevron-down" style={{ fontSize: '0.8em', marginLeft: '4px' }}></i></button>
+            <div className="join-us-menu">
+              <Link href="/#manufacturer">As a Manufacturer</Link>
+              <Link href="/#retailer">As a Retailer</Link>
+            </div>
+          </div>
+
           <div className="nav-socials">
             <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Pinterest"><i className="fab fa-pinterest-p"></i></a>
