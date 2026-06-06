@@ -42,6 +42,7 @@ export default function Navbar({ variant = "default" }) {
           <ul className="nav-links">
             <li><Link href="/services" className="nav-link">Services</Link></li>
             <li><Link href="/shopify" className="nav-link">Shopify Services</Link></li>
+            <li><Link href="/industries" className="nav-link">Industries</Link></li>
             <li><Link href="/case-studies" className="nav-link">Case Studies</Link></li>
             <li><Link href="/contact" className="nav-link">Contact</Link></li>
           </ul>
@@ -98,7 +99,7 @@ export default function Navbar({ variant = "default" }) {
           <ul className="drawer-links">
             <li><Link href="/#services" className="drawer-link" onClick={() => setDrawerOpen(false)}>SERVICES</Link></li>
             <li><Link href="/shopify" className="drawer-link" onClick={() => setDrawerOpen(false)}>SHOPIFY SERVICES</Link></li>
-            <li><Link href="/#services" className="drawer-link" onClick={() => setDrawerOpen(false)}>INDUSTRIES</Link></li>
+            <li><Link href="/industries" className="drawer-link" onClick={() => setDrawerOpen(false)}>INDUSTRIES</Link></li>
             <li><Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>ABOUT US</Link></li>
             <li><Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>CASE STUDIES</Link></li>
             <li><Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>GROWTH FRAMEWORK</Link></li>
