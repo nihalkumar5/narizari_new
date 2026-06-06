@@ -2424,6 +2424,23 @@
   transform: translateY(0);
 }
 
+.mobile-join-dropdown {
+  width: 100%;
+}
+
+.mobile-join-dropdown .join-us-menu {
+  top: auto;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, 10px);
+  width: 90%;
+}
+
+.mobile-join-dropdown:hover .join-us-menu {
+  transform: translate(-50%, 0);
+}
+
 .join-us-menu a {
   padding: 1rem 1.5rem;
   color: var(--color-navy);

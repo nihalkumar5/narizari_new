@@ -102,10 +102,16 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>CASE STUDIES</Link></li>
             <li><Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>GROWTH FRAMEWORK</Link></li>
             <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONNECT</Link></li>
-            <li style={{ marginTop: '1.5rem' }}>
-              <Link href="/careers" className="btn btn-primary join-btn" onClick={() => setDrawerOpen(false)} style={{ width: '100%', justifyContent: 'center', textAlign: 'center', textDecoration: 'none' }}>
-                JOIN US
-              </Link>
+            <li style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+              <div className="nav-join-dropdown mobile-join-dropdown">
+                <button className="join-us-btn" style={{ width: '100%', justifyContent: 'center' }}>
+                  Join Us <i className="fas fa-chevron-down" style={{ fontSize: '0.8em', marginLeft: '4px' }}></i>
+                </button>
+                <div className="join-us-menu">
+                  <Link href="/join?type=manufacturer" onClick={() => setDrawerOpen(false)}>As a Manufacturer</Link>
+                  <Link href="/join?type=wholesaler" onClick={() => setDrawerOpen(false)}>As a Wholesaler</Link>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
