@@ -1,6 +1,7 @@
 
 import Navbar from '@/components/Navbar';
 import ClientLogic from '@/components/ClientLogic';
+import ScrollReveal from '@/components/ScrollReveal';
 
 
 
@@ -32,10 +33,14 @@ export default function Home() {
               <span className="bolt-badge-text">Get the Bolt Conversion Guarantee &rarr;</span>
             </div>
 
-            <h1>Improve Conversion,<br/><span id="typewriter-text">Faster</span><span className="typewriter-cursor">|</span></h1>
-            <p className="hero-desc">
-              We help saree brands increase online sales through premium websites, performance marketing, content systems, and conversion-focused growth strategies.
-            </p>
+            <ScrollReveal direction="up" delay={0.1}>
+              <h1>Improve Conversion,<br/><span id="typewriter-text">Faster</span><span className="typewriter-cursor">|</span></h1>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.2}>
+              <p className="hero-desc">
+                We help saree brands increase online sales through premium websites, performance marketing, content systems, and conversion-focused growth strategies.
+              </p>
+            </ScrollReveal>
             
             <div className="hero-cta-group" style={{"marginTop":"1rem"}}>
               <a href="#contact" className="btn btn-dark-pill" style={{"backgroundColor":"var(--color-navy)","color":"#D6F500","fontWeight":"600","padding":"0.8rem 2rem","fontSize":"1rem"}}>Get started</a>
@@ -98,16 +103,18 @@ export default function Home() {
     {/*  Benefits Bento Section  */}
     <section id="benefits" className="bento-benefits-section">
       <div className="section-container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div className="text-center" style={{ marginBottom: "4rem" }}>
-          <div className="benefit-badge" style={{ color: "var(--color-white)" }}>
-            <span style={{ display: "inline-block", width: "8px", height: "8px", backgroundColor: "#ccff00", borderRadius: "50%", marginRight: "8px", boxShadow: "0 0 10px rgba(204, 255, 0, 0.5)" }}></span>
-            Benefits
+        <ScrollReveal direction="up" delay={0.1}>
+          <div className="text-center" style={{ marginBottom: "4rem" }}>
+            <div className="benefit-badge" style={{ color: "var(--color-white)" }}>
+              <span style={{ display: "inline-block", width: "8px", height: "8px", backgroundColor: "#ccff00", borderRadius: "50%", marginRight: "8px", boxShadow: "0 0 10px rgba(204, 255, 0, 0.5)" }}></span>
+              Benefits
+            </div>
+            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "white" }}>Why work with us?</h2>
+            <p style={{ color: "#a0a0a0", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
+              Great marketing is more than just ads—it is an engine built on strategy, creative, and data.
+            </p>
           </div>
-          <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "white" }}>Why work with us?</h2>
-          <p style={{ color: "#a0a0a0", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
-            Great marketing is more than just ads—it is an engine built on strategy, creative, and data.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="bento-benefits-grid">
           {/* Card 1 */}
@@ -185,37 +192,39 @@ export default function Home() {
     <section id="authority">
       <div className="section-container">
         <div className="swiss-grid">
-          <div className="col-12 text-center" style={{"maxWidth":"800px","marginInline":"auto"}}>
+          <ScrollReveal direction="up" delay={0.1} className="col-12 text-center" style={{"maxWidth":"800px","marginInline":"auto"}}>
             <span className="section-subtitle" style={{"color":"var(--color-navy)","background":"var(--color-accent)","padding":"0.4rem 1rem","borderRadius":"100px","display":"inline-block","fontWeight":"700","marginBottom":"1.5rem"}}>Proven Nationwide Authority</span>
             <h2 style={{"color":"var(--color-navy)","marginBottom":"2rem"}}>Trusted By <span style={{"fontFamily":"var(--font-caveat), cursive", "fontWeight":"500", "fontSize":"1.15em", "display":"inline-block", "transform":"rotate(-2deg)"}}>Brands</span> That Expect <span style={{"fontFamily":"var(--font-caveat), cursive", "fontWeight":"500", "fontSize":"1.15em", "display":"inline-block", "transform":"rotate(-2deg)"}}>Results.</span></h2>
             <p style={{"color":"var(--color-slate-light)","opacity":"0.9","fontWeight":"500","maxWidth":"650px","marginInline":"auto","fontSize":"1.1rem"}}>
               We don't look at vanity traffic. We track profitable, sustained revenue. We help multi-generational handloom houses break local retail limitations and conquer the premium market across Tier 1 metros.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
 
-        <div className="swiss-grid margin-top-lg" id="stats-counter-container" style={{"rowGap":"2rem"}}>
-          {/*  Stat 1  */}
-          <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
-            <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter" data-target="45">0</div>
-            <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>₹ Crores Revenue Influenced</div>
+        <ScrollReveal direction="up" delay={0.2}>
+          <div className="swiss-grid margin-top-lg" id="stats-counter-container" style={{"rowGap":"2rem"}}>
+            {/*  Stat 1  */}
+            <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
+              <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter" data-target="45">0</div>
+              <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>₹ Crores Revenue Influenced</div>
+            </div>
+            {/*  Stat 2  */}
+            <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
+              <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-prefix" data-prefix="" data-target="14" data-suffix="+">0</div>
+              <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Heritage Houses Scaled</div>
+            </div>
+            {/*  Stat 3  */}
+            <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
+              <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-percent" data-target="95">0</div>
+              <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Client Retention Rate</div>
+            </div>
+            {/*  Stat 4  */}
+            <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
+              <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-float" data-target="4.8">0</div>
+              <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Average Digital ROAS</div>
+            </div>
           </div>
-          {/*  Stat 2  */}
-          <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
-            <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-prefix" data-prefix="" data-target="14" data-suffix="+">0</div>
-            <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Heritage Houses Scaled</div>
-          </div>
-          {/*  Stat 3  */}
-          <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
-            <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-percent" data-target="95">0</div>
-            <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Client Retention Rate</div>
-          </div>
-          {/*  Stat 4  */}
-          <div className="col-3 text-center glass-card" style={{"padding":"3rem 1.5rem"}}>
-            <div style={{"fontSize":"clamp(2.8rem, 4vw, 3.8rem)","fontFamily":"var(--font-heading)","color":"var(--color-navy)","fontWeight":"800","lineHeight":"1"}} className="counter-float" data-target="4.8">0</div>
-            <div style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","fontSize":"0.75rem","letterSpacing":"0.1em","color":"var(--color-slate-light)","marginTop":"1.25rem","fontWeight":"700"}}>Average Digital ROAS</div>
-          </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
 
