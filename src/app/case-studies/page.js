@@ -205,6 +205,20 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
+
+        {/* --- FINAL CTA SECTION --- */}
+        <section className="shopify-cta-section animate-on-scroll" style={{marginTop: "5rem", marginBottom: "5rem"}}>
+          <div className="cta-block">
+            <span className="cta-pill"><i className="fab fa-whatsapp"></i> Whatsapp Call</span>
+            <h2>Ready to Grow Like Crazy?</h2>
+            <p>Book your free demo call—let's make your brand the next big thing!</p>
+            <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="cta-btn" style={{textDecoration: "none"}}>Schedule a Free Call <i className="fas fa-arrow-right"></i></a>
+            <div className="cta-trust">
+              <span className="stars" style={{color:"#e056fd", letterSpacing:"2px"}}>★★★★★</span> Trusted by 200+ brands
+            </div>
+          </div>
+        </section>
+
       </main>
 
       {/* Premium Footer */}
