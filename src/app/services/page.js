@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import ClientLogic from '@/components/ClientLogic';
 import Link from 'next/link';
+import './services.css';
 
 const servicesList = [
   {
@@ -33,7 +34,7 @@ const servicesList = [
   },
   {
     id: "05",
-    title: "Conversion Optimization (CRO)",
+    title: "Conversion Optimization",
     desc: "Every element of the checkout and selection path is tuned to increase average order values. We remove purchase objections around fabric authenticity, returns, and color matching.",
     deliverable: "Checkout Optimization",
     image: "/assets/saree_ad_2.png"
@@ -51,64 +52,175 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '80px' }}>
-        <section id="services">
-          <div className="section-container" style={{"borderBottom":"none"}}>
-            <div className="section-intro center">
-              <span className="section-subtitle">What We Build</span>
-              <h2>Quiet Luxury Marketing Systems Built to Command Authority.</h2>
-            </div>
-            {/*  Categories Style Services  */}
-            <div style={{ marginTop: "5rem", display: "flex", flexDirection: "column", gap: "8rem" }}>
-              {servicesList.map((service, index) => (
-                <div key={service.id} className="service-category" style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "4rem", alignItems: "center" }}>
-                  
-                  {/* Text Column */}
-                  <div className="service-text-col" style={{ gridColumn: "span 5", order: index % 2 === 0 ? 1 : 2 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-                      <span style={{ fontSize: "1.5rem", color: "var(--color-accent-dark)" }}>✦</span>
-                      <span style={{ fontFamily: "var(--font-heading)", fontWeight: "700", fontSize: "1.2rem", color: "var(--color-slate-light)" }}>{service.id}</span>
-                    </div>
-                    <h3 style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", marginBottom: "1.5rem", lineHeight: 1.2 }}>{service.title}</h3>
-                    <p style={{ fontSize: "1.1rem", color: "var(--color-slate-light)", marginBottom: "2.5rem", lineHeight: 1.6 }}>
-                      {service.desc}
-                    </p>
-                    <div style={{ fontFamily: "var(--font-body)", fontWeight: "700", fontSize: "0.85rem", letterSpacing: "0.08em", color: "var(--color-accent-dark)", textTransform: "uppercase", marginBottom: "2rem" }}>
-                      Deliverable: {service.deliverable}
-                    </div>
-                    <Link href="/#contact" className="btn btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
-                      Explore Service <i className="fas fa-arrow-right"></i>
-                    </Link>
-                  </div>
-                  
-                  {/* Image Column */}
-                  <div className="service-img-col" style={{ gridColumn: "span 7", order: index % 2 === 0 ? 2 : 1, borderRadius: "24px", overflow: "hidden", boxShadow: "0 30px 60px rgba(0,0,0,0.12)", position: "relative", aspectRatio: "16/10", background: "var(--color-slate-light)" }}>
-                    <img src={service.image} alt={service.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                  </div>
-
-                </div>
-              ))}
-            </div>
+      <main className="services-page" style={{ paddingTop: '80px' }}>
+        
+        {/* Brutalist Hero */}
+        <section className="services-hero">
+          <div className="section-subtitle" style={{ color: "var(--color-navy)", display: "inline-block", marginBottom: "1rem", background: "var(--color-accent)", padding: "0.5rem 1rem", border: "2px solid var(--color-navy)", boxShadow: "3px 3px 0 var(--color-navy)" }}>
+            What We Build
           </div>
+          <h1 className="services-hero-title">Quiet Luxury Marketing<br/>Systems Built To Command<br/><span style={{"fontFamily":"var(--font-caveat), cursive", "fontWeight":"500", "fontSize":"1.15em", "display":"inline-block", "transform":"rotate(-2deg)", "color":"var(--color-accent-dark)"}}>Authority.</span></h1>
+          <p className="services-hero-subtitle">
+            We don't do basic social media management. We engineer complete growth ecosystems for heritage brands that need to scale nationally.
+          </p>
+        </section>
+
+        {/*  Brutalist Services List  */}
+        <section className="services-list">
+          {servicesList.map((service, index) => (
+            <article key={service.id} className="service-row">
+              
+              <div className="service-text-col">
+                <div className="service-number">{service.id}</div>
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-desc">{service.desc}</p>
+                <div className="service-deliverable">
+                  Deliverable: {service.deliverable}
+                </div>
+                <Link href="/contact" className="btn btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", width: "max-content" }}>
+                  Discuss This Service <i className="fas fa-arrow-right"></i>
+                </Link>
+              </div>
+              
+              <div className="service-img-col">
+                <div className="service-img-wrapper">
+                  <img src={service.image} alt={service.title} />
+                </div>
+              </div>
+
+            </article>
+          ))}
         </section>
         
-        {/*  CTA block  */}
-        <section className="section-container" style={{"paddingInline":"0","borderBottom":"none"}}>
-          <div id="contact" className="bg-navy" style={{"textAlign":"center","position":"relative","padding":"clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 5rem)"}}>
-            {/*  Subtle visual accent  */}
-            <div style={{"position":"absolute","top":"-50%","left":"-50%","width":"200%","height":"200%","background":"radial-gradient(circle, rgba(197, 168, 128, 0.08) 0%, transparent 60%)","pointerEvents":"none"}}></div>
+        {/*  Brutalist CTA block  */}
+        <section className="section-container" style={{ borderBottom: "none", paddingBottom: "6rem", paddingTop: "4rem" }}>
+          <div id="contact" style={{
+            backgroundColor: "var(--color-accent)",
+            border: "4px solid var(--color-navy)",
+            boxShadow: "12px 12px 0 var(--color-navy)",
+            textAlign: "center",
+            position: "relative",
+            padding: "clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem)",
+            overflow: "hidden"
+          }}>
+            {/* Decorative Grid Background */}
+            <div style={{
+              position: "absolute",
+              top: 0, left: 0, width: "100%", height: "100%",
+              backgroundImage: "radial-gradient(var(--color-navy) 1px, transparent 1px)",
+              backgroundSize: "20px 20px",
+              opacity: 0.15,
+              pointerEvents: "none"
+            }}></div>
             
-            <div style={{"position":"relative","zIndex":"5","maxWidth":"700px","marginInline":"auto"}}>
-              <span className="section-subtitle" style={{"color":"var(--color-accent)"}}>Ready to Scale?</span>
-              <h2 style={{"color":"var(--color-white)","marginBottom":"1.5rem","fontSize":"clamp(2rem, 3.5vw, 3rem)"}}>Ready To Build A Marketing Engine That Scales?</h2>
-              <p style={{"color":"var(--color-white)","opacity":"0.85","marginBottom":"3rem","fontSize":"1.15rem","fontWeight":"400","maxWidth":"550px","marginInline":"auto"}}>
+            {/* Abstract Decorative Elements */}
+            <div style={{
+              position: "absolute",
+              top: "-20px",
+              left: "-20px",
+              width: "100px",
+              height: "100px",
+              border: "4px solid var(--color-navy)",
+              borderRadius: "50%",
+              pointerEvents: "none"
+            }}></div>
+            <div style={{
+              position: "absolute",
+              bottom: "-30px",
+              right: "40px",
+              width: "80px",
+              height: "80px",
+              backgroundColor: "var(--color-white)",
+              border: "4px solid var(--color-navy)",
+              pointerEvents: "none",
+              transform: "rotate(15deg)"
+            }}></div>
+
+            <div style={{ position: "relative", zIndex: 5, maxWidth: "750px", marginInline: "auto" }}>
+              <div style={{
+                display: "inline-block",
+                padding: "0.5rem 1rem",
+                backgroundColor: "var(--color-navy)",
+                color: "var(--color-white)",
+                fontFamily: "var(--font-heading)",
+                fontWeight: "700",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                marginBottom: "2rem",
+                boxShadow: "4px 4px 0 var(--color-white)",
+                border: "2px solid var(--color-white)"
+              }}>
+                Action Required
+              </div>
+              <h2 style={{
+                fontFamily: "var(--font-heading)",
+                color: "var(--color-navy)",
+                marginBottom: "1.5rem",
+                fontSize: "clamp(2.5rem, 4vw, 4rem)",
+                lineHeight: "1.1",
+                textTransform: "uppercase"
+              }}>
+                Ready To Build A Marketing Engine That <span style={{ color: "var(--color-white)", textShadow: "2px 2px 0 var(--color-navy)" }}>Scales?</span>
+              </h2>
+              <p style={{
+                fontFamily: "var(--font-body)",
+                color: "var(--color-navy)",
+                marginBottom: "3rem",
+                fontSize: "1.2rem",
+                fontWeight: "600",
+                maxWidth: "600px",
+                marginInline: "auto",
+                lineHeight: "1.6"
+              }}>
                 Schedule a 30-minute heritage brand discovery call. We'll outline your market opportunities and analyze how to take your traditional saree house national.
               </p>
-              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="btn btn-white" style={{"fontSize":"0.95rem","padding":"1rem 2.5rem"}}>Book Your Strategy Call</a>
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{
+                fontSize: "1.1rem",
+                padding: "1rem 2.5rem",
+                backgroundColor: "var(--color-navy)",
+                color: "var(--color-white)",
+                boxShadow: "4px 4px 0 var(--color-white)"
+              }}>
+                Book Your Strategy Call
+              </a>
             </div>
           </div>
         </section>
       </main>
+
+      {/* Premium Footer */}
+      <footer className="premium-footer">
+        <div className="premium-footer-bg"></div>
+        <div className="premium-footer-grid">
+          <div className="premium-footer-brand">
+            <h2>Nari<span>Zari.</span></h2>
+            <p className="premium-footer-desc">
+              We build high-converting marketing systems and digital showrooms to scale premium Varanasi Saree brands nationwide.
+            </p>
+          </div>
+          <div className="premium-footer-col">
+            <h3>Start Scaling</h3>
+            <div className="premium-footer-links">
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer">Book Discovery Call <i className="fas fa-arrow-right" style={{fontSize: "0.8em", marginLeft: "4px"}}></i></a>
+              <a href="/services">Our Services</a>
+              <a href="/#process">The Framework</a>
+            </div>
+          </div>
+          <div className="premium-footer-col">
+            <h3>Connect</h3>
+            <div className="premium-footer-links">
+              <a href="https://linkedin.com">LinkedIn</a>
+              <a href="https://instagram.com">Instagram</a>
+              <a href="mailto:hello@narizari.com">hello@narizari.com</a>
+            </div>
+          </div>
+        </div>
+        <div className="premium-footer-bottom">
+          <span>&copy; {new Date().getFullYear()} NariZari. All Rights Reserved.</span>
+          <span>Designed for High-Ticket Heritage.</span>
+        </div>
+      </footer>
+      
       <ClientLogic />
     </>
   );
