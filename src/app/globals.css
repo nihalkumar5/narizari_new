@@ -402,7 +402,7 @@
     right: 0;
     bottom: 0;
     width: min(450px, 100vw);
-    background: rgba(18, 18, 18, 0.96);
+    background: rgba(18, 18, 18, 0.65);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
