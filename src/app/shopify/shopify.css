@@ -117,8 +117,11 @@ body.shopify-dark-theme .join-us-menu a {
     gap: 1.5rem;
   }
   .huge-title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
     text-align: center;
+    word-break: break-word;
+    hyphens: auto;
+    letter-spacing: 0;
   }
   .text-blocks {
     grid-template-columns: 1fr;
@@ -126,6 +129,10 @@ body.shopify-dark-theme .join-us-menu a {
   }
   .folder-card {
     padding: 1.5rem;
+  }
+  .bottom-folders {
+    flex-direction: column;
+    height: auto;
   }
 }
 
@@ -770,13 +777,34 @@ body.shopify-dark-theme .join-us-menu a {
 .accent-yellow .essential-number { background: var(--color-yellow); }
 
 @media (max-width: 768px) {
+  .shopify-essential-section {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+  .shopify-bento-section {
+    padding: 2rem 1rem;
+  }
+  .shopify-bento-card {
+    padding: 1.5rem;
+  }
+  .essential-stagger-container {
+    gap: 1.5rem;
+  }
   .essential-card {
     width: 100%;
-    align-self: center;
+    align-self: center !important;
     flex-direction: column !important;
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
   }
+  .essential-card p {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  .accent-lavender { box-shadow: 4px 4px 0 var(--color-lavender) !important; }
+  .accent-orange { box-shadow: 4px 4px 0 var(--color-orange) !important; }
+  .accent-cyan { box-shadow: 4px 4px 0 #00E6B8 !important; }
+  .accent-yellow { box-shadow: 4px 4px 0 var(--color-yellow) !important; }
 }
 
 /* --- TRANSFORMATION SHOWCASE --- */
