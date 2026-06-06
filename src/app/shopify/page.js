@@ -150,6 +150,72 @@ export default function Shopify() {
           </div>
         </section>
 
+        {/* --- TRANSFORMATION SHOWCASE --- */}
+        <section className="shopify-transformation-section">
+          <div className="transformation-header">
+            <span className="section-subtitle" style={{color:"var(--color-navy)", background:"var(--text-light)"}}>UX/UI Upgrade</span>
+            <h2>Conversion Rate Transformations</h2>
+            <p>See how we redesign outdated funnels into high-converting luxury experiences.</p>
+          </div>
+          <div className="transformation-grid">
+            <div className="transformation-card">
+              <h3>Product Page Optimization</h3>
+              <img src="/assets/before_after_product.png" alt="Product Page Before and After" />
+            </div>
+            <div className="transformation-card">
+              <h3>Streamlined Checkout Flow</h3>
+              <img src="/assets/before_after_checkout.png" alt="Checkout Before and After" />
+            </div>
+            <div className="transformation-card">
+              <h3>Editorial Homepage Redesign</h3>
+              <img src="/assets/before_after_home.png" alt="Homepage Before and After" />
+            </div>
+          </div>
+        </section>
+
+        {/* --- TESTIMONIALS SECTION --- */}
+        <section className="shopify-testimonial-section">
+          <div className="testimonial-header">
+            <span className="testimonial-subtitle">Client Success</span>
+            <h2>What They Say?</h2>
+          </div>
+          <div className="testimonial-cards-container">
+            <div className="testi-card card-green">
+              <div className="stars">★★★★★</div>
+              <p>I honestly didn't realise how much of a difference a professional redesign would make until I tried this service. The team delivered a stunning website that looks exactly like a premium luxury brand. Our conversion rates have skyrocketed!</p>
+              <div className="testi-author">
+                <img src="/images/avatar.png" alt="User" />
+                <div>
+                  <strong>Sneha Sharma</strong>
+                  <span>Saree Retailer</span>
+                </div>
+              </div>
+            </div>
+            <div className="testi-card card-pink">
+              <div className="stars">★★★★★</div>
+              <p>We booked a complete Shopify overhaul before launching our new collection and was amazed at the attention to detail. They tackled areas I wouldn't even think to optimize. It felt like walking into a brand-new digital flagship store. Highly recommend!</p>
+              <div className="testi-author">
+                <img src="/images/avatar.png" alt="User" />
+                <div>
+                  <strong>Rahul Verma</strong>
+                  <span>Wholesale Distributor</span>
+                </div>
+              </div>
+            </div>
+            <div className="testi-card card-white">
+              <div className="stars">★★★★★</div>
+              <p>I use them for a regular monthly optimization and it's been a total game-changer. They're reliable, data-driven, and always go above and beyond. Seeing our sales dashboard hit new numbers each week is the best feeling.</p>
+              <div className="testi-author">
+                <img src="/images/avatar.png" alt="User" />
+                <div>
+                  <strong>Priya Patel</strong>
+                  <span>Boutique Owner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
     </>
   );
