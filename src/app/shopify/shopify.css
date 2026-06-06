@@ -1147,33 +1147,38 @@ body.shopify-dark-theme .join-us-menu a {
 
 .why-choose-footer {
   text-align: center;
-  background: var(--text-light);
+  background-color: var(--text-light);
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
   padding: 5rem 2rem;
   border-radius: 24px;
-  border: none;
-  box-shadow: none;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
   margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .why-choose-footer p {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  color: var(--bg-dark);
-  margin-bottom: 2.5rem;
-  font-style: normal;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #111;
+  margin-bottom: 3rem;
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  max-width: 900px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 950px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .why-connect-btn {
   background: var(--color-accent);
-  color: var(--bg-dark);
+  color: #000 !important;
   padding: 1.2rem 3.5rem;
-  font-weight: 800;
+  font-weight: 900;
   border: none;
   border-radius: 50px;
   text-decoration: none;
@@ -1181,13 +1186,13 @@ body.shopify-dark-theme .join-us-menu a {
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
-  box-shadow: 0 10px 30px rgba(200, 255, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(200, 255, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .why-connect-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(200, 255, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(200, 255, 0, 0.6);
 }
 
 /* --- TESTIMONIAL SECTION --- */
@@ -1324,4 +1329,159 @@ body.shopify-dark-theme .join-us-menu a {
     transform: none !important;
     width: 90%;
   }
+}
+
+/* --- FINAL CTA SECTION --- */
+.shopify-cta-section {
+  grid-column: 1 / -1;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.shopify-cta-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-block {
+  background: var(--bg-dark);
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 24px;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(200, 255, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.cta-pill {
+  background: rgba(200, 255, 0, 0.1);
+  border: 1px solid rgba(200, 255, 0, 0.3);
+  color: var(--color-accent);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-block h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.cta-block p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.cta-btn {
+  background: var(--color-accent);
+  color: #000 !important;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(200, 255, 0, 0.3);
+}
+
+.cta-trust {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- FOOTER --- */
+.shopify-footer {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4rem 4rem 2rem 4rem;
+  background: #000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
 }
