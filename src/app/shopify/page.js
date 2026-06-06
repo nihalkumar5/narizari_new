@@ -1,227 +1,192 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import './storefront.css';
+import './shopify.css';
 
 export default function Shopify() {
-  const [view, setView] = useState('selection'); // 'selection' | 'storefront'
-  const [theme, setTheme] = useState('minimal'); // 'minimal' | 'heritage' | 'brutalist'
-
-  const handleSelectTheme = (selected) => {
-    setTheme(selected);
-    setView('storefront');
-  };
-
-  const handleBack = () => {
-    setView('selection');
-  };
-
-  // Dummy products for the preview
-  const products = [
-    { id: 1, name: "Banarasi Pure Silk Handloom", price: "₹28,500", image: "/assets/bento_marketing_1.png" },
-    { id: 2, name: "Katan Silk Brocade Saree", price: "₹34,000", image: "/assets/case-study-ecom.png" },
-    { id: 3, name: "Georgette Zari Weave", price: "₹18,900", image: "/assets/saree_ad_1.png" },
-    { id: 4, name: "Organza Tissue Saree", price: "₹22,400", image: "/assets/case-study-brand.png" },
-  ];
+  useEffect(() => {
+    document.body.classList.add('shopify-dark-theme');
+    return () => {
+      document.body.classList.remove('shopify-dark-theme');
+    };
+  }, []);
 
   return (
     <>
-      <Navbar />
+      <Navbar variant="shopify" />
+      <main className="shopify-main">
+        
+    {/*  LEFT COLUMN  */}
+    <div className="left-col">
       
-      {view === 'selection' && (
-        <main className="theme-selector-view">
-          <div className="theme-selector-header">
-            <div className="section-subtitle" style={{ display: "inline-block", marginBottom: "1rem", backgroundColor: "var(--color-navy)", color: "var(--color-white)", padding: "0.5rem 1rem", border: "2px solid var(--color-white)", boxShadow: "4px 4px 0 var(--color-accent)" }}>Interactive Preview</div>
-            <h1>Choose Your <span style={{ color: "var(--color-accent-dark)" }}>Design System</span></h1>
-            <p style={{ fontSize: "1.2rem", color: "var(--color-slate)", maxWidth: "600px", margin: "0 auto" }}>
-              Select an architecture below to preview how our custom Shopify engine adapts to your specific brand aesthetic.
-            </p>
+      <div className="huge-title">
+        <div className="row-1">UNLIMITED</div>
+        <div className="row-2">ECOMMERCE</div>
+        <div className="row-3">
+          <div className="avatar-group">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" />
+            <img src="https://i.pravatar.cc/150?img=9" alt="Avatar" />
+            <img src="https://i.pravatar.cc/150?img=12" alt="Avatar" />
+            <div className="orange-circle"></div>
           </div>
+          SCALING
+        </div>
+      </div>
 
-          <div className="theme-grid">
-            
-            {/* Minimal Card */}
-            <div className="theme-card" onClick={() => handleSelectTheme('minimal')}>
-              <div className="theme-card-icon">✦</div>
-              <h3>Minimal Luxury</h3>
-              <p>Clean lines, abundant white space, and elegant sans-serif typography. Perfect for modern, understated elegance.</p>
-            </div>
+      <div className="text-blocks">
+        <p>Our Solutions</p>
+        <p>We Provide The Full<br/>Funnel Approach</p>
+      </div>
 
-            {/* Heritage Card */}
-            <div className="theme-card" onClick={() => handleSelectTheme('heritage')}>
-              <div className="theme-card-icon">✤</div>
-              <h3>Heritage Classic</h3>
-              <p>Warm tones, serif typography, and traditional framing. Built for legacy brands with deep roots.</p>
-            </div>
-
-            {/* Brutalist Card */}
-            <div className="theme-card" onClick={() => handleSelectTheme('brutalist')}>
-              <div className="theme-card-icon">⬛</div>
-              <h3>Modern Brutalist</h3>
-              <p>High-contrast, thick borders, neon accents, and heavy typography. Designed to command absolute authority.</p>
-            </div>
-
-          </div>
-        </main>
-      )}
-
-      {view === 'storefront' && (
-        <div className="storefront-wrapper">
-          <button className="back-to-themes-btn" onClick={handleBack}>
-            <i className="fas fa-arrow-left"></i> Back To Themes
+      <div className="bottom-left">
+        <div className="play-video">
+          <button className="play-btn">
+            <i className="fas fa-play"></i>
           </button>
-
-          <div className="storefront-browser">
-            {/* Browser Chrome Bar */}
-            <div className="browser-chrome">
-              <div className="browser-dot red"></div>
-              <div className="browser-dot yellow"></div>
-              <div className="browser-dot green"></div>
-              <div className="browser-url">
-                https://demo.{theme}sarees.com
-              </div>
-            </div>
-
-            {/* The Actual Storefront Preview */}
-            <div className={`sf-body theme-${theme}`}>
-              
-              {/* Promo Banner */}
-              <div className="sf-promo-banner">
-                <p>COMPLIMENTARY WORLDWIDE SHIPPING ON ORDERS OVER ₹50,000</p>
-              </div>
-
-              {/* Nav */}
-              <nav className="sf-nav">
-                <div className="sf-logo">
-                  {theme === 'minimal' && 'The Silk Edit.'}
-                  {theme === 'heritage' && 'Veda Heritage'}
-                  {theme === 'brutalist' && 'NARI ZARI'}
-                </div>
-                <ul className="sf-nav-links">
-                  <li><a href="#">New Arrivals</a></li>
-                  <li><a href="#">Bridal</a></li>
-                  <li><a href="#">Katan Silk</a></li>
-                  <li><a href="#">Collections</a></li>
-                </ul>
-                <div className="sf-nav-icons">
-                  <i className="fas fa-search"></i>
-                  <i className="far fa-user"></i>
-                  <i className="fas fa-shopping-bag"></i>
-                </div>
-              </nav>
-
-              {/* Hero */}
-              <section className="sf-hero">
-                <div className="sf-hero-content">
-                  <div className="sf-hero-badge">NEW BRIDAL COLLECTION</div>
-                  <h1 className="sf-hero-title">
-                    {theme === 'minimal' && 'Quiet Elegance.'}
-                    {theme === 'heritage' && 'Woven in Tradition.'}
-                    {theme === 'brutalist' && 'UNAPOLOGETIC LUXURY.'}
-                  </h1>
-                  <p className="sf-hero-desc">
-                    Explore our latest collection of handwoven masterpieces direct from the looms of Varanasi. Crafted for generations.
-                  </p>
-                  <div className="sf-hero-actions">
-                    <button className="sf-btn-primary">Shop Collection</button>
-                    <button className="sf-btn-secondary">View Lookbook</button>
-                  </div>
-                </div>
-                <div className="sf-hero-img">
-                  <div className="img-wrapper">
-                    <img src="/assets/shopify_hero.png" alt="Saree Hero" />
-                  </div>
-                </div>
-              </section>
-
-              {/* Features / Benefits */}
-              <section className="sf-features">
-                <div className="sf-feature">
-                  <i className="fas fa-certificate"></i>
-                  <h4>Silk Mark Certified</h4>
-                  <p>100% authentic pure handloom silk</p>
-                </div>
-                <div className="sf-feature">
-                  <i className="fas fa-globe-asia"></i>
-                  <h4>Global Shipping</h4>
-                  <p>Secure, insured delivery worldwide</p>
-                </div>
-                <div className="sf-feature">
-                  <i className="fas fa-undo"></i>
-                  <h4>Easy Returns</h4>
-                  <p>Hassle-free 14-day return policy</p>
-                </div>
-              </section>
-
-              {/* Products Section */}
-              <section className="sf-products-section">
-                <div className="sf-section-header">
-                  <h2>Curated Selection</h2>
-                  <a href="#">View All <i className="fas fa-arrow-right"></i></a>
-                </div>
-                <div className="sf-products">
-                  {products.map((product, index) => (
-                    <div key={product.id} className="sf-product-card">
-                      <div className="sf-product-img">
-                        {index === 0 && <span className="sf-badge bestseller">Bestseller</span>}
-                        {index === 1 && <span className="sf-badge new">New</span>}
-                        <img src={product.image} alt={product.name} />
-                        <div className="sf-quick-add">
-                          <button>Quick Add +</button>
-                        </div>
-                      </div>
-                      <div className="sf-product-info">
-                        <div>
-                          <div className="sf-stars">
-                            <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                          </div>
-                          <h4 className="sf-product-title">{product.name}</h4>
-                          <p className="sf-product-price">{product.price}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Footer */}
-              <footer className="sf-footer">
-                <div className="sf-footer-grid">
-                  <div className="sf-footer-col">
-                    <div className="sf-logo-footer">
-                      {theme === 'minimal' && 'The Silk Edit.'}
-                      {theme === 'heritage' && 'Veda Heritage'}
-                      {theme === 'brutalist' && 'NARI ZARI'}
-                    </div>
-                    <p>Curators of authentic handwoven luxury from Varanasi.</p>
-                  </div>
-                  <div className="sf-footer-col">
-                    <h4>Shop</h4>
-                    <a href="#">Sarees</a>
-                    <a href="#">Lehengas</a>
-                    <a href="#">Fabrics</a>
-                  </div>
-                  <div className="sf-footer-col">
-                    <h4>Support</h4>
-                    <a href="#">Contact</a>
-                    <a href="#">Shipping</a>
-                    <a href="#">Returns</a>
-                  </div>
-                  <div className="sf-footer-col newsletter-col">
-                    <h4>Join the List</h4>
-                    <div className="sf-newsletter">
-                      <input type="email" placeholder="Email Address" />
-                      <button>→</button>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-
-            </div>
+          <div className="play-text">
+            Let's See<br/>How We Did It
           </div>
         </div>
-      )}
+
+        <div className="pill-tags">
+          <div className="pill">Custom Themes</div>
+          <div className="pill">Conversion Audits</div>
+          <div className="pill">Speed Optimization</div>
+        </div>
+      </div>
+    </div>
+
+    {/*  RIGHT COLUMN  */}
+    <div className="right-col">
+      
+      {/*  Big Lavender Folder  */}
+      <div className="folder-card card-lavender">
+        <div className="lavender-top">
+          <div className="lavender-title">Your<br/>Business<br/>Boost</div>
+          <div style={{"display":"flex","gap":"5px"}}>
+            <div style={{"width":"8px","height":"8px","background":"#fff","borderRadius":"50%"}}></div>
+            <div style={{"width":"8px","height":"8px","border":"1px solid #fff","borderRadius":"50%"}}></div>
+          </div>
+        </div>
+        
+        <img src="/assets/shopify_hero.png" alt="Hero Model" className="hero-model" />
+        
+        <div className="demo-bar">
+          <span style={{"fontWeight":"500","fontSize":"1.1rem"}}>Book Demo Call</span>
+          <button className="demo-btn">
+            <i className="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      {/*  Small Folders Row  */}
+      <div className="bottom-folders">
+        
+        {/*  Orange  */}
+        <div className="small-folder card-orange">
+          <div className="small-folder-title">Unique<br/>Business Solutions</div>
+          <div className="small-folder-bottom">
+            <i className="fas fa-cubes" style={{"fontSize":"2.5rem"}}></i>
+          </div>
+        </div>
+
+        {/*  Grey  */}
+        <div className="small-folder card-grey">
+          <div className="small-folder-title" style={{"display":"flex","justifyContent":"space-between"}}>
+            <div style={{"display":"flex","gap":"5px","alignItems":"center"}}>
+              <div style={{"width":"6px","height":"6px","background":"#000","borderRadius":"50%"}}></div>
+              <div style={{"width":"6px","height":"6px","border":"1px solid #000","borderRadius":"50%"}}></div>
+            </div>
+            <i className="fas fa-arrow-up-right-from-square" style={{"fontSize":"1.5rem","fontWeight":"300"}}></i>
+          </div>
+          <div className="small-folder-bottom">
+            Our Case<br/>Studies
+          </div>
+        </div>
+
+        {/*  Yellow  */}
+        <div className="small-folder card-yellow">
+          <div className="small-folder-title">Successful<br/>Projects</div>
+          <div className="small-folder-bottom yellow-number">
+            700<sup>+</sup>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+        {/* --- BENTO GRID SECTION --- */}
+        <section className="shopify-bento-section">
+          <h2 className="shopify-bento-header">The NariZari E-Commerce System</h2>
+          
+          <div className="shopify-bento-grid">
+            
+            {/* 1. Large Orange Card */}
+            <div className="shopify-bento-card card-ecommerce">
+              <span className="shopify-bento-tag">Performance</span>
+              <div className="ecommerce-content">
+                <div>
+                  <h3 className="shopify-bento-title">High-Octane<br/>E-Commerce Engine</h3>
+                  <p className="shopify-bento-text">Custom Shopify architecture built for speed and conversions.</p>
+                  <div className="ecommerce-stats">
+                    <div className="stat-item">
+                      <span className="stat-num">3x</span>
+                      <span className="stat-label">Faster Loads</span>
+                    </div>
+                    <div className="stat-item">
+                      <span className="stat-num">45%</span>
+                      <span className="stat-label">Conv. Uplift</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="/assets/shopify_engine_dashboard.png" alt="High-Octane E-Commerce Dashboard" />
+            </div>
+
+            {/* 2. Tall Card */}
+            <div className="shopify-bento-card card-growth">
+              <span className="shopify-bento-tag" style={{ color: "rgba(0,0,0,0.5)" }}>Ecosystem</span>
+              <h3 className="shopify-bento-title">Holistic<br/>Growth<br/>System</h3>
+              <p className="shopify-bento-text" style={{ color: "var(--text-light)" }}>Everything from paid media to email retention, integrated.</p>
+              <img src="/assets/shopify_growth_nodes.png" alt="Holistic Growth Network Nodes" />
+            </div>
+
+            {/* 3. Wide Card */}
+            <div className="shopify-bento-card card-integration">
+              <span className="shopify-bento-tag" style={{ color: "rgba(0,0,0,0.5)" }}>Tech Stack</span>
+              <h3 className="shopify-bento-title">Seamless Integration</h3>
+              <p className="shopify-bento-text" style={{ color: "var(--bg-dark)", maxWidth: "60%" }}>
+                We connect your favorite tools directly into your Shopify ecosystem.
+              </p>
+              <div className="integration-logos">
+                <i className="fab fa-shopify"></i>
+                <i className="fab fa-mailchimp"></i>
+                <i className="fab fa-stripe"></i>
+                <i className="fab fa-facebook"></i>
+                <i className="fab fa-google"></i>
+              </div>
+            </div>
+
+            {/* 4. Square Dark Card */}
+            <div className="shopify-bento-card card-global">
+              <span className="shopify-bento-tag">Reach</span>
+              <h3 className="shopify-bento-title">Scale Globally,<br/>Act Locally.</h3>
+            </div>
+
+            {/* 5. Square Grey Card */}
+            <div className="shopify-bento-card card-strategies">
+              <img src="/images/avatar.png" alt="Strategist Avatar" className="avatar-img" />
+              <h3 className="shopify-bento-title" style={{ fontSize: "1.5rem" }}>Expert Strategies</h3>
+              <p className="shopify-bento-text" style={{ fontSize: "0.9rem", color: "var(--bg-dark)" }}>
+                Direct access to our top e-commerce growth specialists.
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </main>
     </>
   );
 }
