@@ -210,6 +210,44 @@ export default function Careers() {
           </div>
         </section>
 
+        {/* APPLICATION FORM SECTION */}
+        <section className="application-section" id="apply">
+          <div className="application-container">
+            <div className="application-header">
+              <h2>Join Our Team</h2>
+              <p>Don't see a perfect fit above? We're always looking for top talent. Drop your resume here.</p>
+            </div>
+            <form className="application-form" onSubmit={(e) => e.preventDefault()}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Full Name</label>
+                  <input type="text" id="name" placeholder="John Doe" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input type="email" id="email" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="role">Desired Role or Department</label>
+                <input type="text" id="role" placeholder="e.g. Frontend Developer" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="portfolio">Portfolio / LinkedIn URL</label>
+                <input type="url" id="portfolio" placeholder="https://" />
+              </div>
+              <div className="form-group file-upload-group">
+                <label htmlFor="resume" className="file-upload-label">
+                  <i className="fas fa-cloud-upload-alt"></i>
+                  <span>Upload Resume (PDF, DOCX)</span>
+                  <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+                </label>
+              </div>
+              <button type="submit" className="btn-solid submit-btn">Submit Application</button>
+            </form>
+          </div>
+        </section>
+
       </main>
 
       {/* Premium Footer */}
