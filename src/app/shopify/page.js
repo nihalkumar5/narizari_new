@@ -256,6 +256,87 @@ export default function Shopify() {
           </div>
         </section>
 
+        {/* --- WHY CHOOSE SECTION --- */}
+        <section className="shopify-why-choose animate-on-scroll">
+          <div className="why-choose-header">
+            <h2>Why Choose <span className="neon-text">NariZari</span> for Your E-commerce Brand's Growth?</h2>
+            <p>At NariZari, we're not just another digital marketing agency—we're your growth partners. We work closely with e-commerce brands to craft tailored, performance-driven strategies that turn traffic into revenue and one-time buyers into loyal customers.</p>
+          </div>
+
+          <h3 className="why-choose-subtitle">What Makes Us Different?</h3>
+          
+          <div className="why-choose-grid">
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-chart-line"></i></div>
+              <h4>Proven Shopify Growth Experts</h4>
+              <p>We have helped multiple Shopify brands scale to 6, 7, and even 8 figures using a blend of paid ads, conversion optimization, and retention marketing.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-bullseye"></i></div>
+              <h4>Data-Driven & ROI-Focused Strategies</h4>
+              <p>Every decision we make is backed by analytics, split-testing, and consumer behavior insights, ensuring that your budget is spent efficiently and profitably.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-funnel-dollar"></i></div>
+              <h4>Full-Funnel Approach</h4>
+              <p>From customer acquisition (ads, SEO) to retention (email, SMS), we create a seamless strategy that maximizes LTV and profitability.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-palette"></i></div>
+              <h4>Creative & Ad Strategy That Converts</h4>
+              <p>Our in-house creative team designs high-converting ad creatives that engage, persuade, and drive action—leading to higher ROAS.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-icon"><i className="fas fa-handshake"></i></div>
+              <h4>Dedicated Account Management</h4>
+              <p>We provide personalized, hands-on account management, ensuring that your brand gets the attention, insights, and strategic guidance needed to scale.</p>
+            </div>
+          </div>
+          
+          <div className="why-choose-footer">
+            <p>With NariZari, you're not just hiring an agency—you're partnering with a team committed to your brand's long-term success.</p>
+            <a href="/contact" className="why-connect-btn">LET'S CONNECT NOW!</a>
+          </div>
+        </section>
+
+        {/* --- FINAL CTA SECTION --- */}
+        <section className="shopify-cta-section animate-on-scroll">
+          <div className="cta-block">
+            <span className="cta-pill"><i className="fab fa-whatsapp"></i> Whatsapp Call</span>
+            <h2>Ready to Grow Like Crazy?</h2>
+            <p>Book your free demo call—let's make your brand the next big thing!</p>
+            <button className="cta-btn">Schedule a Free Call <i className="fas fa-arrow-right"></i></button>
+            <div className="cta-trust">
+              <span className="stars" style={{color:"#e056fd", letterSpacing:"2px"}}>★★★★★</span> Trusted by 200+ brands
+            </div>
+          </div>
+        </section>
+
+        {/* --- FOOTER --- */}
+        <footer className="shopify-footer">
+          <div className="footer-content">
+            <div className="footer-logo">
+              <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.8rem", fontWeight: "800", color: "var(--color-white)", letterSpacing: "-0.02em" }}>
+                Nari<span style={{ color: "var(--color-accent)" }}>Zari</span>
+              </span>
+              <p>Premium Shopify Growth & Marketing Agency</p>
+            </div>
+            <div className="footer-links">
+              <a href="#">Home</a>
+              <a href="#">Case Studies</a>
+              <a href="#">Services</a>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>&copy; {new Date().getFullYear()} NariZari. All rights reserved.</p>
+          </div>
+        </footer>
+
       </main>
     </>
   );
