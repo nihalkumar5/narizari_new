@@ -162,9 +162,9 @@
 }
 
 .ind-card:hover .ind-bg-image {
-  opacity: 0.6;
+  opacity: 1;
   transform: scale(1.05);
-  filter: grayscale(20%) contrast(1.2);
+  filter: grayscale(0%) contrast(1.1);
 }
 
 .ind-content {
