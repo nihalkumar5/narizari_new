@@ -3,6 +3,24 @@ import Navbar from '@/components/Navbar';
 export default function CaseStudies() {
   return (
     <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .cs-grid-12 {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+        }
+        .cs-col-6 {
+          grid-column: span 6;
+        }
+        @media (max-width: 768px) {
+          .cs-grid-12 {
+            display: flex;
+            flex-direction: column;
+          }
+          .cs-col-6 {
+            grid-column: auto;
+          }
+        }
+      `}} />
       <Navbar />
       <main className="case-studies-page" style={{ paddingTop: '8rem', backgroundColor: 'var(--color-bg)' }}>
         <section className="section-container" style={{"paddingInline":"0","borderBottom":"none"}}>
@@ -16,12 +34,12 @@ export default function CaseStudies() {
 
             <div className="bento-grid">
               {/*  Case Study 1  */}
-              <article className="bento-card bento-span-12" style={{"padding":"0","border":"1px solid var(--color-border-thin)","backgroundColor":"var(--color-white)","overflow":"hidden","display":"grid","gridTemplateColumns":"repeat(12, 1fr)","borderRadius":"28px"}}>
-                <div className="col-6 hover-reveal-container" style={{"gridColumn":"span 6","padding":"0","borderBottom":"none"}}>
-                  <img src="/assets/case-study-ecom.png" alt="Maison Eclat premium Varanasi Saree online store mockup" className="hover-reveal-img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <article className="bento-card bento-span-12 cs-grid-12" style={{"padding":"0","border":"1px solid var(--color-border-thin)","backgroundColor":"var(--color-white)","overflow":"hidden","borderRadius":"28px"}}>
+                <div className="hover-reveal-container cs-col-6" style={{"padding":"0","borderBottom":"none"}}>
+                  <img src="/assets/case-study-ecom.png" alt="Maison Eclat premium Varanasi Saree online store mockup" className="hover-reveal-img" style={{ width: "100%", height: "100%", objectFit: "cover", minHeight: "300px" }} />
                   <div className="hover-overlay"></div>
                 </div>
-                <div style={{"gridColumn":"span 6","padding":"clamp(2rem, 4vw, 3.5rem)","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"2rem"}}>
+                <div className="cs-col-6" style={{"padding":"clamp(2rem, 4vw, 3.5rem)","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"2rem"}}>
                   <div>
                     <span style={{"fontFamily":"var(--font-body)","fontSize":"0.75rem","fontWeight":"700","color":"var(--color-accent-dark)","letterSpacing":"0.08em","textTransform":"uppercase"}}>01. Digital Transformation</span>
                     <h3 style={{"marginBlock":"0.75rem","fontSize":"2rem", "fontFamily": "var(--font-heading)", "color": "var(--color-navy)", "fontWeight": "800"}}>Maison Eclat</h3>
@@ -110,8 +128,8 @@ export default function CaseStudies() {
               </article>
 
               {/*  Case Study 4  */}
-              <article className="bento-card bento-span-12" style={{"padding":"0","border":"1px solid var(--color-border-thin)","backgroundColor":"var(--color-white)","overflow":"hidden","display":"grid","gridTemplateColumns":"repeat(12, 1fr)","borderRadius":"28px"}}>
-                <div style={{"gridColumn":"span 6","padding":"clamp(2rem, 4vw, 3.5rem)","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"2rem"}}>
+              <article className="bento-card bento-span-12 cs-grid-12" style={{"padding":"0","border":"1px solid var(--color-border-thin)","backgroundColor":"var(--color-white)","overflow":"hidden","borderRadius":"28px"}}>
+                <div className="cs-col-6" style={{"padding":"clamp(2rem, 4vw, 3.5rem)","display":"flex","flexDirection":"column","justifyContent":"space-between","gap":"2rem"}}>
                   <div>
                     <span style={{"fontFamily":"var(--font-body)","fontSize":"0.75rem","fontWeight":"700","color":"var(--color-accent-dark)","letterSpacing":"0.08em","textTransform":"uppercase"}}>04. D2C Expansion</span>
                     <h3 style={{"marginBlock":"0.75rem","fontSize":"2rem", "fontFamily": "var(--font-heading)", "color": "var(--color-navy)", "fontWeight": "800"}}>Veda Silk House</h3>
@@ -137,7 +155,7 @@ export default function CaseStudies() {
                     </div>
                   </div>
                 </div>
-                <div className="col-6 hover-reveal-container" style={{"gridColumn":"span 6","padding":"0","borderBottom":"none"}}>
+                <div className="hover-reveal-container cs-col-6" style={{"padding":"0","borderBottom":"none"}}>
                   <img src="/assets/bento_seamless.png" alt="Veda Silk House UI mockup" className="hover-reveal-img" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   <div className="hover-overlay"></div>
                 </div>
