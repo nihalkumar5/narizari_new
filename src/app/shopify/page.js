@@ -138,7 +138,7 @@ export default function Shopify() {
             <h2 className="essential-title">Why <span>SHOPIFY</span> is Essential for <br/> Growing Your Business</h2>
           </div>
           
-          <div className="essential-stagger-container">
+          <div className="essential-stagger-container animate-on-scroll">
             {/* Card 1 */}
             <div className="essential-card card-align-left accent-lavender">
               <div className="essential-number">1</div>
