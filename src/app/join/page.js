@@ -114,18 +114,7 @@ function JoinForm() {
                 <textarea placeholder="Complete address for cargo pickup and logistics coordination" required></textarea>
               </div>
 
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Login Credentials</h3>
 
-              <div className="join-row">
-                <div className="join-input-group">
-                  <label>Email Address *</label>
-                  <input type="email" placeholder="business@email.com" required />
-                </div>
-                <div className="join-input-group">
-                  <label>Password *</label>
-                  <input type="password" placeholder="Minimum 6 characters" required minLength="6" />
-                </div>
-              </div>
 
               <div className="join-input-group" style={{ marginTop: '1rem' }}>
                 <label>Manufacturing Categories</label>
@@ -201,18 +190,7 @@ function JoinForm() {
                 <input type="tel" placeholder="If different from mobile" />
               </div>
 
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '1.3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)' }}>Login Credentials</h3>
 
-              <div className="join-row">
-                <div className="join-input-group">
-                  <label>Email Address *</label>
-                  <input type="email" placeholder="business@email.com" required />
-                </div>
-                <div className="join-input-group">
-                  <label>Password *</label>
-                  <input type="password" placeholder="Minimum 6 characters" required minLength="6" />
-                </div>
-              </div>
 
               <div className="join-input-group">
                 <label>Estimated Monthly Volume Requirement</label>
