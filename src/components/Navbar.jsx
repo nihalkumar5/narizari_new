@@ -6,6 +6,7 @@ import Link from 'next/link';
 export default function Navbar({ variant = "default" }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [joinMenuOpen, setJoinMenuOpen] = useState(false);
 
   useEffect(() => {
     if (variant === 'shopify') return;
@@ -104,10 +105,17 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONNECT</Link></li>
             <li style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
               <div className="nav-join-dropdown mobile-join-dropdown">
-                <button className="join-us-btn" style={{ width: '100%', justifyContent: 'center' }}>
-                  Join Us <i className="fas fa-chevron-down" style={{ fontSize: '0.8em', marginLeft: '4px' }}></i>
+                <button 
+                  className="join-us-btn" 
+                  style={{ width: '100%', justifyContent: 'center' }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setJoinMenuOpen(!joinMenuOpen);
+                  }}
+                >
+                  Join Us <i className={`fas fa-chevron-${joinMenuOpen ? 'up' : 'down'}`} style={{ fontSize: '0.8em', marginLeft: '4px' }}></i>
                 </button>
-                <div className="join-us-menu">
+                <div className={`join-us-menu ${joinMenuOpen ? 'open' : ''}`}>
                   <Link href="/join?type=manufacturer" onClick={() => setDrawerOpen(false)}>As a Manufacturer</Link>
                   <Link href="/join?type=wholesaler" onClick={() => setDrawerOpen(false)}>As a Wholesaler</Link>
                 </div>

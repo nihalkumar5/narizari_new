@@ -2437,8 +2437,17 @@
   width: 90%;
 }
 
-.mobile-join-dropdown:hover .join-us-menu {
+.mobile-join-dropdown:hover .join-us-menu,
+.mobile-join-dropdown .join-us-menu.open {
+  opacity: 1;
+  visibility: visible;
   transform: translate(-50%, 0);
+}
+
+@media (min-width: 1025px) {
+  .mobile-join-dropdown {
+    display: none !important;
+  }
 }
 
 .join-us-menu a {
