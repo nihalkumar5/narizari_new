@@ -106,30 +106,35 @@ export default function IndustriesPage() {
       </main>
 
       {/* Premium Footer */}
-      <footer style={{"backgroundColor":"#000","color":"var(--color-white)","padding":"5rem 2rem 2rem","borderTop":"1px solid rgba(255, 255, 255, 0.1)"}}>
-        <div className="section-container swiss-grid">
-          <div className="col-4">
-            <h3 style={{"fontFamily":"var(--font-heading)","fontSize":"1.5rem","fontWeight":"800","marginBottom":"1rem"}}>Nari<span style={{"color":"var(--color-accent)"}}>Zari</span></h3>
-            <p style={{"color":"var(--color-slate-light)","maxWidth":"250px"}}>Engineering unfair advantages for heritage brands.</p>
+      <footer className="premium-footer">
+        <div className="premium-footer-bg"></div>
+        <div className="premium-footer-grid">
+          <div className="premium-footer-brand">
+            <h2>Nari<span>Zari.</span></h2>
+            <p className="premium-footer-desc">
+              We build high-converting marketing systems and digital showrooms to scale premium Varanasi Saree brands nationwide.
+            </p>
           </div>
-          <div className="col-2">
-            <h4 style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","letterSpacing":"1px","fontSize":"0.9rem","marginBottom":"1.5rem","color":"var(--color-white)"}}>Sitemap</h4>
-            <ul style={{"listStyle":"none","padding":"0","display":"flex","flexDirection":"column","gap":"0.8rem"}}>
-              <li><Link href="/services" style={{"color":"rgba(255,255,255,0.6)","textDecoration":"none"}}>Services</Link></li>
-              <li><Link href="/case-studies" style={{"color":"rgba(255,255,255,0.6)","textDecoration":"none"}}>Case Studies</Link></li>
-              <li><Link href="/industries" style={{"color":"rgba(255,255,255,0.6)","textDecoration":"none"}}>Industries</Link></li>
-            </ul>
+          <div className="premium-footer-col">
+            <h3>Start Scaling</h3>
+            <div className="premium-footer-links">
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer">Book Discovery Call <i className="fas fa-arrow-right" style={{fontSize: "0.8em", marginLeft: "4px"}}></i></a>
+              <a href="/services">Our Services</a>
+              <a href="/growth-framework">The Framework</a>
+            </div>
           </div>
-          <div className="col-2">
-            <h4 style={{"fontFamily":"var(--font-body)","textTransform":"uppercase","letterSpacing":"1px","fontSize":"0.9rem","marginBottom":"1.5rem","color":"var(--color-white)"}}>Connect</h4>
-            <ul style={{"listStyle":"none","padding":"0","display":"flex","flexDirection":"column","gap":"0.8rem"}}>
-              <li><a href="mailto:hello@narizari.com" style={{"color":"rgba(255,255,255,0.6)","textDecoration":"none"}}>hello@narizari.com</a></li>
-              <li><Link href="/contact" style={{"color":"rgba(255,255,255,0.6)","textDecoration":"none"}}>Book a Call</Link></li>
-            </ul>
+          <div className="premium-footer-col">
+            <h3>Connect</h3>
+            <div className="premium-footer-links">
+              <a href="https://linkedin.com">LinkedIn</a>
+              <a href="https://instagram.com">Instagram</a>
+              <a href="mailto:hello@narizari.com">hello@narizari.com</a>
+            </div>
           </div>
         </div>
-        <div className="section-container" style={{"marginTop":"4rem","paddingTop":"2rem","borderTop":"1px solid rgba(255, 255, 255, 0.1)","display":"flex","justifyContent":"space-between","alignItems":"center","color":"rgba(255,255,255,0.4)","fontSize":"0.9rem"}}>
-          <p>© {new Date().getFullYear()} NariZari. All rights reserved.</p>
+        <div className="premium-footer-bottom">
+          <span>&copy; {new Date().getFullYear()} NariZari. All Rights Reserved.</span>
+          <span>Designed for High-Ticket Heritage.</span>
         </div>
       </footer>
     </>
