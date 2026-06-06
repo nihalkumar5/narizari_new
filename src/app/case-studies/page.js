@@ -3,24 +3,6 @@ import Navbar from '@/components/Navbar';
 export default function CaseStudies() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        .cs-grid-12 {
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-        }
-        .cs-col-6 {
-          grid-column: span 6;
-        }
-        @media (max-width: 768px) {
-          .cs-grid-12 {
-            display: flex;
-            flex-direction: column;
-          }
-          .cs-col-6 {
-            grid-column: auto;
-          }
-        }
-      `}} />
       <Navbar />
       <main className="case-studies-page" style={{ paddingTop: '8rem', backgroundColor: 'var(--color-bg)' }}>
         <section className="section-container" style={{"paddingInline":"0","borderBottom":"none"}}>
