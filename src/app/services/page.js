@@ -190,14 +190,7 @@ export default function ServicesPage() {
               }}>
                 Schedule a 30-minute heritage brand discovery call. We'll outline your market opportunities and analyze how to take your traditional saree house national.
               </p>
-              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{
-                fontSize: "1.1rem",
-                padding: "1rem 2.5rem",
-                backgroundColor: "var(--color-white)",
-                color: "var(--color-navy)",
-                border: "2px solid var(--color-navy)",
-                boxShadow: "6px 6px 0 var(--color-accent)"
-              }}>
+              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="services-cta-btn">
                 Book Your Strategy Call
               </a>
             </div>
