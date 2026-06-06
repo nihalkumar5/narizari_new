@@ -7,8 +7,23 @@ import './shopify.css';
 export default function Shopify() {
   useEffect(() => {
     document.body.classList.add('shopify-dark-theme');
+    
+    // Scroll animation observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
+
     return () => {
       document.body.classList.remove('shopify-dark-theme');
+      animatedElements.forEach(el => observer.unobserve(el));
+      observer.disconnect();
     };
   }, []);
 
@@ -183,12 +198,15 @@ export default function Shopify() {
               <span>Real results.</span>
             </div>
           </div>
-          <div className="brand-ignore-images">
+          <div className="brand-ignore-images animate-on-scroll">
             <div className="ignore-img-wrapper img-1">
-              <img src="/assets/brand_ignore_pocket_1780737486458.png" alt="Phone in pocket" />
+              <img src="/assets/c1.png" alt="Showcase 1" />
             </div>
             <div className="ignore-img-wrapper img-2">
-              <img src="/assets/brand_ignore_sunglasses_1780737499118.png" alt="Neon sunglasses reflection" />
+              <img src="/assets/c2.png" alt="Showcase 2" />
+            </div>
+            <div className="ignore-img-wrapper img-3">
+              <img src="/assets/c3.png" alt="Showcase 3" />
             </div>
           </div>
         </section>
