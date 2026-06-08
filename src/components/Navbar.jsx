@@ -43,7 +43,7 @@ export default function Navbar({ variant = "default" }) {
           <ul className="nav-links">
             <li><Link href="/industries" className="nav-link">Industries</Link></li>
             <li><Link href="/case-studies" className="nav-link">Case Studies</Link></li>
-            <li><Link href="/contact" className="nav-link">Contact</Link></li>
+            <li><Link href="/careers" className="nav-link">Careers</Link></li>
           </ul>
 
           <div className="nav-join-dropdown">
@@ -102,7 +102,7 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>ABOUT US</Link></li>
             <li><Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>CASE STUDIES</Link></li>
             <li><Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>GROWTH FRAMEWORK</Link></li>
-            <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONNECT</Link></li>
+            <li><Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>CAREERS</Link></li>
             <li style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
               <div className="nav-join-dropdown mobile-join-dropdown">
                 <button 
