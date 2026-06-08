@@ -109,7 +109,9 @@ export default function Home() {
               <span style={{ display: "inline-block", width: "8px", height: "8px", backgroundColor: "#ccff00", borderRadius: "50%", marginRight: "8px", boxShadow: "0 0 10px rgba(204, 255, 0, 0.5)" }}></span>
               Benefits
             </div>
-            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "white" }}>Why work with us?</h2>
+            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "white" }}>
+              Why work with <span style={{ fontFamily: "var(--font-caveat)", fontSize: "1.2em", fontWeight: "400", color: "var(--color-accent)", display: "inline-block", transform: "rotate(-2deg)", paddingLeft: "0.5rem" }}>NariZari</span>?
+            </h2>
             <p style={{ color: "#a0a0a0", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
               Great marketing is more than just ads—it is an engine built on strategy, creative, and data.
             </p>
