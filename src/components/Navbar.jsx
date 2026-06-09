@@ -89,15 +89,11 @@ export default function Navbar({ variant = "default" }) {
         aria-hidden={!drawerOpen}
       >
         <div className="drawer-header">
-          <Link href="/#home" className="nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }} onClick={() => setDrawerOpen(false)}>
-            <img 
-              src="/nz-logo.png" 
-              alt="NariZari Logo" 
-              style={{ height: '48px', width: 'auto', display: 'block' }} 
-            />
-          </Link>
+          <span className="drawer-menu-title">
+            MENU
+          </span>
           <button className="drawer-close-btn" id="drawer-close" aria-label="Close Menu" onClick={() => setDrawerOpen(false)}>
-            <span>MENU</span>
+            <span>CLOSE</span>
             <span className="close-icon">✕</span>
           </button>
         </div>
