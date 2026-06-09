@@ -443,9 +443,9 @@
   .drawer-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(42, 36, 33, 0.4);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(12, 10, 9, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
@@ -464,11 +464,12 @@
     right: 0;
     bottom: 0;
     width: min(450px, 100vw);
-    background: rgba(18, 18, 18, 0.65);
+    background: rgba(242, 241, 236, 0.48);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-white);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    color: var(--color-navy);
     z-index: 2001;
     transform: translateX(100%);
     visibility: hidden;
@@ -494,9 +495,9 @@
   .drawer-close-btn {
     background: none;
     border: none;
-    color: var(--color-white);
+    color: var(--color-navy);
     font-family: var(--font-body);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
     display: flex;
@@ -509,7 +510,7 @@
 
   .drawer-close-btn:hover {
     opacity: 1;
-    color: var(--color-accent);
+    color: rgba(30, 26, 23, 0.6);
   }
 
   .drawer-close-btn .close-icon {
@@ -538,40 +539,40 @@
   .drawer-link {
     font-family: var(--font-heading);
     font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(30, 26, 23, 0.75);
     display: inline-block;
     transition: color var(--transition-smooth), transform var(--transition-smooth);
   }
 
   .drawer-link:hover {
-    color: var(--color-accent);
+    color: var(--color-navy);
     transform: translateX(8px);
   }
 
   /* Drawer Footer */
   .drawer-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(30, 26, 23, 0.08);
     padding-top: 2rem;
   }
 
   .drawer-footer p {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(30, 26, 23, 0.65);
     margin-bottom: 0.5rem;
     line-height: 1.4;
   }
 
   .drawer-footer a {
     font-size: 0.95rem;
-    color: var(--color-accent);
-    font-weight: 600;
+    color: var(--color-navy);
+    font-weight: 700;
     transition: color var(--transition-smooth);
   }
 
   .drawer-footer a:hover {
-    color: var(--color-white);
+    color: rgba(30, 26, 23, 0.6);
   }
 
   /* Capsule Buttons (SaaS look) */
