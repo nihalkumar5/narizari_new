@@ -1149,7 +1149,7 @@
   .bento-bg-text {
     font-size: 11rem;
     font-weight: 900;
-    color: rgba(30, 26, 23, 0.035); /* Subtle dark watermark */
+    color: rgba(30, 26, 23, 0.08); /* Faint dark watermark */
     position: absolute;
     right: -10px;
     bottom: -15px;
