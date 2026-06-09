@@ -34,10 +34,12 @@ export default function Navbar({ variant = "default" }) {
     <>
       <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`} id="navbar" aria-label="Main Navigation">
         <div className="navbar-pill">
-          <Link href="/#home" className="nav-logo" aria-label="Home" style={{ textDecoration: 'none' }}>
-            <span style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", fontWeight: "800", color: "var(--color-white)", letterSpacing: "-0.02em" }}>
-              Nari<span style={{ color: "var(--color-accent)" }}>Zari</span>
-            </span>
+          <Link href="/#home" className="nav-logo" aria-label="Home" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <img 
+              src="/nz-logo.png" 
+              alt="NariZari Logo" 
+              style={{ height: '38px', width: 'auto', display: 'block' }} 
+            />
           </Link>
 
           <ul className="nav-links">
@@ -87,8 +89,12 @@ export default function Navbar({ variant = "default" }) {
         aria-hidden={!drawerOpen}
       >
         <div className="drawer-header">
-          <Link href="/#home" className="nav-logo" style={{ color: 'var(--color-white)' }} onClick={() => setDrawerOpen(false)}>
-            Nari<span>Zari</span>
+          <Link href="/#home" className="nav-logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }} onClick={() => setDrawerOpen(false)}>
+            <img 
+              src="/nz-logo.png" 
+              alt="NariZari Logo" 
+              style={{ height: '38px', width: 'auto', display: 'block' }} 
+            />
           </Link>
           <button className="drawer-close-btn" id="drawer-close" aria-label="Close Menu" onClick={() => setDrawerOpen(false)}>
             <span>CLOSE</span>

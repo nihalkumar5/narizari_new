@@ -1,6 +1,98 @@
+"use client";
+
 import Navbar from '@/components/Navbar';
 import ScrollReveal from '@/components/ScrollReveal';
 import './about.css';
+
+const teamMembers = [
+  {
+    name: "Akanscha Roy",
+    role: "Co-Founder & CBO",
+    image: "/images/team/akanscha-roy.jpg",
+    bio: "Focusing on business growth and strategic brand partnerships to scale the NariZari portfolio.",
+    linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/"
+  },
+  {
+    name: "Pooja Tripathi",
+    role: "Co-Founder & COO",
+    image: "/images/team/pooja-tripathi.jpg",
+    bio: "Pioneering operational excellence and guest experience innovation across all managed properties.",
+    linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490/"
+  },
+  {
+    name: "Shachi Mishra",
+    role: "Co-Founder & CMO",
+    image: "/images/team/shachi-mishra.jpg",
+    bio: "Driving marketing excellence and brand strategy for NariZari's global presence.",
+    linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/"
+  },
+  {
+    name: "Raihane Zaghdoud",
+    role: "Chief Growth Officer",
+    image: "/images/team/rile.jpg",
+    bio: "Driving growth strategy and market expansion for the NariZari brand."
+  },
+  {
+    name: "Sonam Singh",
+    role: "Director, Operations",
+    image: "/images/team/sonam-singh.jpg",
+    bio: "Overseeing daily operations and efficiency across the property portfolio.",
+    linkedin: "https://www.linkedin.com/in/sonam-singh-21a856381/"
+  },
+  {
+    name: "Monika Sharma",
+    role: "Sr. Architect",
+    image: "/images/team/monika-sharma.jpg",
+    bio: "Expert in luxury hospitality architecture and design.",
+    linkedin: "https://www.linkedin.com/in/monica-sharma-3b2ab135"
+  },
+  {
+    name: "Sneha Giri",
+    role: "Legal Advisor",
+    image: "/images/team/sneha-giri.jpg",
+    bio: "Ensuring legal compliance and structural integrity.",
+    linkedin: "https://www.linkedin.com/in/advocate-sneha-giri-95708b68"
+  },
+  {
+    name: "Aparajita Ghosh",
+    role: "Vastu Expert",
+    image: "/images/team/aparajita-ghosh.jpg",
+    bio: "Harmonizing spaces with traditional Vastu principles.",
+    linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6"
+  },
+  {
+    name: "Shikha Mishra",
+    role: "PR Manager",
+    image: "/images/team/shikha-mishra.jpg",
+    bio: "Managing public relations and brand communication."
+  },
+  {
+    name: "Kesar",
+    role: "Marketing Manager",
+    image: "/images/team/kesar.jpg",
+    bio: "Influencer relations and assistant marketing management.",
+    linkedin: "https://www.linkedin.com/in/kesar-chaurasia-97703533b/"
+  },
+  {
+    name: "Namira",
+    role: "Sales Manager",
+    image: "/images/team/namira.jpg",
+    bio: "Driving sales growth and corporate partnerships."
+  },
+  {
+    name: "Gitanjali",
+    role: "Social Media Expert",
+    image: "/images/team/gitanjali.jpg",
+    bio: "Crafting NariZari's digital presence and community engagement.",
+    linkedin: "https://www.linkedin.com/in/gitanjali-chauhan"
+  },
+  {
+    name: "Ambalica",
+    role: "Content Strategist",
+    image: "/images/team/ambalica.jpg",
+    bio: "Developing compelling narratives for the NariZari brand."
+  }
+];
 
 export default function About() {
   return (
@@ -158,29 +250,38 @@ export default function About() {
           </ScrollReveal>
           
           <div className="team-grid">
-            <ScrollReveal direction="up" delay={0.2} className="team-member-card">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Team Member" className="team-member-img" />
-              <div className="team-member-info">
-                <h3 className="team-member-name">Alex Rivera</h3>
-                <span className="team-member-role">Creative Director</span>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="up" delay={0.3} className="team-member-card">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80" alt="Team Member" className="team-member-img" />
-              <div className="team-member-info">
-                <h3 className="team-member-name">Jordan Lee</h3>
-                <span className="team-member-role">Lead Strategist</span>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="up" delay={0.4} className="team-member-card">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80" alt="Team Member" className="team-member-img" />
-              <div className="team-member-info">
-                <h3 className="team-member-name">Casey Smith</h3>
-                <span className="team-member-role">Senior Designer</span>
-              </div>
-            </ScrollReveal>
+            {teamMembers.map((member, index) => (
+              <ScrollReveal 
+                key={member.name} 
+                direction="up" 
+                delay={0.1 + (index % 3) * 0.1} 
+                className="team-member-card"
+              >
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="team-member-img"
+                  onError={(e) => {
+                    e.target.src = '/images/avatar.png';
+                  }}
+                />
+                <div className="team-member-info">
+                  <h3 className="team-member-name">{member.name}</h3>
+                  <span className="team-member-role">{member.role}</span>
+                  {member.bio && <p className="team-member-bio">{member.bio}</p>}
+                  {member.linkedin && (
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="team-member-linkedin"
+                    >
+                      <i className="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                  )}
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </section>
 

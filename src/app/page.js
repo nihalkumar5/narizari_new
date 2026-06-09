@@ -116,93 +116,99 @@ export default function Home() {
               Great marketing is more than just ads—it is an engine built on strategy, creative, and data.
             </p>
           </div>
-        </ScrollReveal>
-
-        <div className="bento-benefits-grid">
+        </ScrollReveal>        <div className="bento-benefits-grid">
           {/* Card 1 */}
           <ScrollReveal direction="up" delay={0.1} className="bento-card-experience" style={{ display: 'flex', flexDirection: 'column' }}>
             <div className="bento-card" style={{ flex: 1 }}>
-            <div className="bento-graphic">
-              <div style={{ 
-                display: "inline-block", 
-                fontSize: "3.5rem", 
-                fontWeight: "900", 
-                color: "#ccff00", 
-                background: "#000", 
-                padding: "0.5rem 1.2rem", 
-                border: "3px solid #000", 
-                boxShadow: "6px 6px 0 #ccff00", 
-                transform: "rotate(-5deg)", 
-                marginTop: "1rem",
-                userSelect: "none"
-              }}>
-                10X
+              <div className="bento-bg-text">10X</div>
+              <div className="bento-card-header" style={{ marginBottom: "1.5rem" }}>
+                <div className="bento-badge-mini"><i className="fas fa-chart-line"></i> Performance</div>
               </div>
-            </div>
-            <h3>Guaranteed 10X<br/>Average ROAS</h3>
+              <h3 style={{ color: "white" }}>Guaranteed 10X<br/>Average ROAS</h3>
             </div>
           </ScrollReveal>
 
           {/* Card 2 */}
           <ScrollReveal direction="up" delay={0.2} className="bento-card-gear" style={{ display: 'flex', flexDirection: 'column' }}>
             <div className="bento-card" style={{ flex: 1 }}>
-            <div className="bento-graphic">
-               <i className="fas fa-chart-bar" style={{ fontSize: "3.5rem", color: "#000", background: "#ccff00", padding: "1rem", border: "3px solid #000", boxShadow: "4px 4px 0 #000", borderRadius: "0" }}></i>
-            </div>
-            <h3>Data-driven<br/>media buying</h3>
+              <div className="bento-card-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+                <div className="bento-badge-mini"><i className="fas fa-bullseye"></i> Targeting</div>
+              </div>
+              <div className="bento-icon-wrapper">
+                <div className="bento-icon-circle">
+                  <i className="fas fa-circle-notch fa-spin-slow" style={{ position: "absolute", fontSize: "4rem", opacity: 0.1, color: "var(--color-accent)" }}></i>
+                  <i className="fas fa-bullseye" style={{ fontSize: "2.25rem", color: "var(--color-accent)", position: "relative", zIndex: 2 }}></i>
+                </div>
+              </div>
+              <h3 style={{ color: "white" }}>Data-driven<br/>media buying</h3>
             </div>
           </ScrollReveal>
 
-          {/* Card 3 (Dark) */}
+          {/* Card 3 */}
           <ScrollReveal direction="up" delay={0.3} className="bento-card-editing" style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className="bento-card dark" style={{ flex: 1 }}>
-            <div className="bento-graphic">
-              <i className="fas fa-bolt" style={{ fontSize: "3.5rem", color: "#000", background: "#ccff00", padding: "1rem 1.5rem", border: "3px solid #000", boxShadow: "4px 4px 0 #000", borderRadius: "0" }}></i>
-            </div>
-            <h3>High-converting<br/>Shopify funnels</h3>
+            <div className="bento-card" style={{ flex: 1 }}>
+              <div className="bento-card-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+                <div className="bento-badge-mini"><i className="fas fa-bolt"></i> Optimization</div>
+              </div>
+              <div className="bento-icon-wrapper">
+                <div className="bento-icon-circle">
+                  <i className="fas fa-bolt-lightning" style={{ fontSize: "2.25rem", color: "var(--color-accent)" }}></i>
+                </div>
+              </div>
+              <h3 style={{ color: "white" }}>High-converting<br/>Shopify funnels</h3>
             </div>
           </ScrollReveal>
 
           {/* Card 4 */}
           <ScrollReveal direction="up" delay={0.2} className="bento-card-seamless" style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className="bento-card" style={{ flex: 1 }}>
-            <div className="bento-graphic">
-               <img src="/assets/glamorous_saree_model.png" alt="Creative Strategy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
-            </div>
-            <h3>Premium brand<br/>positioning</h3>
+            <div className="bento-card full-bleed" style={{ flex: 1 }}>
+              <img src="/assets/glamorous_saree_model.png" alt="Creative Strategy" className="bento-card-bg-img" />
+              <div className="bento-card-overlay"></div>
+              <h3 className="bento-card-title-overlay">Premium brand<br/>positioning</h3>
             </div>
           </ScrollReveal>
 
           {/* Card 5 (Wide) */}
           <ScrollReveal direction="up" delay={0.3} className="bento-card-vision" style={{ display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
-            <div className="bento-card" style={{ flex: 1, paddingRight: 0, flexDirection: 'row', alignItems: 'center' }}>
-            <h3>Hyper-targeted<br/>audience expansion</h3>
-            <div className="bento-graphic-side" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: 0 }}>
-               <img src="/assets/audience_expansion.png" alt="Audience Expansion" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
-            </div>
+            <div className="bento-card" style={{ flex: 1, paddingRight: 0, paddingLeft: 0, paddingTop: 0, paddingBottom: 0, overflow: 'hidden', position: 'relative' }}>
+              <div className="bento-card-split-content">
+                <div className="bento-badge-mini" style={{ width: "fit-content", marginBottom: "1.5rem" }}><i className="fas fa-users"></i> Scale</div>
+                <h3 style={{ color: "white", margin: 0 }}>Hyper-targeted<br/>audience expansion</h3>
+              </div>
+              <div className="bento-graphic-side">
+                 <img src="/assets/audience_expansion.png" alt="Audience Expansion" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
+                 <div className="bento-graphic-side-overlay"></div>
+              </div>
             </div>
           </ScrollReveal>
 
           {/* Card 6 */}
           <ScrollReveal direction="up" delay={0.4} className="bento-card-clients" style={{ display: 'flex', flexDirection: 'column' }}>
             <div className="bento-card" style={{ flex: 1, justifyContent: 'center' }}>
-            <div className="stars" style={{ color: "#000", background: "#ccff00", display: "inline-block", padding: "0.2rem 0.8rem", border: "2px solid #000", boxShadow: "3px 3px 0 #000", marginBottom: "1rem", fontSize: "1.5rem", fontWeight: "800", letterSpacing: "2px" }}>₹₹₹</div>
-            <div className="bento-stat-num" style={{ color: "#000" }}>50<span style={{fontSize:"2rem"}}>Cr+</span></div>
-            <p className="bento-stat-desc" style={{ color: "var(--color-slate)" }}>revenue generated</p>
+              <div className="bento-badge-mini" style={{ width: "fit-content", marginBottom: "1.5rem" }}><i className="fas fa-crown"></i> Track Record</div>
+              <div className="bento-stat-num" style={{ color: "var(--color-accent)", textShadow: "0 0 20px rgba(210, 250, 0, 0.15)" }}>50<span style={{ fontSize: "2rem", fontWeight: "500", marginLeft: "2px" }}>Cr+</span></div>
+              <p className="bento-stat-desc" style={{ color: "rgba(255,255,255,0.7)" }}>profitable revenue generated for heritage brands</p>
             </div>
           </ScrollReveal>
 
           {/* Card 7 */}
           <ScrollReveal direction="up" delay={0.5} className="bento-card-turnaround" style={{ display: 'flex', flexDirection: 'column' }}>
             <div className="bento-card" style={{ flex: 1 }}>
-            <div className="flex-title" style={{ marginBottom: "2rem", color: "#ccff00" }}>
-              <i className="fas fa-chart-pie" style={{ color: "#000" }}></i> <span style={{ color: "var(--color-navy)", fontWeight: "700" }}>Real-time Analytics</span>
-            </div>
-            <div className="bento-graphic-chart" style={{ display: "flex", alignItems: "flex-end", height: "120px", gap: "12px", borderBottom: "4px solid #000", padding: "0 10px" }}>
-              <div style={{ flex: 1, height: "40%", background: "#000", boxShadow: "4px 4px 0 #ccc" }}></div>
-              <div style={{ flex: 1, height: "65%", background: "#000", boxShadow: "4px 4px 0 #ccc" }}></div>
-              <div style={{ flex: 1, height: "100%", background: "#ccff00", border: "4px solid #000", borderBottom: "none", boxShadow: "-4px 4px 0 #000" }}></div>
-            </div>
+              <div className="bento-card-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+                <div className="bento-badge-mini"><i className="fas fa-signal"></i> Analytics</div>
+                <span className="live-pulse-badge">
+                  <span className="pulse-dot"></span>
+                  LIVE
+                </span>
+              </div>
+              <h3 style={{ color: "white", marginBottom: "1.5rem", fontSize: "1.4rem" }}>Real-time dashboard</h3>
+              <div className="bento-graphic-chart">
+                <div className="chart-bar" style={{ height: "40%" }}></div>
+                <div className="chart-bar" style={{ height: "65%" }}></div>
+                <div className="chart-bar active" style={{ height: "100%" }}>
+                  <div className="chart-glow"></div>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
