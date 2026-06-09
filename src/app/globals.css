@@ -239,11 +239,13 @@
 
   .nav-logo img {
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    animation: logo-glow-breath 4s ease-in-out infinite;
   }
 
   .nav-logo:hover img {
+    animation-play-state: paused;
     transform: scale(1.08) rotate(-1.5deg);
-    filter: drop-shadow(0 0 10px var(--color-accent)) brightness(1.15);
+    filter: drop-shadow(0 0 14px var(--color-accent)) brightness(1.2);
   }
 
   /* Sweeping metallic sheen reflection */
@@ -257,17 +259,39 @@
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.5) 50%,
       rgba(255, 255, 255, 0) 100%
     );
     transform: skewX(-20deg);
+    animation: logo-shine-loop 6s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
   }
 
   .nav-logo:hover::after {
-    animation: logo-shine 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    animation-play-state: paused;
   }
 
-  @keyframes logo-shine {
+  @keyframes logo-glow-breath {
+    0% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 1px rgba(210, 250, 0, 0.15)) brightness(1.0);
+    }
+    50% {
+      transform: scale(1.025);
+      filter: drop-shadow(0 0 8px rgba(210, 250, 0, 0.5)) brightness(1.1);
+    }
+    100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 1px rgba(210, 250, 0, 0.15)) brightness(1.0);
+    }
+  }
+
+  @keyframes logo-shine-loop {
+    0% {
+      left: -150%;
+    }
+    15% {
+      left: 150%;
+    }
     100% {
       left: 150%;
     }
