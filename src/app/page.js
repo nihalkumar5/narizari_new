@@ -106,14 +106,14 @@ export default function Home() {
       <div className="section-container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <ScrollReveal direction="up" delay={0.1}>
           <div className="text-center" style={{ marginBottom: "4rem" }}>
-            <div className="benefit-badge" style={{ color: "var(--color-white)" }}>
-              <span style={{ display: "inline-block", width: "8px", height: "8px", backgroundColor: "#ccff00", borderRadius: "50%", marginRight: "8px", boxShadow: "0 0 10px rgba(204, 255, 0, 0.5)" }}></span>
+            <div className="benefit-badge" style={{ color: "var(--color-navy)" }}>
+              <span style={{ display: "inline-block", width: "8px", height: "8px", backgroundColor: "var(--color-accent-dark)", borderRadius: "50%", marginRight: "8px", boxShadow: "0 0 10px rgba(210, 250, 0, 0.4)" }}></span>
               Benefits
             </div>
-            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "white" }}>
-              Why work with <span style={{ fontFamily: "var(--font-caveat)", fontSize: "1.2em", fontWeight: "400", color: "var(--color-accent)", display: "inline-block", transform: "rotate(-2deg)", paddingLeft: "0.5rem" }}>NariZari</span>?
+            <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: "600", marginBottom: "1rem", letterSpacing: "-0.03em", color: "var(--color-navy)" }}>
+              Why work with <span style={{ fontFamily: "var(--font-caveat)", fontSize: "1.2em", fontWeight: "400", color: "var(--color-accent-dark)", display: "inline-block", transform: "rotate(-2deg)", paddingLeft: "0.5rem" }}>NariZari</span>?
             </h2>
-            <p style={{ color: "#a0a0a0", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
+            <p style={{ color: "var(--color-slate-light)", fontSize: "1.1rem", maxWidth: "600px", margin: "0 auto" }}>
               Great marketing is more than just ads—it is an engine built on strategy, creative, and data.
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="bento-card-header" style={{ marginBottom: "1.5rem" }}>
                 <div className="bento-badge-mini"><i className="fas fa-chart-line"></i> Performance</div>
               </div>
-              <h3 style={{ color: "white" }}>Guaranteed 10X<br/>Average ROAS</h3>
+              <h3>Guaranteed 10X<br/>Average ROAS</h3>
             </div>
           </ScrollReveal>
 
@@ -137,11 +137,11 @@ export default function Home() {
               </div>
               <div className="bento-icon-wrapper">
                 <div className="bento-icon-circle">
-                  <i className="fas fa-circle-notch fa-spin-slow" style={{ position: "absolute", fontSize: "4rem", opacity: 0.1, color: "var(--color-accent)" }}></i>
-                  <i className="fas fa-bullseye" style={{ fontSize: "2.25rem", color: "var(--color-accent)", position: "relative", zIndex: 2 }}></i>
+                  <i className="fas fa-circle-notch fa-spin-slow" style={{ position: "absolute", fontSize: "4rem", opacity: 0.1, color: "var(--color-accent-dark)" }}></i>
+                  <i className="fas fa-bullseye" style={{ fontSize: "2.25rem", color: "var(--color-navy)", position: "relative", zIndex: 2 }}></i>
                 </div>
               </div>
-              <h3 style={{ color: "white" }}>Data-driven<br/>media buying</h3>
+              <h3>Data-driven<br/>media buying</h3>
             </div>
           </ScrollReveal>
 
@@ -153,10 +153,10 @@ export default function Home() {
               </div>
               <div className="bento-icon-wrapper">
                 <div className="bento-icon-circle">
-                  <i className="fas fa-bolt-lightning" style={{ fontSize: "2.25rem", color: "var(--color-accent)" }}></i>
+                  <i className="fas fa-bolt-lightning" style={{ fontSize: "2.25rem", color: "var(--color-navy)" }}></i>
                 </div>
               </div>
-              <h3 style={{ color: "white" }}>High-converting<br/>Shopify funnels</h3>
+              <h3>High-converting<br/>Shopify funnels</h3>
             </div>
           </ScrollReveal>
 
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="bento-card" style={{ flex: 1, paddingRight: 0, paddingLeft: 0, paddingTop: 0, paddingBottom: 0, overflow: 'hidden', position: 'relative' }}>
               <div className="bento-card-split-content">
                 <div className="bento-badge-mini" style={{ width: "fit-content", marginBottom: "1.5rem" }}><i className="fas fa-users"></i> Scale</div>
-                <h3 style={{ color: "white", margin: 0 }}>Hyper-targeted<br/>audience expansion</h3>
+                <h3 style={{ margin: 0 }}>Hyper-targeted<br/>audience expansion</h3>
               </div>
               <div className="bento-graphic-side">
                  <img src="/assets/audience_expansion.png" alt="Audience Expansion" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
@@ -187,8 +187,8 @@ export default function Home() {
           <ScrollReveal direction="up" delay={0.4} className="bento-card-clients" style={{ display: 'flex', flexDirection: 'column' }}>
             <div className="bento-card" style={{ flex: 1, justifyContent: 'center' }}>
               <div className="bento-badge-mini" style={{ width: "fit-content", marginBottom: "1.5rem" }}><i className="fas fa-crown"></i> Track Record</div>
-              <div className="bento-stat-num" style={{ color: "var(--color-accent)", textShadow: "0 0 20px rgba(210, 250, 0, 0.15)" }}>50<span style={{ fontSize: "2rem", fontWeight: "500", marginLeft: "2px" }}>Cr+</span></div>
-              <p className="bento-stat-desc" style={{ color: "rgba(255,255,255,0.7)" }}>profitable revenue generated for heritage brands</p>
+              <div className="bento-stat-num" style={{ color: "var(--color-navy)", textShadow: "none" }}>50<span style={{ fontSize: "2rem", fontWeight: "500", marginLeft: "2px" }}>Cr+</span></div>
+              <p className="bento-stat-desc">profitable revenue generated for heritage brands</p>
             </div>
           </ScrollReveal>
 
@@ -202,7 +202,7 @@ export default function Home() {
                   LIVE
                 </span>
               </div>
-              <h3 style={{ color: "white", marginBottom: "1.5rem", fontSize: "1.4rem" }}>Real-time dashboard</h3>
+              <h3 style={{ marginBottom: "1.5rem", fontSize: "1.4rem" }}>Real-time dashboard</h3>
               <div className="bento-graphic-chart">
                 <div className="chart-bar" style={{ height: "40%" }}></div>
                 <div className="chart-bar" style={{ height: "65%" }}></div>
