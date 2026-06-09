@@ -38,7 +38,7 @@ export default function Navbar({ variant = "default" }) {
             <img 
               src="/nz-logo.png" 
               alt="NariZari Logo" 
-              style={{ height: '38px', width: 'auto', display: 'block' }} 
+              style={{ height: '48px', width: 'auto', display: 'block' }} 
             />
           </Link>
 
@@ -93,7 +93,7 @@ export default function Navbar({ variant = "default" }) {
             <img 
               src="/nz-logo.png" 
               alt="NariZari Logo" 
-              style={{ height: '38px', width: 'auto', display: 'block' }} 
+              style={{ height: '48px', width: 'auto', display: 'block' }} 
             />
           </Link>
           <button className="drawer-close-btn" id="drawer-close" aria-label="Close Menu" onClick={() => setDrawerOpen(false)}>
