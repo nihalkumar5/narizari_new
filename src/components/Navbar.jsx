@@ -97,7 +97,7 @@ export default function Navbar({ variant = "default" }) {
             />
           </Link>
           <button className="drawer-close-btn" id="drawer-close" aria-label="Close Menu" onClick={() => setDrawerOpen(false)}>
-            <span>CLOSE</span>
+            <span>MENU</span>
             <span className="close-icon">✕</span>
           </button>
         </div>
