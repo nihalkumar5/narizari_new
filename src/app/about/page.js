@@ -87,6 +87,17 @@ const teamMembers = [
   }
 ];
 
+const partnerBrands = [
+  "Benares Silk Emporium",
+  "Kashi Weaves",
+  "Zari & Loom",
+  "Royal Handlooms",
+  "Heritage Varanasi",
+  "The Golden Thread",
+  "Metro Silk House",
+  "Shanti Handwoven"
+];
+
 export default function About() {
   return (
     <>
@@ -218,14 +229,13 @@ export default function About() {
           
           <ScrollReveal direction="up" delay={0.2} className="marquee-wrapper">
             <div className="marquee-content">
-              {/* Duplicate set for infinite scroll */}
               {[...Array(2)].map((_, i) => (
-                <div key={i} style={{display: 'flex', gap: '4rem'}}>
-                  <div className="marquee-logo-card">Brand A</div>
-                  <div className="marquee-logo-card">Company B</div>
-                  <div className="marquee-logo-card">Studio C</div>
-                  <div className="marquee-logo-card">Global D</div>
-                  <div className="marquee-logo-card">Agency E</div>
+                <div key={i} style={{ display: 'flex', gap: '3rem', paddingRight: '3rem' }}>
+                  {partnerBrands.map((brand) => (
+                    <div key={brand} className="marquee-logo-card">
+                      {brand}
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
