@@ -19,7 +19,7 @@ export default function Footer() {
                 textTransform: "none", 
                 display: "inline-block", 
                 transform: "rotate(-3deg)", 
-                fontSize: "1.15em", 
+                fontSize: "1.55em", 
                 color: "var(--color-navy)",
                 marginLeft: "2px",
                 transition: "transform 0.3s ease"
@@ -34,7 +34,7 @@ export default function Footer() {
           <div 
             className="about-handwritten footer-tagline" 
             style={{ 
-              fontSize: "1.35rem", 
+              fontSize: "1.75rem", 
               color: "rgba(30, 26, 23, 0.8)", 
               marginTop: "0.5rem", 
               transform: "rotate(-1deg)",
@@ -50,7 +50,7 @@ export default function Footer() {
             className="about-handwritten" 
             style={{ 
               display: "block", 
-              fontSize: "1.05rem", 
+              fontSize: "1.45rem", 
               color: "var(--color-navy)", 
               opacity: "0.85", 
               marginBottom: "-0.5rem", 
@@ -83,7 +83,7 @@ export default function Footer() {
             className="about-handwritten" 
             style={{ 
               display: "block", 
-              fontSize: "1.05rem", 
+              fontSize: "1.45rem", 
               color: "var(--color-navy)", 
               opacity: "0.85", 
               marginBottom: "-0.5rem", 
@@ -125,7 +125,7 @@ export default function Footer() {
             className="about-handwritten" 
             style={{ 
               textTransform: "none", 
-              fontSize: "1.25em", 
+              fontSize: "1.65em", 
               display: "inline-block", 
               transform: "rotate(-1.5deg)",
               color: "var(--color-navy)",

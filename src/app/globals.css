@@ -91,6 +91,13 @@
     letter-spacing: -0.02em;
   }
 
+  /* Handwritten/Cursive Typography (Caveat) */
+  .about-handwritten {
+    font-family: var(--font-caveat), cursive;
+    font-weight: 500;
+    text-transform: none;
+  }
+
   h1 {
     font-size: clamp(2.5rem, 5vw, 4.25rem); /* Clean minimal header */
     line-height: 1.1;
