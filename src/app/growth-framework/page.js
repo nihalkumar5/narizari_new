@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import "./growth.css";
 
 export default function GrowthFramework() {
@@ -89,36 +90,7 @@ export default function GrowthFramework() {
       </main>
 
       {/* Premium Footer */}
-      <footer className="premium-footer">
-        <div className="premium-footer-bg"></div>
-        <div className="premium-footer-grid">
-          <div className="premium-footer-brand">
-            <h2>Nari<span>Zari.</span></h2>
-            <p className="premium-footer-desc">
-              We build high-converting marketing systems and digital showrooms to scale premium e-commerce brands worldwide.
-            </p>
-          </div>
-          <div className="premium-footer-col">
-            <h3>Start Scaling</h3>
-            <div className="premium-footer-links">
-              <a href="/services">Full-Stack Growth</a>
-              <a href="/shopify">Shopify Development</a>
-              <a href="/case-studies">Case Studies</a>
-            </div>
-          </div>
-          <div className="premium-footer-col">
-            <h3>Connect</h3>
-            <div className="premium-footer-links">
-              <a href="https://instagram.com/narizari" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://linkedin.com/company/narizari" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="/contact">Contact Us</a>
-            </div>
-          </div>
-        </div>
-        <div className="premium-footer-bottom">
-          <p>© {new Date().getFullYear()} NariZari. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

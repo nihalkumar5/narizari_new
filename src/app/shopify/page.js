@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import './shopify.css';
 
 export default function Shopify() {
@@ -306,37 +307,7 @@ export default function Shopify() {
       </main>
 
       {/* Premium Footer */}
-      <footer className="premium-footer">
-        <div className="premium-footer-bg"></div>
-        <div className="premium-footer-grid">
-          <div className="premium-footer-brand">
-            <h2>Nari<span>Zari.</span></h2>
-            <p className="premium-footer-desc">
-              We build high-converting marketing systems and digital showrooms to scale premium e-commerce brands worldwide.
-            </p>
-          </div>
-          <div className="premium-footer-col">
-            <h3>Start Scaling</h3>
-            <div className="premium-footer-links">
-              <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer">Book Discovery Call <i className="fas fa-arrow-right" style={{fontSize: "0.8em", marginLeft: "4px"}}></i></a>
-              <a href="/services">Our Services</a>
-              <a href="/case-studies">Case Studies</a>
-            </div>
-          </div>
-          <div className="premium-footer-col">
-            <h3>Connect</h3>
-            <div className="premium-footer-links">
-              <a href="https://linkedin.com">LinkedIn</a>
-              <a href="https://instagram.com">Instagram</a>
-              <a href="mailto:hello@narizari.com">hello@narizari.com</a>
-            </div>
-          </div>
-        </div>
-        <div className="premium-footer-bottom">
-          <span>&copy; {new Date().getFullYear()} NariZari. All Rights Reserved.</span>
-          <span>Designed for High-Ticket E-Commerce.</span>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

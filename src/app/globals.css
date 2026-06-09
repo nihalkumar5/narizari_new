@@ -2167,7 +2167,7 @@
     right: 0;
     width: 60%;
     height: 100%;
-    background: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
     pointer-events: none;
     z-index: 1;
@@ -2193,7 +2193,7 @@
   .premium-footer-brand {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .premium-footer-brand h2 {
@@ -2204,10 +2204,13 @@
     letter-spacing: -0.02em;
     margin-bottom: 0;
     text-transform: uppercase;
+    cursor: default;
   }
 
-  .premium-footer-brand h2 span {
-    color: var(--color-navy);
+  .premium-footer-brand h2:hover .footer-handwritten-logo {
+    transform: rotate(-6deg) scale(1.12) !important;
+    color: var(--color-accent-dark) !important;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   }
 
   .premium-footer-desc {
@@ -2216,6 +2219,22 @@
     font-size: 1.05rem;
     line-height: 1.6;
     max-width: 400px;
+  }
+
+  @keyframes footerFloat {
+    0% { transform: rotate(-1deg) translateY(0px); }
+    50% { transform: rotate(-1deg) translateY(-4px); }
+    100% { transform: rotate(-1deg) translateY(0px); }
+  }
+
+  .footer-tagline {
+    animation: footerFloat 5s ease-in-out infinite;
+  }
+
+  .premium-footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .premium-footer-col h3 {
@@ -2228,6 +2247,7 @@
     display: inline-block;
     padding-bottom: 0.5rem;
     text-transform: uppercase;
+    align-self: flex-start;
   }
 
   .premium-footer-links {
@@ -2237,25 +2257,27 @@
     align-items: flex-start;
   }
 
-  .premium-footer-links a {
+  .premium-footer-links a, .premium-footer-links .footer-btn {
     color: var(--color-navy);
     text-decoration: none;
     font-weight: 700;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     border: 2px solid var(--color-navy);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     background-color: var(--color-white);
     box-shadow: 4px 4px 0px var(--color-navy);
+    border-radius: 6px;
+    font-size: 0.95rem;
   }
 
-  .premium-footer-links a:hover {
+  .premium-footer-links a:hover, .premium-footer-links .footer-btn:hover {
     color: var(--color-navy);
-    background-color: var(--color-accent);
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px var(--color-navy);
+    background-color: var(--color-accent-light);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--color-navy);
   }
 
   .premium-footer-bottom {
