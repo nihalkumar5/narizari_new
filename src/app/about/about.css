@@ -422,6 +422,12 @@
   font-size: 1rem;
 }
 
+.about-handwritten {
+  font-family: var(--font-caveat), cursive;
+  font-weight: 500;
+  text-transform: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1200px) {
   .stats-grid {

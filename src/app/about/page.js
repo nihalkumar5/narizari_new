@@ -106,7 +106,9 @@ export default function About() {
         {/* TOP SECTION */}
         <section className="about-top-section">
           <ScrollReveal direction="up" delay={0.1}>
-            <h1 className="about-header-huge">ABOUT US</h1>
+            <h1 className="about-header-huge">
+              ABOUT <span className="about-handwritten" style={{ textTransform: "lowercase", display: "inline-block", transform: "rotate(-2deg)", color: "var(--color-accent)" }}>us</span>
+            </h1>
           </ScrollReveal>
           
           <div className="about-top-content">
@@ -162,7 +164,7 @@ export default function About() {
             <div className="about-bottom-right">
               <ScrollReveal direction="left" delay={0.3}>
                 <h2 className="about-subheader-huge">
-                  WHO WE<br/>ARE
+                  WHO WE<br/><span className="about-handwritten" style={{ textTransform: "lowercase", display: "inline-block", transform: "rotate(-3deg)" }}>are</span>
                 </h2>
               </ScrollReveal>
             </div>
@@ -176,7 +178,9 @@ export default function About() {
               <span className="section-label"><span className="section-label-plus">+</span> About</span>
               <span>(02)</span>
             </div>
-            <h2 className="section-heading">Our Story</h2>
+            <h2 className="section-heading">
+              Our <span className="about-handwritten" style={{ textTransform: "lowercase", display: "inline-block", transform: "rotate(-2deg)" }}>story</span>
+            </h2>
           </ScrollReveal>
           
           <div className="stats-grid">
@@ -223,7 +227,7 @@ export default function About() {
             </div>
             
             <p className="collaborators-text">
-              We partner with visionary brands to create enduring innovation.
+              We partner with <span className="about-handwritten" style={{ textTransform: "lowercase", fontSize: "1.25em", display: "inline-block", transform: "rotate(-1.5deg)" }}>visionary</span> brands to create enduring innovation.
             </p>
           </ScrollReveal>
           
@@ -249,7 +253,9 @@ export default function About() {
               <span className="section-label"><span className="section-label-plus">+</span> Our Team</span>
               <span>(04)</span>
             </div>
-            <h2 className="section-heading">Creative Team</h2>
+            <h2 className="section-heading">
+              Creative <span className="about-handwritten" style={{ textTransform: "lowercase", display: "inline-block", transform: "rotate(-2deg)" }}>team</span>
+            </h2>
           </ScrollReveal>
           
           <div className="team-grid">
