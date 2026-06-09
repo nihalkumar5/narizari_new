@@ -464,12 +464,12 @@
     right: 0;
     bottom: 0;
     width: min(460px, 100vw);
-    background: rgba(255, 255, 255, 0.22);
+    background: rgba(30, 26, 23, 0.85);
     backdrop-filter: blur(28px) saturate(180%);
     -webkit-backdrop-filter: blur(28px) saturate(180%);
-    border-left: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.08);
-    color: var(--color-navy);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.25);
+    color: var(--color-white);
     z-index: 2001;
     transform: translateX(100%);
     visibility: hidden;
@@ -488,7 +488,7 @@
     font-family: var(--font-heading);
     font-size: 15rem;
     font-weight: 900;
-    color: rgba(30, 26, 23, 0.04);
+    color: rgba(255, 255, 255, 0.03);
     pointer-events: none;
     user-select: none;
     z-index: 0;
@@ -511,8 +511,8 @@
 
   .drawer-close-btn {
     background: none;
-    border: 1px solid rgba(30, 26, 23, 0.15);
-    color: var(--color-navy);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.75rem;
@@ -527,9 +527,9 @@
   }
 
   .drawer-close-btn:hover {
-    border-color: var(--color-navy);
-    background-color: var(--color-navy);
-    color: var(--color-white);
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-navy);
   }
 
   .drawer-close-btn .close-icon {
@@ -561,7 +561,7 @@
     font-family: var(--font-heading);
     font-size: clamp(1.35rem, 2.2vw, 1.7rem);
     font-weight: 500;
-    color: rgba(30, 26, 23, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     display: inline-flex;
     align-items: baseline;
     gap: 0.75rem;
@@ -573,24 +573,24 @@
     font-family: var(--font-caveat), cursive;
     font-size: 1.3rem;
     font-weight: 500;
-    color: var(--color-accent-dark);
+    color: var(--color-accent);
     display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
   .drawer-link:hover {
-    color: var(--color-navy);
+    color: var(--color-accent);
     transform: translateX(8px);
   }
 
   .drawer-link:hover .drawer-link-num {
     transform: rotate(-8deg) scale(1.15);
-    color: var(--color-accent-dark);
+    color: var(--color-white);
   }
 
   /* Drawer Footer */
   .drawer-footer {
-    border-top: 1px solid rgba(30, 26, 23, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 2rem;
     position: relative;
     z-index: 1;
@@ -598,24 +598,24 @@
 
   .drawer-footer p {
     font-size: 0.85rem;
-    color: rgba(30, 26, 23, 0.6);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 0.5rem;
     line-height: 1.4;
   }
 
   .drawer-footer a {
     font-size: 0.95rem;
-    color: var(--color-navy);
+    color: var(--color-accent);
     font-weight: 700;
     text-decoration: none;
     transition: color var(--transition-smooth);
-    border-bottom: 1px solid rgba(30, 26, 23, 0.15);
+    border-bottom: 1px solid rgba(210, 250, 0, 0.3);
     padding-bottom: 2px;
   }
 
   .drawer-footer a:hover {
-    color: rgba(30, 26, 23, 0.6);
-    border-bottom-color: rgba(30, 26, 23, 0.6);
+    color: var(--color-white);
+    border-bottom-color: var(--color-white);
   }
 
   /* Capsule Buttons (SaaS look) */
