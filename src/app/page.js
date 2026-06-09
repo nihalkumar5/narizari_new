@@ -137,8 +137,8 @@ export default function Home() {
               </div>
               <div className="bento-icon-wrapper">
                 <div className="bento-icon-circle">
-                  <i className="fas fa-circle-notch fa-spin-slow" style={{ position: "absolute", fontSize: "4rem", opacity: 0.1, color: "var(--color-accent-dark)" }}></i>
-                  <i className="fas fa-bullseye" style={{ fontSize: "2.25rem", color: "var(--color-navy)", position: "relative", zIndex: 2 }}></i>
+                  <i className="fas fa-circle-notch fa-spin-slow" style={{ position: "absolute", fontSize: "4rem", opacity: 0.15, color: "var(--color-accent)" }}></i>
+                  <i className="fas fa-bullseye" style={{ fontSize: "2.25rem", color: "var(--color-accent)", position: "relative", zIndex: 2 }}></i>
                 </div>
               </div>
               <h3>Data-driven<br/>media buying</h3>
@@ -153,7 +153,7 @@ export default function Home() {
               </div>
               <div className="bento-icon-wrapper">
                 <div className="bento-icon-circle">
-                  <i className="fas fa-bolt-lightning" style={{ fontSize: "2.25rem", color: "var(--color-navy)" }}></i>
+                  <i className="fas fa-bolt-lightning" style={{ fontSize: "2.25rem", color: "var(--color-accent)" }}></i>
                 </div>
               </div>
               <h3>High-converting<br/>Shopify funnels</h3>

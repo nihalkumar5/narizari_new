@@ -1194,19 +1194,19 @@
     width: 76px;
     height: 76px;
     border-radius: 50%;
-    background: rgba(210, 250, 0, 0.04);
-    border: 1px solid rgba(210, 250, 0, 0.15);
+    background: var(--color-navy);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     display: grid;
     place-items: center;
     position: relative;
-    box-shadow: 0 10px 30px rgba(210, 250, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(30, 26, 23, 0.15);
     transition: transform var(--transition-smooth), border-color var(--transition-smooth), background-color var(--transition-smooth);
   }
 
   .bento-card:hover .bento-icon-circle {
-    transform: scale(1.05);
-    border-color: rgba(210, 250, 0, 0.4);
-    background: rgba(210, 250, 0, 0.08);
+    transform: scale(1.08) rotate(5deg);
+    background-color: #000000;
+    border-color: var(--color-accent);
   }
 
   /* Full bleed image card */
