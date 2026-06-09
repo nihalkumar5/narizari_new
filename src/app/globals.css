@@ -1245,7 +1245,7 @@
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: -0.02em;
-    color: var(--color-white);
+    color: var(--color-white) !important;
   }
 
   /* Split layout wide card */
