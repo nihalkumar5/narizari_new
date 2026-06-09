@@ -40,13 +40,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/sonam-singh-21a856381/"
   },
   {
-    name: "Monika Sharma",
-    role: "Sr. Architect",
-    image: "/images/team/monika-sharma.jpg",
-    bio: "Expert in luxury hospitality architecture and design.",
-    linkedin: "https://www.linkedin.com/in/monica-sharma-3b2ab135"
-  },
-  {
     name: "Sneha Giri",
     role: "Legal Advisor",
     image: "/images/team/sneha-giri.jpg",
