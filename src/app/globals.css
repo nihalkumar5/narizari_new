@@ -1271,7 +1271,7 @@
   .bento-graphic-side-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #0f0d0c 0%, rgba(25, 22, 20, 0.7) 20%, transparent 80%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 20%, transparent 80%);
     z-index: 2;
   }
 
@@ -1380,6 +1380,16 @@
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
+    .bento-card-experience,
+    .bento-card-gear,
+    .bento-card-editing,
+    .bento-card-seamless,
+    .bento-card-vision,
+    .bento-card-clients,
+    .bento-card-turnaround {
+      grid-column: 1 / -1 !important;
+      grid-row: auto !important;
+    }
     .bento-benefits-grid .bento-card {
       grid-column: 1 !important;
       grid-row: auto !important;
@@ -1406,7 +1416,7 @@
       margin-top: 0;
     }
     .bento-graphic-side-overlay {
-      background: linear-gradient(to bottom, #0f0d0c 0%, rgba(25, 22, 20, 0.7) 20%, transparent 80%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 20%, transparent 80%);
     }
   }
 
