@@ -533,33 +533,28 @@
     box-shadow: 2px 2px 0px var(--color-white);
   }
 
-  /* Neo-Brutalist Drawer Close Button */
+  /* Drawer Close Button */
   .drawer-close-btn {
-    background: var(--color-navy);
-    border: 3px solid var(--color-white);
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--color-white);
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.45rem 1.25rem;
-    border-radius: 0px; /* Sharp brutalist corners */
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 4px 4px 0px var(--color-accent);
-    transform: rotate(1deg);
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .drawer-close-btn:hover {
-    background-color: var(--color-accent);
-    color: var(--color-navy);
     border-color: var(--color-white);
-    box-shadow: 2px 2px 0px var(--color-white);
-    transform: rotate(0deg) scale(1.02);
+    background-color: var(--color-white);
+    color: var(--color-navy);
   }
 
   .drawer-close-btn .close-icon {
