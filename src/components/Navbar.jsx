@@ -103,15 +103,51 @@ export default function Navbar({ variant = "default" }) {
         </div>
         <nav className="drawer-nav">
           <ul className="drawer-links">
-            <li><Link href="/services" className="drawer-link" onClick={() => setDrawerOpen(false)}>SERVICES</Link></li>
-            <li><Link href="/shopify" className="drawer-link" onClick={() => setDrawerOpen(false)}>SHOPIFY SERVICES</Link></li>
-            <li><Link href="/industries" className="drawer-link" onClick={() => setDrawerOpen(false)}>INDUSTRIES</Link></li>
-            <li><Link href="/demo" className="drawer-link" onClick={() => setDrawerOpen(false)}>LIVE DEMO</Link></li>
-            <li><Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>ABOUT US</Link></li>
-            <li><Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>CASE STUDIES</Link></li>
-            <li><Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>CONTACT US</Link></li>
-            <li><Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>GROWTH FRAMEWORK</Link></li>
-            <li><Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>CAREERS</Link></li>
+            <li>
+              <Link href="/services" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">01.</span> Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/shopify" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">02.</span> Shopify Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">03.</span> Industries
+              </Link>
+            </li>
+            <li>
+              <Link href="/demo" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">04.</span> Live Demo
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">05.</span> About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/case-studies" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">06.</span> Case Studies
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">07.</span> Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/growth-framework" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">08.</span> Growth Framework
+              </Link>
+            </li>
+            <li>
+              <Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">09.</span> Careers
+              </Link>
+            </li>
             <li style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
               <div className="nav-join-dropdown mobile-join-dropdown">
                 <button 
