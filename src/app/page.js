@@ -281,16 +281,17 @@ export default function Home() {
         {[1, 2].map((trackIdx) => (
           <div key={trackIdx} className="ad-marquee-content" style={{"display":"flex","flexShrink":0,"gap":"1.5rem","animation":"scroll-ad-marquee 60s linear infinite"}} aria-hidden={trackIdx === 2}>
             {[
-              { video: "/assets/saree_video_1.mp4", poster: "/assets/saree_ad_1.png", filter: "" },
-              { video: "/assets/saree_video_2.mp4", poster: "/assets/saree_ad_2.png", filter: "" },
-              { video: "/assets/saree_video_3.mp4", poster: "/assets/saree_ad_1.png", filter: "hue-rotate(180deg)" },
-              { video: "/assets/saree_video_4.mp4", poster: "/assets/saree_ad_2.png", filter: "sepia(0.5)" },
-              { video: "/assets/saree_video_5.mp4", poster: "/assets/saree_ad_1.png", filter: "grayscale(1)" }
+              { video: "/videos/0_Sale_Discount_1080x1920.mp4", filter: "" },
+              { video: "/videos/0_Fashion_New_Collection_1080x1920.mp4", filter: "" },
+              { video: "/videos/0_Super_Sale_Online_Shop_1080x1920.mp4", filter: "" },
+              { video: "/videos/0_Woman_Woman_Drinking_2160x3840.mp4", filter: "" },
+              { video: "/videos/6308747_Smiling_Sofa_2160x3840.mp4", filter: "" },
+              { video: "/videos/0_Tablet_Online_Shopping_2160x3840.mp4", filter: "" }
             ].map((ad, idx) => (
               <div key={idx} className="ad-card" style={{"width":"320px","height":"480px","borderRadius":"24px","overflow":"hidden","position":"relative","flexShrink":"0","boxShadow":"0 20px 40px rgba(0,0,0,0.15)"}}>
-                <video src={ad.video} poster={ad.poster} autoPlay loop muted playsInline style={{"width":"100%","height":"100%","objectFit":"cover", filter: ad.filter}}></video>
+                <video src={ad.video} autoPlay loop muted playsInline style={{"width":"100%","height":"100%","objectFit":"cover", filter: ad.filter}}></video>
                 <div style={{"position":"absolute","top":"20px","left":"20px","background":"rgba(0,0,0,0.5)","backdropFilter":"blur(12px)","WebkitBackdropFilter":"blur(12px)","color":"#FFF","padding":"8px 14px","borderRadius":"100px","fontSize":"0.75rem","fontWeight":"600","display":"flex","alignItems":"center","gap":"8px"}}>
-                  <div style={{"width":"18px","height":"18px","background":"#000","borderRadius":"50%","display":"grid","placeItems":"center"}}><i className="fas fa-bolt" style={{"fontSize":"8px"}}></i></div> Create a minimal futuristic ad
+                  <div style={{"width":"18px","height":"18px","background":"var(--color-accent)","borderRadius":"50%","display":"grid","placeItems":"center"}}><i className="fas fa-bolt" style={{"fontSize":"10px","color":"#000"}}></i></div> Minimal Futuristic Ad
                 </div>
               </div>
             ))}
