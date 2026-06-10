@@ -1,9 +1,34 @@
 "use client";
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+    const form = e.target;
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setStatus('Sent!');
+        form.reset();
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('Error');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (error) {
+      setStatus('Error');
+      setTimeout(() => setStatus(''), 3000);
+    }
+  };
 
   return (
     <footer className="premium-footer" aria-label="Site Footer">
@@ -93,30 +118,16 @@ export default function Footer() {
             say hello
           </span>
           <h3>Connect</h3>
-          <div className="premium-footer-links">
-            <a 
-              href="https://www.linkedin.com/company/narizari/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="footer-btn"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="footer-btn"
-            >
-              Instagram
-            </a>
-            <a 
-              href="mailto:hello.narizari@gmail.com" 
-              className="footer-btn"
-            >
-              hello.narizari@gmail.com
-            </a>
-          </div>
+          <form className="footer-mini-form" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" onSubmit={handleSubmit}>
+            <input type="hidden" name="_subject" value="Quick hello from Footer!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div className="footer-input-wrapper">
+              <input type="email" name="email" placeholder="Enter your email" required className="footer-email-input" />
+              <button type="submit" className="footer-submit-btn" disabled={status === 'Sending...'}>
+                {status === 'Sending...' ? '...' : status === 'Sent!' ? '✓' : status === 'Error' ? '!' : '→'}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 

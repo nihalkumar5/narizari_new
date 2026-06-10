@@ -2389,9 +2389,62 @@
 
   .premium-footer-links a:hover, .premium-footer-links .footer-btn:hover {
     color: var(--color-navy);
-    background-color: var(--color-accent-light);
+    border-bottom-color: var(--color-navy);
+  }
+
+  .footer-mini-form {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .footer-input-wrapper {
+    display: flex;
+    border: 3px solid var(--color-navy);
+    background: var(--color-bg-start);
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 6px 6px 0px rgba(30, 26, 23, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .footer-input-wrapper:focus-within {
+    box-shadow: 8px 8px 0px var(--color-navy);
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--color-navy);
+  }
+
+  .footer-email-input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--color-navy);
+    outline: none;
+    width: 100%;
+  }
+
+  .footer-email-input::placeholder {
+    color: rgba(30, 26, 23, 0.6);
+  }
+
+  .footer-submit-btn {
+    background: var(--color-navy);
+    color: var(--color-bg-start);
+    border: none;
+    border-left: 3px solid var(--color-navy);
+    padding: 0 1.2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 0.2s ease;
+  }
+
+  .footer-submit-btn:hover {
+    background: var(--color-bg-start);
+    color: var(--color-navy);
   }
 
   .premium-footer-bottom {
