@@ -58,7 +58,7 @@ export default function Navbar({ variant = "default" }) {
           </div>
 
           <div className="nav-socials">
-            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/narizari/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Pinterest"><i className="fab fa-pinterest-p"></i></a>
             <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
