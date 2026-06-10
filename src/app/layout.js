@@ -39,6 +39,9 @@ export const metadata = {
     title: "NariZari | Heritage Brand Marketing",
     description: "Scale your heritage brand nationwide with our high-converting digital marketing systems.",
   },
+  verification: {
+    google: "ublqRQXAIBStXeVPVOY121aqeleGsSC19e1KXYUJjy0",
+  },
 };
 
 export default function RootLayout({ children }) {
