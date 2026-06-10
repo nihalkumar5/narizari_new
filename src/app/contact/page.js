@@ -24,17 +24,17 @@ export default function Contact() {
             <div className="contact-info-list">
               <div className="contact-info-item">
                 <h4>Phone</h4>
-                <p>+(2) 578-365-379</p>
+                <p>+91 83181 95911</p>
               </div>
               <div className="contact-info-item">
                 <h4>Email</h4>
-                <a href="mailto:hello@narizari.com">hello@narizari.com</a>
+                <a href="mailto:hello.narizari@gmail.com">hello.narizari@gmail.com</a>
               </div>
               <div className="contact-info-item">
                 <h4>Office</h4>
                 <p>
-                  230 Norman Street New York,<br />
-                  QC (USA) H8R 1A1
+                  5th Floor, CDC Building,<br />
+                  AIC BHU Campus, Varanasi - 221005
                 </p>
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="map-link">
                   See on Google Map ↗
@@ -54,27 +54,28 @@ export default function Contact() {
             <div className="contact-form-container">
               <h2 className="contact-form-title">Contact</h2>
               
-              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+              <form className="contact-form" action="https://formsubmit.co/hello.narizari@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Submission!" />
                 <div className="form-row">
                   <div className="form-group">
-                    <input type="text" className="form-input" placeholder="Name" />
+                    <input type="text" name="name" className="form-input" placeholder="Name" required />
                   </div>
                   <div className="form-group">
-                    <input type="email" className="form-input" placeholder="Email" />
+                    <input type="email" name="email" className="form-input" placeholder="Email" required />
                   </div>
                 </div>
                 
                 <div className="form-row">
                   <div className="form-group">
-                    <input type="tel" className="form-input" placeholder="Phone" />
+                    <input type="tel" name="phone" className="form-input" placeholder="Phone" />
                   </div>
                   <div className="form-group">
-                    <input type="text" className="form-input" placeholder="Subject" />
+                    <input type="text" name="subject" className="form-input" placeholder="Subject" />
                   </div>
                 </div>
                 
                 <div className="form-group full-width">
-                  <input type="text" className="form-input" placeholder="Tell us about your interested in" />
+                  <input type="text" name="message" className="form-input" placeholder="Tell us about your interested in" required />
                 </div>
                 
                 <button type="submit" className="form-submit-btn">

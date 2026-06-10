@@ -38,7 +38,7 @@ export default function Navbar({ variant = "default" }) {
             <img 
               src="/nz-logo.png" 
               alt="NariZari Logo" 
-              style={{ height: '48px', width: 'auto', display: 'block' }} 
+              className="navbar-brand-logo"
             />
           </Link>
 
