@@ -19,7 +19,7 @@ export default function Contact() {
       if (res.ok) {
         setStatus('Sent successfully!');
         form.reset();
-        setTimeout(() => setStatus(''), 3000);
+        // Do not auto-reset status, let the user see the success screen
       } else {
         setStatus('Failed to send.');
         setTimeout(() => setStatus(''), 3000);
@@ -80,74 +80,85 @@ export default function Contact() {
             <div className="contact-form-container">
               <h2 className="contact-form-title">Contact</h2>
               
-              <form className="contact-form" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" onSubmit={handleSubmit}>
-                <input type="hidden" name="_subject" value="New Contact Form Submission!" />
-                <input type="hidden" name="_captcha" value="false" />
-                <div className="form-row">
-                  <div className="form-group">
-                    <input type="text" name="name" className="form-input" placeholder="Name *" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="tel" name="phone" className="form-input" placeholder="Phone *" required />
-                  </div>
+              {status === 'Sent successfully!' ? (
+                <div className="success-acknowledgment">
+                  <div className="success-icon"><i className="fas fa-check"></i></div>
+                  <h3>Message Received.</h3>
+                  <p>Thank you for reaching out. A member of our team will review your inquiry and get back to you shortly.</p>
+                  <button onClick={() => setStatus('')} className="form-submit-btn" style={{marginTop: '2rem'}}>
+                    Send Another Message
+                  </button>
                 </div>
+              ) : (
+                <form className="contact-form" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" onSubmit={handleSubmit}>
+                  <input type="hidden" name="_subject" value="New Contact Form Submission!" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <div className="form-row">
+                    <div className="form-group">
+                      <input type="text" name="name" className="form-input" placeholder="Name *" required />
+                    </div>
+                    <div className="form-group">
+                      <input type="tel" name="phone" className="form-input" placeholder="Phone *" required />
+                    </div>
+                  </div>
 
-                <div className="form-row">
-                  <div className="form-group">
-                    <input type="email" name="email" className="form-input" placeholder="Email *" required />
+                  <div className="form-row">
+                    <div className="form-group">
+                      <input type="email" name="email" className="form-input" placeholder="Email *" required />
+                    </div>
+                    <div className="form-group">
+                      <input type="url" name="website" className="form-input" placeholder="Website URL" />
+                    </div>
                   </div>
-                  <div className="form-group">
-                    <input type="url" name="website" className="form-input" placeholder="Website URL" />
+                  
+                  <div className="form-row">
+                    <div className="form-group">
+                      <input type="text" name="company" className="form-input" placeholder="Company/ Brand Name *" required />
+                    </div>
+                    <div className="form-group">
+                      <input type="text" name="location" className="form-input" placeholder="Location *" required />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="form-row">
-                  <div className="form-group">
-                    <input type="text" name="company" className="form-input" placeholder="Company/ Brand Name *" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="text" name="location" className="form-input" placeholder="Location *" required />
-                  </div>
-                </div>
 
-                <div className="form-group full-width">
-                  <input type="text" name="message" className="form-input" placeholder="Write a Message *" required />
-                </div>
-
-                <div className="checkbox-group full-width">
-                  <div className="checkbox-group-title">Services Required for *</div>
-                  <div className="checkbox-list">
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="eCommerce + Marketing Suite" />
-                      eCommerce + Marketing Suite
-                    </label>
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="Shopify" />
-                      Shopify
-                    </label>
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="Performance Marketing" />
-                      Performance Marketing
-                    </label>
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="Social Media Management" />
-                      Social Media Management
-                    </label>
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="Branding Creative" />
-                      Branding Creative
-                    </label>
-                    <label className="checkbox-item">
-                      <input type="checkbox" name="services" value="Other" />
-                      Other
-                    </label>
+                  <div className="form-group full-width">
+                    <input type="text" name="message" className="form-input" placeholder="Write a Message *" required />
                   </div>
-                </div>
-                
-                <button type="submit" className="form-submit-btn" disabled={status === 'Submitting...'}>
-                  {status === 'Submitting...' ? 'Sending...' : status === 'Sent successfully!' ? 'Sent!' : status === 'Failed to send.' ? 'Error' : 'Send to us'}
-                </button>
-              </form>
+
+                  <div className="checkbox-group full-width">
+                    <div className="checkbox-group-title">Services Required for *</div>
+                    <div className="checkbox-list">
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="eCommerce + Marketing Suite" />
+                        eCommerce + Marketing Suite
+                      </label>
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="Shopify" />
+                        Shopify
+                      </label>
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="Performance Marketing" />
+                        Performance Marketing
+                      </label>
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="Social Media Management" />
+                        Social Media Management
+                      </label>
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="Branding Creative" />
+                        Branding Creative
+                      </label>
+                      <label className="checkbox-item">
+                        <input type="checkbox" name="services" value="Other" />
+                        Other
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <button type="submit" className="form-submit-btn" disabled={status === 'Submitting...'}>
+                    {status === 'Submitting...' ? 'Sending...' : status === 'Failed to send.' ? 'Error' : 'Submit'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
           
