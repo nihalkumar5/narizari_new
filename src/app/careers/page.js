@@ -7,6 +7,32 @@ import './careers.css';
 
 export default function Careers() {
   const [resumeName, setResumeName] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setStatus('Submitting...');
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setStatus('Sent successfully!');
+        form.reset();
+        setResumeName('');
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('Failed to send.');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (err) {
+      setStatus('Failed to send.');
+      setTimeout(() => setStatus(''), 3000);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -222,8 +248,9 @@ export default function Careers() {
               <h2>Join Our Team</h2>
               <p>Don't see a perfect fit above? We're always looking for top talent. Drop your resume here.</p>
             </div>
-            <form className="application-form" action="https://formsubmit.co/hello.narizari@gmail.com" method="POST" encType="multipart/form-data">
-              <input type="hidden" name="_subject" value="New Job Application!" />
+            <form className="application-form" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" encType="multipart/form-data" onSubmit={handleSubmit}>
+              <input type="hidden" name="_subject" value="New Career Application!" />
+              <input type="hidden" name="_captcha" value="false" />
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
@@ -262,7 +289,9 @@ export default function Careers() {
                   />
                 </label>
               </div>
-              <button type="submit" className="btn-solid submit-btn">Submit Application</button>
+              <button type="submit" className="btn-solid submit-btn" disabled={status === 'Submitting...'}>
+                {status === 'Submitting...' ? 'Submitting...' : status === 'Sent successfully!' ? 'Application Submitted!' : status === 'Failed to send.' ? 'Error Occurred' : 'Submit Application'}
+              </button>
             </form>
           </div>
         </section>

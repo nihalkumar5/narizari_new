@@ -9,6 +9,30 @@ function JoinForm() {
   const searchParams = useSearchParams();
   const initialType = searchParams.get('type') === 'wholesaler' ? 'wholesaler' : 'manufacturer';
   const [type, setType] = useState(initialType);
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setStatus('Submitting...');
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setStatus('Sent successfully!');
+        form.reset();
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('Failed to send.');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (err) {
+      setStatus('Failed to send.');
+      setTimeout(() => setStatus(''), 3000);
+    }
+  };
 
   useEffect(() => {
     const queryType = searchParams.get('type');
@@ -51,8 +75,9 @@ function JoinForm() {
         <div className="join-form-wrapper">
           
           {type === 'manufacturer' ? (
-            <form key="manufacturer-form" className="join-form-content" action="https://formsubmit.co/hello.narizari@gmail.com" method="POST" encType="multipart/form-data">
+            <form key="manufacturer-form" className="join-form-content" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" encType="multipart/form-data" onSubmit={handleSubmit}>
               <input type="hidden" name="_subject" value="New Manufacturer Registration!" />
+              <input type="hidden" name="_captcha" value="false" />
               <div style={{ marginBottom: '1rem' }}>
                 <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '0.5rem' }}>Manufacturer Registration</h2>
                 <p style={{ color: 'var(--color-slate)', fontWeight: '500' }}>Register your manufacturing unit to connect directly with verified wholesalers across India.</p>
@@ -155,11 +180,14 @@ function JoinForm() {
                 </label>
               </div>
 
-              <button type="submit" className="join-submit-btn">Register Manufacturing Unit</button>
+              <button type="submit" className="join-submit-btn" disabled={status === 'Submitting...'}>
+                {status === 'Submitting...' ? 'Submitting...' : status === 'Sent successfully!' ? 'Registered Successfully!' : status === 'Failed to send.' ? 'Error Occurred' : 'Register Manufacturing Unit'}
+              </button>
             </form>
           ) : (
-            <form key="wholesaler-form" className="join-form-content" action="https://formsubmit.co/hello.narizari@gmail.com" method="POST">
+            <form key="wholesaler-form" className="join-form-content" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" onSubmit={handleSubmit}>
               <input type="hidden" name="_subject" value="New Wholesaler Registration!" />
+              <input type="hidden" name="_captcha" value="false" />
               <div style={{ marginBottom: '1rem' }}>
                 <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '0.5rem' }}>Wholesaler Registration</h2>
                 <p style={{ color: 'var(--color-slate)', fontWeight: '500' }}>Register as a wholesaler to source premium heritage textiles directly from verified manufacturers.</p>
@@ -216,7 +244,9 @@ function JoinForm() {
                 </label>
               </div>
 
-              <button type="submit" className="join-submit-btn">Register as Wholesaler</button>
+              <button type="submit" className="join-submit-btn" disabled={status === 'Submitting...'}>
+                {status === 'Submitting...' ? 'Submitting...' : status === 'Sent successfully!' ? 'Registered Successfully!' : status === 'Failed to send.' ? 'Error Occurred' : 'Register as Wholesaler'}
+              </button>
             </form>
           )}
 

@@ -1,9 +1,35 @@
 "use client";
 
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import './contact.css';
 
 export default function Contact() {
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setStatus('Submitting...');
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setStatus('Sent successfully!');
+        form.reset();
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('Failed to send.');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (err) {
+      setStatus('Failed to send.');
+      setTimeout(() => setStatus(''), 3000);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -54,8 +80,9 @@ export default function Contact() {
             <div className="contact-form-container">
               <h2 className="contact-form-title">Contact</h2>
               
-              <form className="contact-form" action="https://formsubmit.co/hello.narizari@gmail.com" method="POST">
+              <form className="contact-form" action="https://formsubmit.co/ajax/hello.narizari@gmail.com" method="POST" onSubmit={handleSubmit}>
                 <input type="hidden" name="_subject" value="New Contact Form Submission!" />
+                <input type="hidden" name="_captcha" value="false" />
                 <div className="form-row">
                   <div className="form-group">
                     <input type="text" name="name" className="form-input" placeholder="Name" required />
@@ -78,8 +105,8 @@ export default function Contact() {
                   <input type="text" name="message" className="form-input" placeholder="Tell us about your interested in" required />
                 </div>
                 
-                <button type="submit" className="form-submit-btn">
-                  Send to us
+                <button type="submit" className="form-submit-btn" disabled={status === 'Submitting...'}>
+                  {status === 'Submitting...' ? 'Sending...' : status === 'Sent successfully!' ? 'Sent!' : status === 'Failed to send.' ? 'Error' : 'Send to us'}
                 </button>
               </form>
             </div>
