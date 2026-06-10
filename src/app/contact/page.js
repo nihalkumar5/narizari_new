@@ -36,7 +36,7 @@ export default function Contact() {
                   5th Floor, CDC Building,<br />
                   AIC BHU Campus, Varanasi - 221005
                 </p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="map-link">
+                <a href="https://www.google.com/maps/search/?api=1&query=AIC+BHU+Campus,+Varanasi+-+221005" target="_blank" rel="noopener noreferrer" className="map-link">
                   See on Google Map ↗
                 </a>
               </div>
