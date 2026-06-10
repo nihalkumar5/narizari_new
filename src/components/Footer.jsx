@@ -93,7 +93,7 @@ export default function Footer() {
             say hello
           </span>
           <h3>Connect</h3>
-          <div className="footer-social-links">
+          <div className="premium-footer-links">
             <a 
               href="https://www.linkedin.com/company/narizari/" 
               target="_blank" 
