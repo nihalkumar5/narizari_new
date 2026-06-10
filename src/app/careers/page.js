@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './careers.css';
 
 export default function Careers() {
+  const [resumeName, setResumeName] = useState('');
   return (
     <>
       <Navbar />
@@ -243,8 +245,21 @@ export default function Careers() {
               <div className="form-group file-upload-group">
                 <label htmlFor="resume" className="file-upload-label">
                   <i className="fas fa-cloud-upload-alt"></i>
-                  <span>Upload Resume (PDF, DOCX)</span>
-                  <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+                  <span>{resumeName || "Upload Resume (PDF, DOCX)"}</span>
+                  <input 
+                    type="file" 
+                    id="resume" 
+                    name="resume" 
+                    accept=".pdf,.doc,.docx" 
+                    required 
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files[0]) {
+                        setResumeName(e.target.files[0].name);
+                      } else {
+                        setResumeName('');
+                      }
+                    }}
+                  />
                 </label>
               </div>
               <button type="submit" className="btn-solid submit-btn">Submit Application</button>
