@@ -166,7 +166,7 @@ export default function Navbar({ variant = "default" }) {
         </nav>
         <div className="drawer-footer">
           <p>NariZari — Growth Engine for Heritage Luxury</p>
-          <a href="mailto:hello@narizari.com">hello@narizari.com</a>
+          <a href="mailto:hello.narizari@gmail.com">hello.narizari@gmail.com</a>
         </div>
       </aside>
     </>

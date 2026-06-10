@@ -110,8 +110,11 @@ export default function Footer() {
             >
               Instagram
             </a>
-            <a href="mailto:hello@narizari.com" className="footer-btn">
-              hello@narizari.com
+            <a 
+              href="mailto:hello.narizari@gmail.com" 
+              className="footer-btn"
+            >
+              hello.narizari@gmail.com
             </a>
           </div>
         </div>
