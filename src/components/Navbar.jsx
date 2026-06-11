@@ -47,6 +47,7 @@ export default function Navbar({ variant = "default" }) {
             <li><Link href="/demo" className="nav-link">Live Demo</Link></li>
             <li><Link href="/case-studies" className="nav-link">Case Studies</Link></li>
             <li><Link href="/careers" className="nav-link">Careers</Link></li>
+            <li><Link href="/clients" className="nav-link">Clients</Link></li>
           </ul>
 
           <div className="nav-join-dropdown">
@@ -142,6 +143,11 @@ export default function Navbar({ variant = "default" }) {
             <li>
               <Link href="/careers" className="drawer-link" onClick={() => setDrawerOpen(false)}>
                 <span className="drawer-link-num">09.</span> Careers
+              </Link>
+            </li>
+            <li>
+              <Link href="/clients" className="drawer-link" onClick={() => setDrawerOpen(false)}>
+                <span className="drawer-link-num">10.</span> Clients
               </Link>
             </li>
             <li style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>

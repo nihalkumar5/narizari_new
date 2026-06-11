@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientLogic from '@/components/ClientLogic';
@@ -44,7 +44,8 @@ export default function Home() {
             </ScrollReveal>
             
             <div className="hero-cta-group" style={{"marginTop":"1rem"}}>
-              <a href="#contact" className="btn btn-dark-pill" style={{"backgroundColor":"var(--color-navy)","color":"#D6F500","fontWeight":"600","padding":"0.8rem 2rem","fontSize":"1rem"}}>Get started</a>
+              <a href="#contact" className="btn btn-primary-cta">Get started</a>
+              <Link href="/contact" className="btn btn-outline-navy">Connect Us</Link>
             </div>
 
             <div className="hero-trusted-stack" style={{"display":"flex","alignItems":"center","gap":"1rem","marginTop":"1rem"}}>

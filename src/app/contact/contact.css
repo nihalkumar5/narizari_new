@@ -19,7 +19,7 @@
 
 /* LEFT COLUMN */
 .contact-left {
-  padding: 12rem 4rem 4rem 8rem; /* Adjusted for floating navbar */
+  padding: 8rem 4rem 4rem 8rem; /* Adjusted for floating navbar */
   display: flex;
   flex-direction: column;
 }
@@ -30,7 +30,7 @@
   font-weight: 800;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   position: relative;
   display: inline-block;
   max-width: max-content;
@@ -111,7 +111,7 @@
 }
 
 .contact-right-top {
-  padding: 14rem 8rem 4rem 4rem;
+  padding: 8.5rem 8rem 4rem 4rem;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -318,7 +318,7 @@
     grid-template-columns: 1fr;
   }
   .contact-left {
-    padding: 10rem 2rem 4rem;
+    padding: 7rem 2rem 4rem;
   }
   .contact-title {
     margin-bottom: 3rem;

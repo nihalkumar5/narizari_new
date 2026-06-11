@@ -43,9 +43,23 @@ export default function Contact() {
               <div className="contact-arrow"></div>
             </h1>
             
-            <h3 className="contact-subtitle">
-              Don't be afraid to say hello with us!
-            </h3>
+            <div className="contact-editorial-text" style={{ marginBottom: '4rem', display: 'flex', flexDirection: 'column', gap: '1.65rem', maxWidth: '550px' }}>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.7', fontWeight: '500', color: 'var(--color-navy)', opacity: 0.95 }}>
+                Have something in mind? Exploring possibilities? Or simply looking for a <span style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-accent)', padding: '0.15rem 0.5rem', borderRadius: '6px', fontStyle: 'normal', fontWeight: '700', fontSize: '1.15rem', display: 'inline-block', transform: 'rotate(-1deg)', boxShadow: '4px 4px 0px rgba(210, 250, 0, 0.2)' }}>fresh perspective</span>?
+              </p>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.7', fontWeight: '500', color: 'var(--color-navy)', opacity: 0.95 }}>
+                An idea. An <span style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-navy)', padding: '0.1rem 0.45rem', borderRadius: '4px', fontWeight: '700' }}>ambition</span>. A <span className="about-handwritten" style={{ fontSize: '1.85rem', display: 'inline-block', transform: 'rotate(-2deg)', color: 'var(--color-navy)', marginLeft: '4px', marginRight: '4px', verticalAlign: 'middle' }}>vision</span> waiting to unfold.
+              </p>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.7', fontWeight: '500', color: 'var(--color-navy)', opacity: 0.95 }}>
+                Wherever you are in your journey, let's begin with a <span className="about-handwritten" style={{ fontSize: '1.85rem', display: 'inline-block', transform: 'rotate(-1.5deg)', color: 'var(--color-navy)', marginLeft: '4px', marginRight: '4px', verticalAlign: 'middle' }}>conversation</span>.
+              </p>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.7', fontWeight: '500', color: 'var(--color-navy)', opacity: 0.95 }}>
+                No pressure. No buzzwords. Just genuine exchange, strategic insight, and the possibility of creating something truly <span className="about-handwritten" style={{ fontSize: '1.85rem', display: 'inline-block', transform: 'rotate(-2deg)', color: 'var(--color-navy)', marginLeft: '4px', marginRight: '4px', verticalAlign: 'middle', borderBottom: '3px solid var(--color-accent)', lineHeight: '1.1' }}>extraordinary</span>.
+              </p>
+              <p style={{ fontSize: '1.5rem', lineHeight: '1.6', fontWeight: '800', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginTop: '0.75rem', letterSpacing: '-0.02em' }}>
+                The finest brands often start with a simple <span className="about-handwritten" style={{ fontSize: '2.1rem', display: 'inline-block', transform: 'rotate(-3deg)', color: 'var(--color-navy)', marginLeft: '6px', verticalAlign: 'middle' }}>hello</span>.
+              </p>
+            </div>
             
             <div className="contact-info-list">
               <div className="contact-info-item">
@@ -73,7 +87,7 @@ export default function Contact() {
           <div className="contact-right">
             <div className="contact-right-top">
               <p className="contact-intro-text">
-                Great! We're excited to hear from you and let's start something special together. call us for any inquery.
+                We look forward to hearing from you. Please fill out the form below, and our team will get back to you shortly to start our conversation.
               </p>
             </div>
             
