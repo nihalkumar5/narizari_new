@@ -165,9 +165,10 @@ export default function ClientLogic() {
     // Hero Floating Elements (Slight Parallax)
     const heroBg = document.querySelector('.hero-bg-img');
     const heroContent = document.querySelector('.hero-content');
+    let parallaxTimeoutId;
+    let throttledScroll;
     
     if (heroBg && heroContent) {
-      let timeoutId;
       const handleScroll = () => {
         const scrolled = window.scrollY;
         if (scrolled < window.innerHeight) {
@@ -176,24 +177,23 @@ export default function ClientLogic() {
         }
       };
 
-      const throttledScroll = () => {
-        if (!timeoutId) {
-          timeoutId = setTimeout(() => {
+      throttledScroll = () => {
+        if (!parallaxTimeoutId) {
+          parallaxTimeoutId = setTimeout(() => {
             handleScroll();
-            timeoutId = null;
+            parallaxTimeoutId = null;
           }, 16); // roughly 60fps
         }
       };
 
       window.addEventListener('scroll', throttledScroll, { passive: true });
-
-      return () => clearTimeout(timeoutId);
     }
 
     // 6. Vision Section SVG Underline Animation
     const visionSection = document.getElementById('vision');
+    let visionObserver;
     if (visionSection) {
-      const visionObserver = new IntersectionObserver((entries, observerInstance) => {
+      visionObserver = new IntersectionObserver((entries, observerInstance) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const underline = document.getElementById('vision-underline');
@@ -209,6 +209,46 @@ export default function ClientLogic() {
       }, { threshold: 0.1 });
       visionObserver.observe(visionSection);
     }
+
+    // 7. Dynamic Calendly Integration (Video Call Scheduler)
+    if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+      const link = document.createElement('link');
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+
+    if (!document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    const handleCalendlyClick = (e) => {
+      e.preventDefault();
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({ url: 'https://calendly.com/narizari/discovery' });
+      } else {
+        window.open('https://calendly.com/narizari/discovery', '_blank');
+      }
+    };
+
+    const calendlyLinks = document.querySelectorAll('a[href*="calendly.com/narizari"]');
+    calendlyLinks.forEach(link => {
+      link.addEventListener('click', handleCalendlyClick);
+    });
+
+    // Unified Cleanup Function
+    return () => {
+      if (typeTimeoutId) clearTimeout(typeTimeoutId);
+      if (parallaxTimeoutId) clearTimeout(parallaxTimeoutId);
+      if (throttledScroll) window.removeEventListener('scroll', throttledScroll);
+      if (visionObserver) visionObserver.disconnect();
+      calendlyLinks.forEach(link => {
+        link.removeEventListener('click', handleCalendlyClick);
+      });
+    };
   }, []);
 
   return null;
