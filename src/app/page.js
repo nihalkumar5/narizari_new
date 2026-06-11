@@ -687,7 +687,7 @@ export default function Home() {
           Schedule a 30-minute heritage brand discovery call. We'll outline your market opportunities and analyze how to take your traditional saree house national.
         </p>
         
-        <a href="https://calendly.com/narizari/discovery" target="_blank" rel="noopener noreferrer" className="brutalist-cta-btn">
+        <a href="mailto:hello.narizari@gmail.com?subject=Request%20for%20Strategy%20Call%20-%20NariZari&body=Hi%20NariZari%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20strategy%20call%20for%20my%20brand.%0A%0ABrand%20Name%3A%20%0APhone%20Number%3A%20%0AWebsite%3A%20%0APreferred%20Date%20%26%20Time%3A%20%0A%0ABest%20regards%2C" className="brutalist-cta-btn">
           BOOK STRATEGY CALL
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter" style={{marginLeft: "15px", verticalAlign: "middle"}}>
             <line x1="5" y1="12" x2="19" y2="12"></line>

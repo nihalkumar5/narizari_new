@@ -210,44 +210,12 @@ export default function ClientLogic() {
       visionObserver.observe(visionSection);
     }
 
-    // 7. Dynamic Calendly Integration (Video Call Scheduler)
-    if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
-      const link = document.createElement('link');
-      link.href = 'https://assets.calendly.com/assets/external/widget.css';
-      link.rel = 'stylesheet';
-      document.head.appendChild(link);
-    }
-
-    if (!document.querySelector('script[src*="calendly.com/assets/external/widget.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.body.appendChild(script);
-    }
-
-    const handleCalendlyClick = (e) => {
-      e.preventDefault();
-      if (window.Calendly) {
-        window.Calendly.initPopupWidget({ url: 'https://calendly.com/narizari/discovery' });
-      } else {
-        window.open('https://calendly.com/narizari/discovery', '_blank');
-      }
-    };
-
-    const calendlyLinks = document.querySelectorAll('a[href*="calendly.com/narizari"]');
-    calendlyLinks.forEach(link => {
-      link.addEventListener('click', handleCalendlyClick);
-    });
-
     // Unified Cleanup Function
     return () => {
       if (typeTimeoutId) clearTimeout(typeTimeoutId);
       if (parallaxTimeoutId) clearTimeout(parallaxTimeoutId);
       if (throttledScroll) window.removeEventListener('scroll', throttledScroll);
       if (visionObserver) visionObserver.disconnect();
-      calendlyLinks.forEach(link => {
-        link.removeEventListener('click', handleCalendlyClick);
-      });
     };
   }, []);
 
