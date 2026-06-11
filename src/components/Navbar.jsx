@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import BookingModal from './BookingModal';
 
 export default function Navbar({ variant = "default" }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -175,6 +176,7 @@ export default function Navbar({ variant = "default" }) {
           <a href="mailto:hello.narizari@gmail.com">hello.narizari@gmail.com</a>
         </div>
       </aside>
+      <BookingModal />
     </>
   );
 }

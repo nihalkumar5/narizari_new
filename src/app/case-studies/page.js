@@ -213,7 +213,7 @@ export default function CaseStudies() {
             <span className="cta-pill"><i className="fab fa-whatsapp"></i> Whatsapp Call</span>
             <h2>Ready to Grow Like Crazy?</h2>
             <p>Book your free demo call—let's make your brand the next big thing!</p>
-            <a href="mailto:hello.narizari@gmail.com?subject=Request%20for%20Strategy%20Call%20-%20NariZari&body=Hi%20NariZari%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20strategy%20call%20for%20my%20brand.%0A%0ABrand%20Name%3A%20%0APhone%20Number%3A%20%0AWebsite%3A%20%0APreferred%20Date%20%26%20Time%3A%20%0A%0ABest%20regards%2C" className="cta-btn" style={{textDecoration: "none"}}>Schedule a Free Call <i className="fas fa-arrow-right"></i></a>
+            <a href="#book" className="cta-btn" style={{textDecoration: "none"}}>Schedule a Free Call <i className="fas fa-arrow-right"></i></a>
             <div className="cta-trust">
               <span className="stars" style={{color:"#e056fd", letterSpacing:"2px"}}>★★★★★</span> Trusted by 200+ brands
             </div>

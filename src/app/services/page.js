@@ -191,7 +191,7 @@ export default function ServicesPage() {
               }}>
                 Schedule a 30-minute heritage brand discovery call. We'll outline your market opportunities and analyze how to take your traditional saree house national.
               </p>
-              <a href="mailto:hello.narizari@gmail.com?subject=Request%20for%20Strategy%20Call%20-%20NariZari&body=Hi%20NariZari%20Team%2C%0A%0AI%20would%20like%20to%20schedule%20a%20strategy%20call%20for%20my%20brand.%0A%0ABrand%20Name%3A%20%0APhone%20Number%3A%20%0AWebsite%3A%20%0APreferred%20Date%20%26%20Time%3A%20%0A%0ABest%20regards%2C" className="services-cta-btn">
+              <a href="#book" className="services-cta-btn">
                 Book Your Strategy Call
               </a>
             </div>
