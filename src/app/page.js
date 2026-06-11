@@ -44,7 +44,7 @@ export default function Home() {
             </ScrollReveal>
             
             <div className="hero-cta-group" style={{"marginTop":"1rem"}}>
-              <a href="#contact" className="btn btn-primary-cta">Get started</a>
+              <a href="#book" className="btn btn-primary-cta">Get started</a>
               <Link href="/contact" className="btn btn-outline-navy">Connect Us</Link>
             </div>
 
