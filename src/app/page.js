@@ -450,7 +450,7 @@ export default function Home() {
     {/*  8. Founder Section (Brutalist Layout)  */}
     <section id="vision" className="brutalist-vision-section">
       <div className="brutalist-vision-img-wrapper">
-        <img src="/assets/founder_vineet.png" alt="Vineet Mishra, NariZari founder sitting at desk in an editorial portrait" />
+        <img src="/assets/founder_vineet.jpeg" alt="Vineet Mishra, NariZari founder sitting at desk in an editorial portrait" />
       </div>
       <div className="brutalist-vision-content">
         <span className="brutalist-vision-tag">The Vision</span>
