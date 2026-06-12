@@ -2527,6 +2527,7 @@
     width: 45%;
     position: relative;
     border-right: 4px solid var(--color-accent);
+    overflow: hidden;
   }
 
   .brutalist-vision-img-wrapper img {
@@ -2537,6 +2538,11 @@
     height: 100%;
     object-fit: cover;
     object-position: left;
+    transition: transform var(--transition-smooth);
+  }
+
+  .brutalist-vision-img-wrapper:hover img {
+    transform: scale(1.05);
   }
 
   .brutalist-vision-content {
